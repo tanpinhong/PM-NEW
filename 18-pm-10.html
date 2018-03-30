@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>浅析支付模块</h2>
+            <p>分享人：孙若淇</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <p>1.什么是支付模块</p>
+            <p>2.支付模块的基础——账户模型</p>
+            <p>3.实名认证与银行卡绑定</p>
+            <p>4.银行卡支付</p>
+            <p>5.第三方支付</p>
+            <p>6.更多讨论</p>
+        </section>
+        <section>
+            <section>
+                <h3>1.什么是支付模块</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                     支付模块是按照支付场景来为业务方提供支付服务<br>
+                    这个模块一般位于支付网关之后，支付渠道之前。 它根据支付能力将不同的支付渠道封装成统一的接口，通过支付网关来对外提供服务<br>
+                    从服务的角度，支付模块服务本身也是一个代理模式的服务，它透过支付网关响应业务方请求， 进行一些统一处理后，分发到不同的支付渠道去执行，最后将执行结果做处理后，通过支付网关再回传给业务方
+                    <br>                     
+                </p>
+            </section>
+                <section style="text-align: left;">
+                <p style="text-align: left">
+                  支付系统的参考架构图<br>
+                   <img src="1.jpg"> 
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>2.支付模块的基础——账户模型</h3>
+            </section>
+            <section >
+                <p>2.1支付账户和登录账号<br>
+                   支付账户指用户在支付系统中用于交易的资金所有者权益的凭证<br>
+                   登录账号 指用户在系统中的登录的凭证和个人信息。 一个用户可以有多个登录账户，一个登录账户可以有多个支付账户，比如零钱账户，储值卡账户等。 <br>
+                   一般来说，支付账户不会在多个登录账户之间共用。<br>
+                </p>
+            </section>
+            <section >
+                <p style="text-align: left">
+               2.2账户的设计需求<br>
+               1.交易的需求，比如检查账户是否被锁定、余额是否足够、是否有效等。<br>
+               2.记账的需求，按照公司会计需求记录账户上的所有行为，包括支出、充值、转账等<br>
+               3.对账的需求，包括和支付渠道、商户、个人的对账需求，核对交易和账户余额是否正确<br>
+               4.风控的需求，如反洗钱、反欺诈等，都需要依赖于账户体系来提供核心数据。本文暂不分析这个内容，将在《支付风控》、《支付反洗钱》这两篇文章中详细分析<br>
+               5.信用的需求，对用户、资产、商户等主体进行信用评估时，也需要依赖账户体系来提供的核心数据<br>
+                </p>
+            </section>
+                 <section >
+                <p style="text-align: left">
+               2.3账户模型<br>
+               根据业务需要，可以设置多种账户，如支付账户、预付卡账户、代扣账户、零钱账户、结算账户等。 从类别上来说，这里的账户，一般指总账账户<br>
+               虚拟币账号：用户和使用奇点奇豆的商户都需要建立虚拟币账户<br>
+               代扣账号： 用来支持订阅类型的定期代扣<br>
+               零钱账号：即电商的内部账号，用户、商户、清算单位需要建立零钱账户<br>
+               第三方支付账号：用户在第三方支付机构建立的账户<br>
+               银行卡账号：用户的银行卡信息，每个卡对应一个账户<br>
+               结算账号：用来支持和第三方支付公司、银行进行结算用。 第三方支付需要为每个商户号建立结算账号；银行需要为借记卡、贷记卡分别建立结算账号（有必要吗？银行卡直连时使用）<br>
+               代扣代缴账户：用来支持代扣税款业务<br>
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>3.实名验证与银行卡绑定</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                分类：二要素（姓名和身份证）、三要素（加上银行卡号）、四要素（再加上手机号）<br>
+                   国内唯一的库在公安部，由NCIIC负责对外提供接口。提供如下功能：
+                   <br>
+                简项核查：返回“一致”“不一致”“库中无此号”<br>
+                返照核查：返回“一致+网纹照片”“不一致”“库中无此号”<br>
+                人像核查：返回“同一人”“不同人”“库中无此号”<br>
+                官方接口收费是 5元/条。 市面上主要的第三方服务提供商有国政通（简项、返照）、诺证通（简项）、IDface（三接口）等，收费简项核查：0.5~2.0元、返照核查为0.8~2.1元、人像核查2.0~8.0元不等。一般都和访问量有关，量大从优。<br>
+                </p>                
+            </section>
+            <section style="text-align: left;">
+              <p style="text-align: left">
+              绑卡流程<br>
+              <img src="2.PNG"> <br>
+               从安全角度考虑,只能绑自己的卡。<br>
+               需要用户在银行侧预留的手机号进行短信验证。<br>
+               绑卡有这些前置需求：用户必须已经绑定了手机号。该手机号用于修改支付密码；用户需设置了支付密码。支付密码不同于登录密码。<br>
+               检查用户是否有手机号。没有则进入设置手机号流程。<br>
+                </p>             
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+               绑卡流程<br>
+               检查用户是否设置支付密码。如果已经设置，则需要用户输入密码。确认后开始绑卡。否则，也是先进去绑卡后设置密码。<br>
+               用户输入卡号，系统根据卡号判断卡的发卡行，并显示给用户。有些实现，如微信支付，会提供扫卡识码功能。<br>
+               用户输入银行预留手机。对于没有绑过卡的用户，需要用户提供真实姓名和身份证号。对于信用卡，还需要输入cv码和有效期。<br>
+               调用银行绑卡验证接口进行绑卡。这里有一个四要素验证的概念。由于国内要求实名制，所有银行卡都是实名办理的，所以银行可以验证姓名，身份证号，银行卡号和手机号是不是一致的，如果没问题，则会发短信到手机上。<br>
+                </p>        
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>4.银行卡支付</h3>
+            </section>
+              <section>
+                 <p style="text-align: left">
+                 交易是生成订单；支付是对订单进行付款<br>
+                多次支付，是指现金流入或流出在多个时点上发生;<br>
+                等额分付终值是指一定时期内，间隔相等时间支付固定的金额(通常叫做分次付款)、各期分次款及由这些分次款复利累积的总和<br>
+                单次支付是我们用的最多的支付方式，即一次结清所有款项<br>
+                线上银行卡支付的分类：<br>
+                按照卡的类别，分为贷记卡支付，也叫motopay、ePOS，即信用卡支付；和借记卡支付。按照支付形态，又分为认证支付、网银支付、快捷支付几种形态。<br>
+                </p>
+            </section>
+             <section>
+                 <p style="text-align: left">
+                 认证支付<br>
+               是指付款人通过第三方支付平台接收输入的银行卡相关信息（如卡号、密码、CVN2、有效期、预留手机号等要素），由第三方支付平台经过付款人发卡行进行验证，使用第三方支付平台短信验证或发卡行手机短信验证等辅助认证以完成支付交易的支付方式。<br>
+               快捷支付<br>
+               一种是与“认证支付”模式相同；另一种，是指付款人在第三方支付平台的注册用户账户并付款人的银行卡账户实现关联（一般情况下关联时需由发卡行验证），在交易时付款人使用在第三方支付平台的用户账户发起交易，由第三方支付平台联动付款热绑定的银行，由发卡银行进行交易授权的支付方式<br>
+                </p>
+            </section>
+               <section>
+                 <p style="text-align: left">
+               网银支付<br>
+               网银支付是由银联或者银行提供支付界面，用户必须在页面上输入卡号，密码等验证信息才可以执行支付。大部分银行还要求用户使用U盾或者其它安全硬件。但安全和易用永远是个矛盾。网银使用会打断用户体验，增加用户使用难度。对使用硬件加密的支付，不可能天天带着U盾跑。另外网银主要用在web端，在手机端，嵌入网银页面，影响界面美观<br>
+                </p>
+            </section>
+            <section style="text-align: left">
+                 <p>     支付流程<br>
+              用户在交易界面上，提交订单到交易系统中； 交易系统确认订单无误后，请求支付系统进行结算。这是在交易系统做的，后面工作就进入支付系统。<br>
+              用户被引导到收银台页面，让用户确认交易金额，选择支付方式，调用支付系统接口。<br>
+支付系统接收到支付请求，验证请求的各个字段是否有问题，确认无误后，调用支付网关执行支付。<br>
+支付网关请求浦发银行的快捷支付接口执行支付。<br>
+
+                </p>
+
+            </section>
+            <section style="text-align: left">
+                 <p>     支付流程<br>
+             
+支付网关接收到支付结果报文后，对结果报文做解析，获取结果，并将结果告知交易系统。这可以通过URL或者RPC调用来实现。<br>
+商城系统收到支付结果后，开始执行后续操作。如果是支付成功，则开始准备出库。这一步在交易系统中处理。<br>
+ 网银支付，和快捷相比，就在第4步，插入一个步骤，将用户导航到网银页面输入支付信息，后续步骤是一样的。在资金流上也是相同的。在第五步获取返回结果上，一般银行就直接同步返回，银联是分为同步和异步返回。<br>
+                </p>
+
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>5.第三方支付</h3>
+            </section>
+            <section style="text-align: left">
+                 <p>     中国第三方支付是特指具备一定实力和信誉保障的第三方独立机构，一般通过和银行合作的方式，提供交易支持工具和平台，实现资金的转移的一种新型支付模式。<br>
+                        目前主要媒介有以互联网为媒介的互联网支付和以手机为媒介的移动支付，以及交易量比较小的预付卡支付和银行卡收单业务。支付工具目前以手机扫描二维码，NFC近场支付为主。<br>
+                        目前央行发放了267张支付牌照，形成了3个梯队。按照市场份额算，支付宝以52.3%居首，财付通以33.7%位列第二， 两家支付巨头共占86%份额，组成第一梯队。8家知名支付企业：拉卡拉，易宝，联动优势，连连支付，平安付，百度钱包，京东支付和快钱，瓜分剩下13%，组成第二梯队。其他的257张支付牌照市场交易额仅1.4%， 大多有牌照支付企业都处于无业务状态。<br>
+                </p>
+
+            </section>
+              <section style="text-align: left">
+                 <p>     <img src="3.jpg"> <br>
+
+                </p>
+
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>6.更多讨论</h3>
+            </section>
+            <section>
+                <p>问题讨论 
+                </p>
+            </section>
+
+        </section>
+        <section>
+            <!--<h4>鸣谢</h4>-->
+            <p>感谢大家观看</p>
+            <p><small>BY : 孙若淇</small></p>
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

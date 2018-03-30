@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    a    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h3>快捷登录&密码登录到底哪个好？</h3>
+            <p id="aaaa">分享人：王佳妮</p>
+        </section>
+        <section id="bbbb">
+            <p>目录</p>
+            <p>一、简述</p>
+            <p>二、具体分析</p>
+            <p>三、总结</p>
+            <p>四、更多讨论</p> 
+        </section>
+        <section>
+        	<section>
+            <h3>一、简述</h3>
+            <p>密码登录：用帐号+密码登录，如果密码正确，证明帐号是你本人的，允许登录</p>
+            <p>快捷登录：通过验证手机号是本人使用后允许登录</p>
+            <p>两者实际上都是通过验证外部标识（手机号码）来取得产品的内部标识（user_id）并登录</p>
+        </section>
+        	
+        </section>
+<section>
+        <section>
+            <h3>二、具体分析</h3>
+        </section>
+        <section>
+            <h4>
+           1.登录的安全性
+            </h4>
+            <p>密码登录：可能因其他网站密码泄露导致撞库，或因用户自身密码设置的太简单而被暴力破解</p>
+            <p>快捷登录：时效性——5分钟失效时间 + 随机性——6位随机码</p>
+            <P>所以，登录的安全性上看，快捷登录绝对更安全</P>
+        </section>
+        <section>
+            <h4>
+            2.登录的便捷性（用户体验）
+            </h4>
+           <p>密码登录：需要输入正确的帐号和密码，较繁琐</p>
+           <p>快捷登录：用户体验较好些，简单方便；注册和登录通常绑在一起，通过短信验证登录，同时会直接注册成账号，简化了登录注册的步骤，提高了注册转化率，不会因为注册繁琐，迫使用户取消注册</p>
+           <P>所以，从用户体验上看，快捷登录也是更优的</P>
+        </section>
+        
+            <section>
+                <h4>3.潜在的风险</h4>
+               <p>（1）信号差的时接收不到短信</p>
+               <p>人满为患的公众场所，WIFI网络一切都ok，不过就是收不到短信，着急得满头大汗等了40秒才收到短信登录成功
+正常情况下，密码登录5秒钟搞定，这时短信登录花了40多秒。显然这时的快捷登录变得不那么快捷。</p>
+            </section>
+             <section>
+               <p>（2）短信是有渠道风险的</p>
+               <p>假设某一天短信供应商宕机，无论用户手机信号有多好，都是收不到验证码的。快捷登录就行不通了，显然需要其他途径供用户登录</p>
+            </section>
+            <section>
+               <p>（3）更换手机号后无法登录</p>
+               <p>产品确保账户安全的情况下，登录后一段时间会是免登录状态，不过不会永久免登录，再次登录时，如果换了手机号，则无法快捷登录</p>
+            </section>
+            <section>
+                <h4>4.维护成本</h4>
+               <p>一条短信渠道商收费，3-8分</p>
+               <P>假设一天登录+注册人数5万，一个月的成本就要7.5W了</P>
+               <p>所以从成本上看，密码登录完胜快捷登录</p>
+            </section>
+</section>
+           
+<section>
+        <section>
+            <h3>三、总结</h3>  
+            <p>如果产品处于快速的发展期，想要更好的注册数据量，更短的用户注册流程，短信验证码登录绝对是最佳选择，但最好在适当的时机引导用户完善密码，同时提供密码登录的入口</p>   
+              <p>当产品已经在稳定的时期，可以将密码登录作为主入口，将快捷登录作为辅助登录的方式，同时引导用户必须完善密码</p>
+        </section>
+     
+        
+</section>  
+
+        <section>
+            <h3>四、更多讨论</h3>
+        </section>
+       
+       
+        <section>
+            <h4>鸣谢</h4>
+            <p id="ccc">感谢大家观看</p>
+            <p id="ccc"><small>BY :王佳妮</small></p>
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He

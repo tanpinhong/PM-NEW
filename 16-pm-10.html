@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h3>浅谈风控及支付风控？</h3>
+            <h4>小课堂【深圳修真院】</h4>
+            <p>分享人：梁樱桃</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <div style="text-align: left;padding-left:125px;">
+            <p>一、小课堂目标</p>
+            <p>二、什么是风控和支付风控</p>
+            <p>三、为什么要了解风控？我们所处的互联网背景</p>
+            <p>四、主要风控场景及产品方规避方案</p>
+            <p>五、参考文献</p>
+            <p>六、更多讨论</p> 
+            </div>
+                   
+        </section>
+        <section>
+            <section>
+                <h3>一、小课堂目标</h3>
+            </section>
+            <section>
+                <p>1.了解互联网产品的风险及风控系统</p>
+                <p>2.在产品设计中保留风控意识</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>二、什么是风控和支付风控</h3>
+            </section>
+            <section>
+                <p>1.风险控制：指风险管理者采取各种措施和方法，消灭或减少风险事件发生的各种可能性，或风险控制者减少风险事件发生时造成的损失。</p>
+                <p>2.支付风控：通过采集交易、渠道、商品、账户、用户等信息，对这些数据进行实时和定时的挖掘分析，识别出各种风险，采取各种措施降低损失。</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>三、为什么要了解风控？我们所处的互联网背景</h3>
+            </section>
+            <section>
+                <img src="./img/pm-10-fengkong/1.jpg" style="width:500px;margin-bottom:80px;">
+            </section>
+            <section>
+                <p><a href="http://www.sohu.com/a/207652321_99931348">盘点2017全球十大数据泄露事件：一件比一件重量级</a></p>
+            </section>
+            <section>
+                <p>可以看到，金融机构、社交平台、B2B电商平台均成为时下数据泄露的重灾区。</p>
+            </section>
+            <section>
+                <p>数据是怎么泄露的？为什么用户可以恶意篡改数据充值流量和话费？在产品设计中哪些环节可能存在危险，如何规避呢？</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>四、主要风控场景及产品方规避方案</h3>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h3>1.账户风险</h3>
+                <p>即盗号，下图是盗号流程</p>
+                </div>
+                <img src="./img/pm-10-fengkong/2.png">
+            </section>
+            <section>
+            <div style="text-align: left;padding-left:25px;">
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp黑客一般把从小网站/APP里拿到的账户信息去尝试登陆大型网站。因为大部分用户，习惯于在多个网站使用同一套账户和密码。如果登录成功，则可以进一步窃取更多的用户信息，比如信用卡信息等。 </p>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp由此可见,撞库攻击本质上是利用用户相同的注册习惯，以大量的用户数据为基础，尝试登陆目标网站，从而窃取更多的用户资料。 这也使得黑客无需进行系统攻击的情况下，即可轻易获取目标用户信息。</p>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp更进一步，黑客们会把这些资料整理后，形成社工库。这个库也日益壮大， 目前有千万规模。除了用户名密码，还有大量的个人隐私也被挖掘出来。比如如家2000万数据泄露，其中包含开房信息；QQ群用户信息泄露、京东2015年初用户信息泄露。这都导致大量的个人隐私被窃取甚至出售。</p>
+                </div>
+            </section>
+            <section>
+            <img src="./img/pm-10-fengkong/3.jpg">  
+            </section>
+            <section>
+                <p>由此可见，账户被窃取，往往是网站防护薄弱和用户安全意识薄弱两种因素导致。那么如何判断账户被盗呢？</p>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:25px;">
+                <h4>账户被盗的判断是需要整合各方数据：</h4>
+                <p> 1.收集用户的登录数据后，需要将本次的登录IP、设备环境等信息与用户的历史数据，积累的黑名单进行比对，来判断本次是否为被盗登录。 </p>
+                <p>2.可以通过用户画像对比（用户历史的购买偏好、登录地址、消费能力、常用收货地等多维度数据），最终认定是否是一次盗号登录</p>
+                <p>3.已经泄露六要素的用户将更可能发生盗卡情形，需要进行及时的拦截。另外对于频繁地同目的地转账以及大额的金额都需要做到实时监控。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:25px;">
+                <h3>2.洗钱风险</h3>
+                <p>常见的网络洗钱手法包括：在线购买游戏点卡、比特币、手机充值卡等物品，再转卖套现；利用未实名第三方支付平台转账，将赃款在银行账户和第三方支付平台之间多次切换；POS机虚构交易套现；</p>
+                <p><a href="https://www.zhihu.com/question/19689062">常见的网络洗钱方法有哪些？如何更好地防范？</a></p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:25px;">
+                <h4>用户在支付系统中涉及到的数据都需要收集整理来支持风控分析。</h4>
+                <p> 包括但不限于：账户数据、订单数据、交易数据、优惠券数据和账务流水等。这些数据在支付数据库中也存在，风控所需要的数据和业务数据略有不同。除了业务数据外，风控还需要收集如下数据： </p>
+                <p>1.用户当前上下文环境，包括用户所用设备的类型、操作系统、IP地址、设备ID、所在地等</p>
+                <p>2.账户，订单等操作实体的状态。风控需要关心这些状态变更的时机，以及变更的时间间隔。例如，用户频繁更改交易密码，超正常频率提交订单等，就不是一个正常的状态。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:25px;">
+                <h3>3.交易风险</h3>
+                <p>支付的交易风险主要是交易过程中的各种恶意行为，而这些行为在电商系统中表现特别突出，包括自动刷单、人工批量下单以及异常大额订单等场景。</p>
+                <p>刷单行为主要来自于黄牛和商家侧，包括小号刷单：商家自己组织注册的或专业刷单机构手中获取的；通过虚拟机/VPN，模拟多台机器访问/不同地区IP访问；刷虚拟物品/低价刷单/商家互刷等</p>
+                </div>
+            </section>
+            <section>
+            <img src="./img/pm-10-fengkong/4.jpg" style="width:450px;margin: 15px 40px;">  
+            <img src="./img/pm-10-fengkong/5.jpg" style="width:400px;"> 
+            </section>
+            <section>
+            <div style="text-align: left;padding-left:25px;">
+            <h4>如何在交易记录中识别出小号、互刷、低价等这些特征？</h4>
+            <p>需要对IP、设备信息、注册内容的重合度等进行监控，还要通过技术手段收集代理和VPN的IP与手机虚拟号来深度认证。</p>
+            </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:25px;">
+                <h3>4.其他风险</h3>
+                <p>a.套现风险：主要指通过网络使用信用卡进行套现，包括虚假购买，自买自卖，退货套现。</p>
+                <p>b.资金风险：主要指第三方支付机构挪用用户沉淀资金的风险</p>
+                <p>c.合规风险：因未遵守相关法律法规导致处罚、声誉受损的风险</p>
+                <p>d.操作风险：内部工作人员操作失误导致的风险</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:25px;">
+                <h3>总结：</h3>
+                <p>互联网给我们的生活带来便利，提高数据和信息传输效率的同时，也正经历着一场前所未有的全球性信息数据安全问题，风控任重而道远。</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>五、参考文献</h3>
+                <div style="text-align: left;padding-left:25px;">
+                <p><a href="http://www.sohu.com/a/207652321_99931348">盘点2017全球十大数据泄露事件：一件比一件重量级</a></p>
+                <p><a href="https://www.zhihu.com/question/19689062">常见的网络洗钱方法有哪些？如何更好地防范？</a></p>
+                <p><a href="http://www.woshipm.com/pd/502457.html">支付风控系统设计：支付风控场景分析(一)</a></p>
+                <p><a href="http://www.woshipm.com/data-analysis/527332.html">支付风控系统设计：风控数据仓库建设（二）</a></p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+            <h3>六、更多讨论</h3>
+        </section>
+        <section>
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            <p><small>BY : 梁樱桃</small></p>
+        </section>
+    </div>
+</div>
+<script>
+    angular.module("myApp", [])
+        .controller('demoCtrl',function ($scope) {
+            $scope.aa='as111111'
+        })
+        .directive('demoOne',function () {
+
+            return{
+                restrict:"AECM",
+                template:'<input type="text" ng-model="aa">',
+                replace: true,
+                scope:{},
+                controller:['$scope',function ($scope) {
+                    $scope.aa='ss1212'
+                }]
+
+
+            }
+        })
+
+</script>
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He

@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h3>第三方支付</h3>
+            <h4>小课堂【深圳修真院】</h4>
+            <p>分享人：梁樱桃</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <div style="text-align: left;padding-left:225px;">
+            <p>一、小课堂目标</p>
+            <p>二、什么是第三方支付？</p>
+            <p>三、为什么要做第三方支付？</p>
+            <p>四、主流第三方支付方式</p>
+            <p>五、接入前的准备（支付宝，微信支付）</p>
+            <p>六、怎样对接支付渠道</p>
+            <p>七、异常流程处理</p>
+            <p>八、参考文献</p>
+            <p>九、更多讨论</p> 
+            </div>      
+        </section>
+        <section>
+            <section>
+                <h3>一、小课堂目标</h3>
+            </section>
+            <section>
+            <div style="text-align: left;padding-left:225px;">
+                <p>1.了解第三方支付及主流第三方支付方式</P>
+                <P>2.了解接入前准备及对接流程</P>
+                <P>3.异常流程处理</P>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>二、什么是第三方支付？</h3>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p style="font-size:25px">1.定义：第三方支付是指具备一定实力和信誉保障的独立机构，采用与各大银行签约的方式，通过与银行支付结算系统接口对接而促成交易双方进行交易的网络支付模式。</p>
+                <p style="font-size:25px">2.第三方支付流程：在第三方支付模式，买方选购商品后，使用第三方平台提供的账户进行货款支付（支付给第三方），并由第三方通知卖家货款到账、要求发货；买方收到货物，检验货物，并且进行确认后，再通知第三方付款；第三方再将款项转至卖家账户。</p>
+                </div>
+                <img src="./img/pm-10-payment/1.jpg">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>三、为什么要做第三方支付？</h3>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>1. 对商家而言，通过第三方支付平台可以规避无法收到客户货款的风险，同时能够为客户提供多样化的支付工具。尤其为无法与银行网关建立接口的中小企业提供了便捷的支付平台。</p>
+                <p>2. 对客户而言，不但可以规避无法收到货物的风险，而且货物质量在一定程度上也有了保障，增强客户网上交易的信心。</p>
+                <p>3. 对银行而言，通过第三方平台银行可以扩展业务范畴，同时也节省了为大量中小企业提供网关接口的开发和维护费用。</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>四、主流第三方支付方式</h3>
+            </section>
+            <section>
+                <img src="./img/pm-10-payment/2.jpg">
+            </section>
+            <section>
+                <img src="./img/pm-10-payment/3.jpg">
+            </section>
+            <section>
+                <img src="./img/pm-10-payment/4.jpg">
+                <p style="font-size:20px">数据来自艾瑞统计</p>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;综合上面3大统计数据，我们可以看到第三方支付主要的两大霸主：支付宝与财富通（微信支付为主）</p>
+                </div>
+            </section>
+            <section>
+                <img src="./img/pm-10-payment/9.jpg">
+            </section>
+            <section>
+                <img src="./img/pm-10-payment/10.jpg">
+            </section>
+         </section>
+        <section>
+            <section>
+                <h3>五、接入前准备</h3>
+                <img src="./img/pm-10-payment/7-1.jpg">
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>其他说明：</h4>
+                <p>余额消费及转账限额：</p>
+                </div>
+                <img src="./img/pm-10-payment/12.jpg">
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>各银行限额：</p>
+                </div>
+                <img src="./img/pm-10-payment/8.jpg" style="width:550px;">
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:100px;">
+                <p>二维码扫码支付限额：（2018年4月1日起开始执行）</p>
+                </div>
+                <img src="./img/pm-10-payment/11.jpg">
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>接入形式：</p>
+                <p>SDK嵌入形式：会导致底层数据平台端无法获取，平台可以获得到的就是一个支付结果</p>
+                <p>API的对接形式：平台自己可以监控整个的支付流程，包含支付中发生的异常情况监测，比如响应超时的情况等；还有，需要确认字段信息,支付四要素（姓名、身份证、银行卡号、预留手机号）等</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>六、怎样对接支付渠道</h3>
+                <img src="./img/pm-10-payment/6.png">
+             </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>1. 商务洽谈</p>
+                <p>在大前提的OK的情况下，具体了解其支付业务都有哪些，而平台需要的支付业务都有哪些，然后进行匹配；此外，还要考虑是否需要对接钱包和账户体系等；</p>
+                <p>同时，洽谈范围中非常重要的还需要包含支取渠道收取平台的手续费的问题，还有就是支付渠道的分账是T+1（仅工作日次日）还是D+1（无论工作日与非工作日的次日）等等细节也都是需要在此阶段最终明确的。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>2. 支付流程梳理</p>
+                <p>返回机制：同步OR异步？</p>
+                <p>接入形式：SDK嵌入形式还是API对接形式</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>3. 技术接入：</p>
+                <p>比较核心的内容就是”支付“和”对账“：关于支付主要考虑支付在交易流程中如何调用来唤起支付，而对账主要是进行公司内部对账、公司与商家对账、公司与支付渠道对账的数据记录。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>4. 测试上线</p>
+                <p>在遍历了全部业务流程的全部支付场景无误之后（包含异常流程的测试；比如故意吧四要素信息填写错了，银行卡余额不足来测试等等），完成测试，并确定支付渠道产品上线。产品上线后，还需要一段时间的跟踪验证，对于出现的线上问题及时修复和处理，以保证支付渠道无BUG。</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>七、异常流程处理</h3>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p> 1.单边帐：对于一笔交易，商户端和用户端的结果不一致</p>
+                <p>处理方案：</p>
+                <p> a.每一笔交易一定要闭环，即要么支付成功，要么撤销交易，一定不能有交易一直停留在等待用户付款的状态；</p>
+                <p> b.收银系统应该具备独立的手动查询功能作为兜底，输入商户订单号（可从用户手机账单中获得）调用支付宝查询接口获得确切的支付状态。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p> 2.未支付订单处理</p>
+                <p>处理方案：</p>
+                <p> a.及时通过调用撤销接口关闭订单（注意：超过24H的订单无法撤销）；</p>
+                <p> b.为每笔订单设置超时时间，超过时间未支付的订单会自动关闭。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p> 3.用户已经付款成功只是商户端单方面原因（网络问题）导致没有获得支付结果</p>
+                <p>处理方案：加一个弹窗和用户确认支付结果，如果用户已经支付成功，先退款然后让用户再次支付。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p> 4.分享到微信的支付宝支付页面无法自动唤起支付宝客户端</p>
+                <p>处理方案：加一个弹窗引导用户用手机自带浏览器打开支付页面</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p> 5.在iOS系统中，唤起支付宝App支付完成后，不会自动回到浏览器或商户App</p>
+                <p>处理方案：用户可手工切回到浏览器或商户App。</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>八、参考文献</h3>
+                <p><a href="https://pay.weixin.qq.com/wiki/doc/api/index.html">微信支付开发文档</a></p>
+                <p><a href="https://docs.open.alipay.com/">蚂蚁金服开发文档</a></p>
+                <p><a href="http://www.woshipm.com/pmd/885742.html">支付渠道浅析</a></p>
+                <p><a href="http://news.sina.com.cn/c/nd/2017-12-28/doc-ifyqcwaq5078257.shtml">二维码限额</a></p>
+            </section>
+        </section>
+        <section>
+            <section>
+            <h3>九、更多讨论</h3>
+        </section>
+        <section>
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            <p><small>BY : 梁樱桃</small></p>
+        </section>
+    </div>
+</div>
+<script>
+    angular.module("myApp", [])
+        .controller('demoCtrl',function ($scope) {
+            $scope.aa='as111111'
+        })
+        .directive('demoOne',function () {
+
+            return{
+                restrict:"AECM",
+                template:'<input type="text" ng-model="aa">',
+                replace: true,
+                scope:{},
+                controller:['$scope',function ($scope) {
+                    $scope.aa='ss1212'
+                }]
+
+
+            }
+        })
+
+</script>
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He

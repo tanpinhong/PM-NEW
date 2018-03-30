@@ -1,0 +1,283 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+    <!--<img src="././img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">-->
+    <map name="pttmap">
+        <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com/" alt="" target="_blank">
+    </map>
+    <div class="reveal center slide" role="application" data-transition-speed="default" data-background-transition="fade">
+        <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.754714);">
+            <section class="present" style="top: 221.5px; display: block;">
+                <h2>如何设计移动端产品？</h2>
+                <p>分享人：赵春蕾</p>
+            </section>
+            <section hidden="" aria-hidden="true" class="future" style="top: 135px; display: block;font-size: 20px;">
+                <p>目录 </p>
+                <p>1.降低认知负荷</p>
+                <p>2.满足用户的控制感</p>
+                <p>3.界面的无障碍设计</p>
+                <p>4.导航栏设计</p>
+                <p>5.导航中的动效设计</p>
+                <p>6.关注用户的首次启动</p>
+                <p>7.加快App的响应速度</p>
+                <p>8.提高内容的展示质量</p>
+                <p>9.触控设计</p>
+                <p>10.情感化设计</p>
+                <p>11.优化消息推送</p>
+                <p>12.针对移动设备的优化</p>
+                <p>13.App的设计应适应新兴市场</p>
+                <p>14.测试和反馈</p>
+            </section>
+            <section class="future" aria-hidden="true" style="top: 330px; display: none;">
+                <h3>
+                    当设计移动端产品时，有很多事情需要考虑，在今天小课堂中，总结了移动端产品设计中的一些建议，希望能给大家以启发。
+                </h3>
+            </section>
+            <section class="future" aria-hidden="true" style="top: 330px; display: none;">
+            <section>
+                <p> 1、降低认知负荷<br>
+                <p>1.1整理界面</p>
+                <p>1.2满足用户的控制感</p>
+                <p>1.3界面的无障碍设计</p>
+                <img src="./img/pm01/1.png"><br>
+                右图所示的tab bar明显优于左图（图像来源：Apple）
+                </section>
+                <section class="future" aria-hidden="true" style="top: 330px; display: none;">
+                    <img src="./img/pm01/2.gif"><br>
+                    点击后，展开更多隐藏项（图片来源：Ramotion）
+                </section>
+                <section>
+                    <img src="./img/pm01/3.png"><br>
+                    任务分解后，降低了用户对任务的难度预期,减少用户输入（图片来源：Murat Mutlu）
+                </section>
+                <section>
+                    <p>2. 满足用户的控制感<br>
+                    <p>2.1交互元素可预测、符合用户习惯</p>
+                    <p>2.2请正确使用“返回”按钮</p>
+                    <p>2.3有效的错误信息</p>
+                </section>
+                <section>
+                    <p><img src="./img/pm01/4.png"><br>
+                        Spotify的错误页面只有“出现错误”字样，无任何解决方案<br>
+                     错误信息应包含以下内容：<br>
+                       1 出了什么错，可能的原因；<br>
+                       2为了修复错误，接下来用户要怎么做。
+                    </p>
+                </section>
+                <section>
+                    <p>3. 界面的无障碍设计<br>
+                    <p>3.1照顾色盲人群</p>
+                    <p>3.2动效是可选项</p>
+                    <img src="./img/pm01/5.png"><br>
+                    色盲用户无法区分红色突出的字段,同时使用标签、icon和颜色传递信息
+                </section>
+                <section>
+                <p>4.导航栏设计<br>
+                <p>4.1使用标准化的导航组件</p>
+                <p>4.2不要混用导航模式</p>
+                <p>4.3导航栏可见</p>
+                <p>4.4标注当前的位置或层级标题</p>
+                </section>
+                <section>
+                    <img src="./img/pm01/6.gif"><br>
+                    iOS的tab bar（图片来源：Ramotion）
+                </section>
+                <section>
+                    <img src="./img/pm01/7.png"><br>
+                    Apple出品的Health App提供了当前页面的信息
+                </section>
+                <section hidden="" aria-hidden="true" class="future" style="top: 135px; display: block;font-size: 30px;">
+                    <p>5. 导航中的动效使用<br>
+                        动画是描述状态转换的最佳工具。动画能帮助用户理解页面之间的状态变化、触发了什么、以及如何恢复。<br>
+                        <img src="./img/pm01/8.gif"><br>
+                        功能动画可以有效地引导用户注意力，使复杂的转化更好理解（图片来源：Jae-seong, Jeong）
+                    </p>
+                </section>
+                <section>
+                    <p>6.关注用户的首次启动——第一印象决定最终印象<br>
+                    <p>6.1 避免登录才能使用</p>
+                    <p>6.2优化用户引导页的用户体验</p>
+                    <p>6.3不要在首次启动时，要求用户进行任何设置操作</p>
+                    <p>6.4避免在一开始就请求各类权限</p>
+                </section>
+                <section>
+                    <img src="./img/pm01/14.jpg"><br>
+                    Duolingo引导页的快速测试
+                </section>
+                <section>
+                    <p>7. 加快App的响应速度<br>
+                    <p>7.1 在可见区域内加载内容</p>
+                    <p>7.2 显示加载时间</p>
+                    <p>7.3分散用户注意力</p>
+                    <p>7.4 加载占位图（skeleton screen）</p>
+                </section>
+                <section>
+                    <img src="./img/pm01/9.gif"><br>
+                    精细制作的动画能给用户小惊喜（图片来源：UI8）
+                </section>
+                <section>
+                    <img src="./img/pm01/10.gif"><br>
+                    占位符能立刻显示（图片来源：Tandem Seven）<br>
+                    当App加载数据时，占位图能给用户一种App响应快、性能好的印象。loading时的“菊花”只是告知用户正在发生什么，而占位图则能显示更细致的加载进度。
+                </section>
+                <section>
+                    <p>8. 提高内容的展示质量<br>
+                    <p>8.1 提高文本的可读性易读性</p>
+                    <p>8.2 高清图片和合适的宽高比</p>
+                    <p>8.3视频的纵向播放</p>
+                </section>
+                <section>
+                    <img src="./img/pm01/11.jpg"><br>
+                    光线较强时，低对比度的界面几乎无法阅读
+                </section>
+                <section>
+                    <img src="./img/pm01/12.gif"><br>
+                    Facebook的直播支持纵向播放，同时可以查看用户留言/评论（图片来源：Giphy）
+                </section>
+                <section>
+                    <p>9.触控设计<br>
+                    <p>9.1为手指设计，而不是为光标设计</p>
+                    <p>9.2拇指触控区域</p>
+                    <p>9.3交互反馈</p>
+                </section>
+                <section hidden="" aria-hidden="true" class="future" style="top: 135px; display: block;font-size: 20px;">
+                    <img src="./img/pm01/13.png"><br>
+                    屏幕尺寸越大，自然拇指区的相对面积越小。（图片来源：Smashing Magazine）<br>
+                    设计App时应考虑到所有区域：<br>
+                    绿色区域是导航栏或频繁的交互操作的最佳位置（如操作按钮）；<br>
+                    红色区域是潜在的危险选项的最佳位置（例如“删除”或“清空”），用户不太可能误触到此区域。
+                </section>
+                <section>
+                    <img src="./img/pm01/13.gif"><br>
+                    利用动画及时的给用户反馈（图片来源：Vadim Gromov）
+                </section>
+                <section>
+                    <p>10.情感化设计<br>
+                    <p>10.1. 个性化体验</p>
+                    <p>10.2. 可爱的动画</p>
+                </section>
+                <section>
+                    <p>11. 优化消息推送<br>
+                    <p>11.1. 推送有价值的内容</p>
+                    <p>11.2. 避免在短时间内集中发送多条通知</p>
+                    <p>11.3. 把控消息推送的时机</p>
+                    <p>11.4. 考虑其他渠道传递消息</p>
+                </section>
+                <section>
+                    <p>12. 针对移动设备的优化<br>
+                    <p>12.1. 考虑到中断情况</p>
+                    <p>12.2. 利用移动设备的功能特点</p>
+                    <p>12.3. 拓展产品渠道</p>
+                </section>
+                <section>
+                    <p>13. App的设计应适应新兴市场<br>
+                    <p>13.1. 落后的网络普及</p>
+                    <p>13.2. 有限的数据</p>
+                    <p>13.3. 有限的设备性能</p>
+                    <p>13.4. 结合当地文化和美学特点</p>
+                    <p>13.5. 结合区域特点设计产品功能</p>
+                </section>
+                <section>
+                    <p>14. 测试和反馈<br>
+                    <p>14.1. 反馈机制</p>
+                    <p>14.2. 设计是一个永无止境的过程</p>
+                </section>
+                <section>
+                    <h4>总结</h4>
+                    <p>伟大的产品是用户体验和功能的完美结合，这是我们不懈追求的目标。但不要指望着App的初始版本就是完美的，相反，我们应将产品视为不断改进、不断调整的长期项目。冰冻三尺非一日之寒，结合数据、测试、反馈、需求分析等手段，来不断改进产品，不断优化体验，才是产品设计的正确姿势。</p>
+                </section>
+
+
+
+            </section>
+
+
+
+
+
+            <section>
+
+
+
+
+
+                <h4>鸣谢</h4>
+                <p>感谢大家观看</p>
+                <p><small>BY : 赵春蕾</small></p>
+            </section>
+        </div>
+        <div class="backgrounds"><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background stack future" data-loaded="true" style="display: block;"><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="slide-background stack future" style="display: none;"><div class="slide-background present" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="slide-background stack future" style="display: none;"><div class="slide-background present" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="slide-background stack future" style="display: none;"><div class="slide-background present" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="slide-background future" style="display: none;"></div></div>
+        <div class="progress " style="display: block; "><span style="width: 0px; "></span></div>
+        <aside class="controls " style="display: block; ">
+            <button class="navigate-left" aria-label="previous slide "></button>
+            <button class="navigate-right enabled" aria-label="next slide "></button>
+            <button class="navigate-up" aria-label="above slide "></button>
+            <button class="navigate-down" aria-label="below slide "></button>
+        </aside>
+        <div class="slide-number " style="display: none; "></div>
+        <div class="speaker-notes" data-prevent-swipe=""></div>
+        <div class="pause-overlay "></div>
+
+    <div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px);">
+        如何设计移动端产品？
+                分享人：赵春蕾
+            </div></div>
+    <script src="./用户体验五要素_files/head.min.js.下载"></script>
+    <script src="./用户体验五要素_files/reveal.js.下载"></script>
+    <script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc "或"o "键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+    </script>
+
+
+</body></html>

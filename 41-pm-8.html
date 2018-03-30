@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h3>基于场景的设计</h3>
+            <h4>小课堂【深圳修真院】</h4>
+            <p>分享人：梁樱桃</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <div style="text-align: left;padding-left:225px;">
+            <p>一、小课堂目标</p>
+            <p>二、什么是基于场景的设计？</p>
+            <p>三、为什么要基于场景做设计</p>
+            <p>四、怎样基于场景做设计？</p>
+            <p>五、参考文献</p>
+            <p>六、更多讨论</p> 
+            </div>
+                   
+        </section>
+        <section>
+            <section>
+                <h3>一、小课堂目标</h3>
+            </section>
+            <section>
+                <p>1.了解什么是基于场景的设计方法</P>
+                <P>2.学会如何基于场景去做产品设计</P>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>二、什么是基于场景的设计？</h3>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>1.定义：基于用户达到某个目标的一系列场景的判断与分析，理解用户每一场景的痛点及需求，结合上文场景，预期用户下一步的目标及意图，通过设计来帮助用户提高或让用户引起情感上的感动/共鸣等目标。</p>
+                <p>2.要点：基于场景，理解需求，预期意图，进行设计</p>
+                <p>3.案例：以看电影为例，在整个看电影的过程中，涉及到的主要场景有以下六个：线上买票－去电影院－线下取票－检票入座－观影－评论吐槽。</p>
+                </div>
+            </section>
+            <section>
+                <img src="./img/PM-08-scene design/1.png">
+                <p style="font-size:25px">格瓦拉app设计了一个基于场景的功能：当用户在格瓦拉购票成功后，首页会出现一个人偶小浮标，在不同场景下点击该浮标，会出现不同的内容，例如在去电影院的场景下显示影院地理位置以及滴滴打车入口；线下取票场景显示取票二维码可以快捷取票；线下取票后再点击小浮标显示电影开始时间以及座位号；观影后显示别人的评论以及吐槽入口引导用户去评论。</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>三、为什么要基于场景做设计</h3>
+            </section>
+            <section>
+                <p>1.移动端的崛起使得用户的场景千变万化，通过分析用户在不同使用场景中产品的使用情况，能够更好的了解用户的需求和痛点，给出更好的设计方案。</p>
+                <p>2.中小型互联网公司根本没有那么多时间和金钱去进行大规模的用户调研，且只关注几种典型用户会限制产品的发展。</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>四、怎样基于场景做设计？</h3>
+            </section>
+            <section>
+                <img src="./img/PM-08-scene design/2.png" >
+                <p style="font-size:20px">场景设计四步曲：场景列举、机会点挖、设计策略、衡量标准</p>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>1.列举场景</h4>
+                <p>a.定义：谁（who），在什么时候(when)，在什么地方(where)，做了什么事情(do)，周围环境怎么样(how)。</p>
+                <p style="font-size:25px">例子：用户(who)夜间(when)在陌生的路上(where)开车(do)对路线不熟悉且路况不好(how)</p>
+                <p>b.线上场景VS线下场景：“where”不同</p>
+                <p style="font-size:25px">线下场景的“where”：现实中的位置，可通过GPS，蓝牙，Wi-Fi钥匙等来检测</p>
+                <p style="font-size:25px">线上场景的“where”：app中的某个页面，例如首页，支付页面，商品详情页等。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>c.关键场景获取：通过操作流程图来依次提取其中的关键场景</p>
+                <p style="font-size:25px">案例：看电影的流程为：买电影票－去电影院－取票－检票找座位－观影－出影院－评论吐槽，</p>
+                </div>
+                <img src="./img/PM-08-scene design/3.png" >
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>根据流程抽取列举出看电影涉及到的关键场景：</p>
+                <p style="font-size:25px">1.美团电影页面(where)购票(do)；</p>
+                <p style="font-size:25px">2.电影开始前(when)乘车(do)前往电影院的路上(where)；</p>
+                <p style="font-size:25px">3.观影前(when)在电影院(where)通过自助取票机取票（do）； </p>
+                <p style="font-size:25px">4.观众(who)拿着爆米花可乐等零食手忙脚乱(how)地掏出电影票(do)在入口(where)排队检票(do)； 检票工作人员(who)在入口处(where)等到放映前5分钟(when)开始检查每位观众的电影票(do)并撕掉联(do)； </p>
+                <p style="font-size:25px">5.观众(who)拿着爆米花可乐3D眼镜等手忙脚乱地(how)查看电影票上的座位号(do)并在昏暗的灯光下越过同排其他顾客(how)找到自己的座位(do)；</p>
+                <p style="font-size:25px">6.坐在座位上(where)将手中的爆米花，可乐，背包等放置好(how)，戴上眼镜开始观影(do)</p>
+                <p style="font-size:25px">7.观影结束后(where)拿好自己的东西走出影厅(where)将眼镜还给工作人员(do)，扔掉手里的垃圾(do)，排队上厕所(do)；</p>
+                <p style="font-size:25px">8.回家的路上(where)和朋友吐槽剧透(do)；在朋友圈(where)晒观影照片(do)；在购票app上(where)评价吐槽(do)</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>2.机会点挖掘</h4>
+                </div>
+                <img src="./img/PM-08-scene design/5.png" >
+             </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>a. 通过分析当前场景用户需求挖掘机会点</p>
+                <p style="font-size:25px">案例：举一个微信语音聊天的例子，当手机处于音量静音的状态(how)在聊天页面(where)点击语音信息(do)，用户的需求是清晰听到对方发送的语音信息，但由于手机处于音量静音状态听不到语音且用户无法快速判断为什么没有声音，微信基于该场景的痛点及需求设计了这样的方案：当用户处于该场景下，会有弹框提示用户调高音量后播放</p>
+                </div>
+                <img src="./img/PM-08-scene design/6.png" >
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>b.通过对用户下一步目标的预期来寻找机会点</p>
+                <p style="font-size:25px">首先需要对上文场景进行判断，结合对当前场景的描述与分析，预期用户接下来的行为，从而寻求当前场景的设计机会点。</p>
+                <p>如何对下一步进行预测：</p>
+                <p style="font-size:25px">1.通过成组的动作进行预期，例如，复制－粘贴、吃饭→付款；</p>
+                <p style="font-size:25px">2.通过用户的认知流程进行预期，例如，拍照时摆好姿势不动→准备完毕可以拍照；</p>
+                <p style="font-size:25px">3.通过产品的使用流程进行预期，例如截图→分享、买票→取票。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>案例：谷歌的hangouts</p>
+                <img src="./img/PM-08-scene design/7.png" style="width:400px">
+                <p style="font-size:25px">场景描述：用户在聊天页面(where)聊天的时候(do)收到对方发送的信息“where are you”(how)，根据对当前场景的判断，预期到用户下一步的行为是回复对方自己所在的位置。</p>
+                <p style="font-size:25px">“怎样帮助用户在接下来更加方便快捷地回复所处位置”，是当前场景的设计机会点。hangouts将该机会点转化为如下设计点：当检测到对方发送的文字中包含“where are you”的时候就会在原有页面中插入定位按钮，点击定位按钮后发送自己的位置给对方</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>3. 设计策略</h4>
+                <p style="font-size:25px">以贴心为目标的设计策略，以高效为目标的设计策略，以情感化为目标的设计策略</p>
+                </div>
+                <img src="./img/PM-08-scene design/8.png" >
+             </section>
+             <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>高效：</h4>
+                <p>以高效为目标的设计策略共有五点，根据行动点明确程度依次为：行动点前置插入，行动点替换，行动相关推送，突出行动点，自动执行。这五个设计策略都能够不同程度地提高用户操作效率，接下来通过案例依次介绍一下每个设计策略。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>行动点前置插入</p>
+                <p style="font-size:25px">指将预期到的用户下一步的行为点前置到当前场景，使得用户在需要的时候就能直接操作，达到缩短关键流程，提高操作效率的作用。形式多数为直接插入。</p>
+                <p>如何对下一步进行预测：</p>
+                <p style="font-size:25px">上面提到的谷歌hangouts就属于行动点前置插入的典型案例</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>行动点替换</p>
+                <p style="font-size:25px">一般是指当前场景下某个行动点的功能不再适合当前场景，因而将其替换为另外的需求较强的行动点，位置不发生变化，而功能变化，为用户提供当前场景需要的或与下一步意图相关的行动点能够帮助用户提高操作效率</p>
+                <img src="./img/PM-08-scene design/9.png" style="width:450px">
+                <p style="font-size:25px">以Mono首页为例，当用户在首页上滑向下浏览时，导航栏的“推荐”按钮替换为“返回顶部”，在不改变布局的情况下实现了高效操作的目的</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>行动点相关推送提示</p>
+                <p style="font-size:25px">根据用户当前或下一步的行为提供相关推送或提示，以辅助用户进行决策行动，提高用户操作效率。</p>
+                <p style="font-size:25px">上面提到的微信聊天页面音量静音状态下听取语音消息的案例，就是通过预测用户下一步的行为，而提供了相关的提示，以使用户减少思考成本，快速达到下一步目标</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>突出行动点</p>
+                <p style="font-size:25px">预期到用户下一步的行为后通过颜色或提示等方式对行动点进行突出，吸引并提醒用户点击，减少思考成本，提高操作效率。</p>
+                <img src="./img/PM-08-scene design/10.png">
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>直接执行</p>
+                <p style="font-size:25px">适用于一些需求较为明确的行动点，做用户之所想，提高操作流畅性及效率。</p>
+                <img src="./img/PM-08-scene design/11.png">
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>贴心：</h4>
+                <p style="font-size:25px">通过机会点挖掘阶段对用户当前场景需求分析以及对下一步目标的预期，设计阶段需要通过在细节上的设计一定程度上满足用户当前场景下的情感需求，或辅助用户达到下一步的目标，让用户感到贴心与感动。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>案例：导航app的HUD模式</p>
+                <img src="./img/PM-08-scene design/12.png">
+                <p style="font-size:25px">用户在行车过程中需要集中精力注视前方，尤其是夜间行车的时候更需要集中注意力，而现有手机导航需要不时低头查看且显示屏幕小，导航app的HUD模式能够很好地满足该场景下的痛点与需求，可以在夜间将导航信息投影在前车窗上，使用户无需低头就可以查看</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>情感化：</h4>
+                <p style="font-size:25px">与上文以贴心为目标的设计策略类似，以情感化为目标的设计策略同样需要具体场景具体分析，主要从细节出发满足用户在当前场景下的情感需求，让用户感动，给用户惊喜。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>案例：豆瓣的上午好／下午好／晚上好”</p>
+                <img src="./img/PM-08-scene design/13.png" style="width:400px">
+                <p style="font-size:25px">豆瓣首页轮播图下面会根据时间显示“上午好／下午好／晚上好”的情感化打招呼内容，并且当用户向下浏览内容时，认为用户当前场景下不再需要搜索而是依次浏览内容，因此情感化的打招呼内容吸顶替换搜索框。通过对当前场景需求的判断，采用情感化细节带给用户感动与惊喜。</p>
+                </div>
+            </section>
+             <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>4. 衡量标准</h4>
+                </div>
+                <img src="./img/PM-08-scene design/14.png" >
+             </section>
+             <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>效率：该方案是否能够缩短关键流畅，减少思考成本，从而实现提高操作效率的目的？</p>
+                <p>惊喜、感动：方案能否想用户之所想，通过情感化及贴心的细节给用户惊喜，让用户感动？</p>
+                <p>期待：当用户下次再处于该场景中，是否会对你的方案产生期待？</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h3>总结：</h3>
+                <p> 1.基于场景的设计是指基于对当前场景的判断与分析，理解用户痛点与需求，结合前后文预期用户的目标及意图，通过设计提高操作效率，给用户惊喜与感动，使用户期待。  </p>
+                <p>2.如何基于场景做设计：</p>
+                <p> a.通过流程图列举场景;</p>
+                <p> b.通过分析当前场景需求或结上下文预期用户下一步行为来挖掘机会点;</p>
+                <p> c.将机会点通过设计策略转化为设计点;</p>
+                <p>d.通过衡量标准对设计点进行衡量判断以及优化。</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>五、参考文献</h3>
+                <p><a href="http://blog.csdn.net/zoeyyeoz/article/details/51182501">如何基于场景设计产品</a></p>
+                <p><a href="http://www.woshipm.com/pd/103420.html">以场景为中心的产品设计方法</a></p>
+                <p><a href="http://www.sj33.cn/digital/ued/201608/46100.html">基于场景的设计方法</a></p>
+            </section>
+        </section>
+        <section>
+            <section>
+            <h3>六、更多讨论</h3>
+        </section>
+        <section>
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            <p><small>BY : 梁樱桃</small></p>
+        </section>
+    </div>
+</div>
+<script>
+    angular.module("myApp", [])
+        .controller('demoCtrl',function ($scope) {
+            $scope.aa='as111111'
+        })
+        .directive('demoOne',function () {
+
+            return{
+                restrict:"AECM",
+                template:'<input type="text" ng-model="aa">',
+                replace: true,
+                scope:{},
+                controller:['$scope',function ($scope) {
+                    $scope.aa='ss1212'
+                }]
+
+
+            }
+        })
+
+</script>
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He

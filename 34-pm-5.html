@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    a    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h3>什么是登录注册？</h3>
+            <p id="aaaa">分享人：王佳妮</p>
+        </section>
+        <section id="bbbb">
+            <p>目录</p>
+            <p>1.为什么需要登录注册？</p>
+            <p>2.登录注册的方式有哪些以及特点？</p>
+            <p>3.登录注册如何具体设计？</p>
+            <p>4.参考文献</p>
+            <p>5.更多讨论</p>
+        </section>
+        <section>
+        	<section>
+            <h3>1.为什么需要登录注册？</h3>
+        </section>
+        	<section>
+           <p>（1）满足用户个性化需求</p>
+		</section>
+        <section>
+           <p>（2）满足用户隐私需求</p>
+</section>
+<section>
+    <p>（3）方便产品提供更好的服务</p>
+</section>
+
+        </section>
+<section>
+        <section>
+            <h3>2.登录注册的方式有哪些以及特点？</h3>
+            <img src="./img/pm-wjn/登录注册.png">
+        </section>
+        <section>
+            <h4>
+           （1）登录：
+           <p>A.帐号密码：（手机号/邮箱号/独立账号+密码）</p>
+            </h4>
+            <div style="display: flex;">
+            <img src="./img/pm-wjn/帐号密码.png"  style="width: 32%; height: 32%; margin: 0 2rem;">
+            <img src="./img/pm-wjn/帐号密码1.png"  style="width: 32%; height: 32%; margin: 0 2rem;">
+            </div>
+        </section>
+        <section>
+            <h4>
+             <p>B.快捷登录：（手机号+动态密码）</p>
+            </h4>
+        </section>
+            <section>
+                <h4><p>C.第三方授权登录：(以授权社交软件居多，例如：QQ、微信、新浪微博等)</p>
+           </h4> 
+            </section>
+             <section>
+                <h4><p>D.一号多用：一个账号，(多个软件都可以使用登录，和第三方类似)</p>
+           		</h4>   
+           		<img src="./img/pm-wjn/一号多用.png" style="width: 30%; height: 32%;">
+            </section>
+             <section>
+                <h4><p>E.指纹、手势登录：(一般都用于二次登录，为用户的帐号多加道保险)</p>
+           </h4>  
+            </section>
+                    <section>
+            <h4>
+           （2）注册：
+           <p>A.手机注册</p>
+            </h4>
+        </section>
+        <section>
+            <h4>
+             <p>B.邮箱注册</p>
+            </h4>
+        </section>
+            <section>
+                <h4><p>C.用户名注册</p>
+           </h4> 
+            </section>
+             <section>
+                <h4><p>D.昵称+手机号注册</p>
+           </h4>   
+            </section>
+             <section>
+                <h4><p>E.不需要单独注册：第三方、手机动态登录、一号多用</p>
+           </h4>  
+            </section>
+</section>
+           
+<section>
+        <section>
+            <h3>3.登录注册如何具体设计？</h3>      
+        </section>
+        <section>
+            <p>（1）首先思考几个问题：</p>
+            <p>A.为谁设计登录注册——用户画像</p>
+            <p>B.是否一定要登录注册——产品定位</p>
+            <p>C.是否需要独立的账户体系——产品定位、发展战略</p>
+            <P>D.哪些操作需要用户登录——产品功能</P>
+            
+        </section>
+        <section>
+            <p>（2）其次根据产品类型来看设计需求：</p>
+        </section>
+        <section>
+            <p>A.社交型、社区型产品——需要用户大量传播</p>
+            <img src="./img/pm-wjn/抖音.png" style="width: 32%; height: 32%;">
+        </section>
+        <section>
+            <p>B.交易类产品——安全为上</p>
+        </section>
+        <section>
+            <p>C.工具型产品——提供服务</p>
+            <img src="./img/pm-wjn/地图.png" style="width: 32%; height: 32%; margin-left: 2rem;">
+            <img src="./img/pm-wjn/照相.png" style="width: 32%; height: 32%;margin-left: 2rem;">
+        </section>
+        <section>
+            <p>（3）最后举例说明：</p>
+        </section>
+        <section>
+            <p>A.滴滴打车</p>
+            <img src="./img/pm-wjn/滴滴.png" style="width: 32%; height: 32%;">
+        </section>
+         <section>
+            <p>B.大众点评</p>
+            <img src="./img/pm-wjn/大众点评.png" style="width: 32%; height: 32%;">
+        </section>
+</section>  
+<section>
+    
+             <section><h3>4.参考文献</h3></section>
+             <section><p>（1）在APP设计中，不同种的注册方式和登录方式</p>
+             	</section>   
+    
+</section>
+        <section>
+            <h3>5.更多讨论</h3>
+        </section>
+       
+       
+        <section>
+            <h4>鸣谢</h4>
+            <p id="ccc">感谢大家观看</p>
+            <p id="ccc"><small>BY :王佳妮</small></p>
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He

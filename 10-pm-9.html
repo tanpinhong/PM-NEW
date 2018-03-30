@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>什么是消息推送</h2>
+
+            <p>分享人：李晗</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <p>1.什么是消息推送</p>
+            <p>2.推送消息的类型</p>
+            <p>3.消息推送的时机与场景</p>
+            <p>4.个性化推送</p>
+            <p>5.消息推送的策略</p>
+            <p>6.消息推送的数据指标</p>
+            <p>7.参考文献</p>
+            <p>8.更多讨论</p>
+        </section>
+        <section>
+            <section>
+                <h3>1.什么是消息推送</h3>
+            </section>
+            <section>
+                <p>消息推送（Push）指运营人员通过自己的产品或第三方工具对用户移动设备进行的主动消息推送。用户可以在移动设备锁定屏幕和通知栏看到push消息通知，通知栏点击可唤起APP并去往相应页。</p>
+            </section>
+                <section>
+                <p>优点：
+                    1.提高产品活跃度：</p>
+                    <p> APP消息推送可以直接唤醒APP，那么APP消息是获得用户特别关注，并打开APP激活使用的绝佳途径。
+                </p>
+                <p>2.带动功能模块使用率</p>
+                    <p>根据二八理论，大多数用户会只使用也习惯于20%的核心功能，再好的功能在起初也要引导用户，让用户感知到新的功能或营销活动。</p>
+                <p>3.增加用户粘度/带来交易订单</p>
+                    <p>合理的推送无疑能抓住用户需求，增加使用粘性，对用电商类来说带来的就是订单交易量。
+                </p>
+                    <p> 4.唤醒沉睡的用户</p>
+                    <p>  可以针对性的对沉睡用户发推送信息，有效挽留用户流失。</p>
+
+            </section>
+            <section>
+                <p>不利：</p>
+                <p> 1.对用户形成打扰，招致卸载。提高活跃度的同时也能招致高卸载率。</p>
+                <p>2.用户对推送消息变得麻木。</p>
+                <p>3.产品丧失用户信任。用户下载使用代表着对APP的信任，透支这份信任必然用户会丧失好感。</p>
+                <p> 4.唤醒沉睡的用户</p>
+                <p>  可以针对性的对沉睡用户发推送信息，有效挽留用户流失。</p>
+
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>2.推送消息的类型</h3>
+                <img src="..\img\pm-pic\push.png">
+            </section>
+            <section>
+                <p>推送形式：</p>
+                <img src="..\img\pm-pic\leixing.png">
+            </section>
+        </section>
+
+
+        <section>
+            <section>
+                <h3>3.消息时机与场景</h3>
+                <img src="..\img\pm-pic\time.png">
+            </section>
+            <section>
+                <p>不同app用户群不同，push时机也会不一样，但总体而言，push的时间应在人相对闲暇，即与人最高频次使用手机的时间吻合，上班路上及早餐时间（9-10点）、午休（12-14点）、下班路上（6-7点）、睡前（21-22点）四个时机发送较佳。</p>
+            </section>
+            <section>
+                <p>同时要根据用户的使用场景给用户进行消息push</p>
+                <p>比如新闻类客户端，时事热点的消息是不定时会发生的，当然根据时效性来推送消息。像墨迹天气这样的APP，对今天的气温，风速，晴雨之类当然最好说早上用户出门前推送了。视频播放类和教育学习类应用在夜晚使用比例较高，因此在推送时机上运营人员更应该重视夜晚时段；新闻类应用在上午尤其是上班路上的时间被启动次数最多，可以在这个时段推。比如体育赛事，比赛开始前给用户推送提示，哪怕是深夜的非常规时段。</p>
+            </section>
+            <section>
+            另外，因为信息轰炸现在的用户对消息推送权限的严格管控，安装APP时会关闭了消息推送功能。所以需要引导用户打开，一般选择在系统更新、有重要业务功能上线的时机。 </section>
+        </section>
+
+
+        <section>
+            <section>
+                <h3>4.个性化推送</h3>
+            </section>
+            <section>
+                <h3>为什么要个性化推荐</h3>
+                <img src="..\img\pm-pic\personalised.jpg">
+                <p>基于个性化内容的消息推送，点击率增率明显！</p>
+            </section>
+            <section>
+                <p>什么是个性化内容?</p>
+                <p>个性化内容会考虑到用户的场景，并考虑语言、用户生命周期、实时地理位置等等因素。</p>
+
+                比如给一个完成订购飞机票的用户，推送到达当天目的地的酒店优惠或天气信息等。
+                一个音乐APP用户，推送通知她收藏的歌手的发布的新歌。
+                比如你对你金融平台的用户转化率分析，对不同地域，年龄，性别，甚至星座的大数据分析，发现某个群体转化率特别高，那么可以尝试对这样群体的活动做特别的push。
+                <p>个性化内容的特点：内容精准、针对性强，能让用户觉得受到重视。</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>5 消息推送的策略</h3>
+            </section>
+            <section>
+                <p style="font-size: 28px">1.推送频率</p>
+                <p style="font-size: 25px">根据用户使用频次决定消息push频率
+                    产品类型决定使用频次，使用频次决定消息push频率。一般来说，新闻类实时性强，推送频率相对较高，而工具类频率最低。</p>
+                <p style="font-size: 28px">2.标签推送</p>
+                <p style="font-size: 25px">
+                    即给人打标签。基础的用户标签分类主要有设备信息、用户信息、行为信息、优惠信息、其他信息....给每一个用户打上各种不同的标签，再按标签将用户分类，对不同类标签的用户进行差异化消息推送。
+                </p>
+                <p style="font-size: 28px"> 3.账号体系推送（alias推送）</p>
+                <p style="font-size: 25px">利用平台方掌握的姓名、性别、年龄、受教育程度、地域等人口学属性特征，构建用户数据库。对数据库中的用户进行筛选与分类管理，并做针对性推送。</p>
+                <p style="font-size: 28px"> 4.半自动push：</p>
+                <p style="font-size: 25px" >运营人力有限，当推送数量级变大时，就需要建立一个半自动push平台规则，比如包括接受人群、出发条件、运营规则等等，最后由半自动系统发送推送消息。</p>
+                <p style="font-size: 28px"> 5.定义多类push优先级</p>
+                <p style="font-size: 25px"> 运营想发的推送固然很多，营销类消息，功能性消息，个性化消息等。这时候优先级排序就很重要，减少对用户的干扰。</p>
+
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>6：消息推送的数据指标</h3>
+            </section>
+            <section>
+                <p style="font-size: 28px">1.到达率</p>
+                <p style="font-size: 25px">到达率=到达数量/发送数量，到达率低原因主要分两种，一种是技术通道的原因。第二种是用户主动关闭了消息推送。</p>
+                <p style="font-size: 28px">2.打开率（打开人数/到达数）</p>
+                <p style="font-size: 25px">
+
+                </p>
+                <p style="font-size: 28px"> 3..转化率</p>
+                <p style="font-size: 25px">比如说一条营销类push，通过push消息把用户吸引打开APP后，用户直接退出了APP还是成功转化成购买行为。</p>
+                <p style="font-size: 28px"> 4.卸载率：</p>
+                <p style="font-size: 25px" >每条push都应该有对应的卸载率，某条推送卸载率=推送1h后卸载人数/到达人数。push在拉高日活的同时也在拉高卸载，所以推送要慎重要有方法。</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>7.参考文献</h3>
+                <p>（知乎）消息推送（push）对app运营的影响有哪些？——詹磊</p>
+                <p>（想把APP消息推送这道菜“炒得好吃”，秘诀在这里——作者: Benny@AISSUER/p>
+                <p>push对于产品有多大帮助？如何平衡推送和用户体验？——作者: luckberyl 来自: PMCAFF</p>
+                <p>十分钟带你了解APP消息推送（Push）——大城小胖（人人都是产品经理）</p>
+                <p>（关于APP 消息推送，这里有七大知识点——卿宗伟</p>
+                <p>To B 产品的消息推送设计——张小菜（人人都是产品经理）</p>
+            </section>
+        </section>
+
+        <section>
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+        </section>
+    </div>
+</div>
+<script>
+    angular.module("myApp", [])
+        .controller('demoCtrl',function ($scope) {
+            $scope.aa='as111111'
+        })
+        .directive('demoOne',function () {
+
+            return{
+                restrict:"AECM",
+                template:'<input type="text" ng-model="aa">',
+                replace: true,
+                scope:{},
+                controller:['$scope',function ($scope) {
+                    $scope.aa='ss1212'
+                }]
+
+
+            }
+        })
+
+</script>
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He

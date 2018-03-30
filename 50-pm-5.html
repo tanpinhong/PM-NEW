@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    a    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h3>关于验证码的思考</h3>
+            <p id="aaaa">分享人：王佳妮</p>
+        </section>
+        <section id="bbbb">
+            <p>目录</p>
+            <p>一、语音验证码和短信验证码的区别是什么？</p>
+            <p>二、验证码选择4位或6位哪个更安全？</p>
+            <p>三、重复发送验证码的话，是否应该发送同一个验证码？</p>
+            <p>四、更多讨论</p> 
+        </section>
+        <section>
+        	<section>
+            <h3>一、语音验证码和短信验证码的区别是什么？</h3>
+            
+        </section>
+        <section>
+            <h4>
+           （一）区别
+            </h4>
+           <p>1.验证码接受方式不同：短信验证——短信方式；而语音验证——电话的形式语音接听 </p>
+            <p>2.传播形式不同：短信验证当信号不好、当所在地域为屏蔽地区的时候，短信验证码收不到；而电话语音验证可以保证整个流程顺利进行下去</p>
+            <P>3.安全性方面不同：短信验证——受手机木马、信息泄露等影响，使得验证失败，财产丢失；而语音验证——防止刷单且更加安全</P>
+            <P>4.应用方式不同：短信验证——方便快捷，更容易被人们接受；语音验证——以用户接听电话的形式，容易被客户不小心挂断。</P>	
+        </section>
+         <section>
+            <h4>
+           （二）分析比较
+            </h4>
+           <p>1.体验方面： </p>
+            <p>（1）短信验证：短信到达率的问题，很多短信会丢失，特别是这类校验、通知短信。任何一家短信服务商都无法做到100%的到达率，另外还有类似西藏之类的短信管制的因素等等，所以短信验证通常会使得大概5%到10%的用户无法通过验证</p>
+            <P>（2）语音验证：虽然语音验证的体验和便捷度都无法和短信相比，但在无法接收短信的情况下，语音验证可以保证整个流程顺利进行下去</P>
+        </section>
+        <section>
+           <p>2.风控安全方面: </p>
+            <p>（1）手机木马：智能机的流行使得原来相对安全的短信验证变得脆弱如纸。中了木马后，短信就会在不知情的情况下被转发走，导致各类验证失效，财产受损</p>
+            <P>（2）短信仓库/短信转移/信息泄露：前两者都是运营商的业务，可以在网站上看到短信内容，或者转发到指定的手机中</P>
+            <P>（3）作弊风险：现在很多公司都会有大量的运营活动来支持自己的业务，比如促销满减，新客1元，免费体验，秒杀，限购等等，这中间就意味着需要很多账户。而账户一般都会要求做手机短信验证来核实是个真实的用户，于是就产生了专门做手机验证码服务的卡商和刷单的赚客，从而危害到了公司正常业务的发展</P>
+        </section>
+        </section>
+<section>
+        <section>
+            <h3>二、验证码选择4位或6位哪个更安全？</h3>
+        </section>
+        <section>
+            <p>大多数的短信验证码都是采用的6位验证码，其主要原因在于：6位短信验证码更为安全</p>
+            <p>从破解的概率来看，4位的话，有1/10000=0.01%的概率，6位的话，有1/1000000=0.0001%的概率</p>
+            <P>尽管采用6位验证码更难记些，但是对于账户的安全度还是高些</P>
+            <P>验证码越长，安全系数会呈放大效应，即安全度越高，但考虑到用户输入体验，以及6位数字的破解时间，一般6位的破解预计会超过验证码超时时间，所以现在大多数网站都是采用6位的验证码</P>
+        </section>
+        
+</section>
+           
+<section>
+        <section>
+            <h3>三、重复发送验证码的话，是否应该发送同一个验证码？</h3>  
+            <p>显然，不应该</p>    
+        </section>
+     
+        
+</section>  
+
+        <section>
+            <h3>四、更多讨论</h3>
+        </section>
+       
+       
+        <section>
+            <h4>鸣谢</h4>
+            <p id="ccc">感谢大家观看</p>
+            <p id="ccc"><small>BY :王佳妮</small></p>
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He

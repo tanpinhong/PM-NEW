@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>如何设计表单？</h2>
+            <p>分享人：赵跃</p>
+        </section>
+        <section>
+            目录<br>
+            <br>
+            一、小课堂目标<br>
+            二、知识点介绍<br>
+            三、布局小建议<br>
+            四、标签的设计<br>
+            五、帮助性信息<br>
+            六、输入框的设计<br>
+            七、报错提示<br>
+            八、自动配置<br>
+            九、尺寸和录入量、格式<br>
+            十、录入信息的分组<br>
+            十一、提高反馈报错和帮助信息的可见度<br>
+            十二、总结<br>
+            十三、参考文献
+        </section>
+
+        <section>
+            <section>
+                <h3>一、小课堂目标</h3>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                                   了解在表单设计中，我们需要注意哪些内容。
+            </section>
+        </section>
+
+
+        <section>
+            <section>
+                <h3>二、知识点介绍</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    表单是承载信息和展示信息的重要途径，因此我们在设计的时候要注意很多事情。<br>
+                    <br>
+                    表单的组成：<br>
+                    <br>
+                    标签<br>
+                    帮助文字<br>
+                    输入框<br>
+                    报错提示<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    <img src="./img/pm-zhaoyue/24.jpg"><br>
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>三、布局小建议</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">我们尽量采用单列进行展示。<br>
+                    <br>
+                    建议这样做的原因一是能够方便用户进行浏览和输入，二是因为这样布局，能够进行响应式的开发，减少了成本。<br>
+                    <br>
+                    但是其自身也存在着缺点，当需要输入的条件过多时，用户需要拖动鼠标进行查看与填写。<br>
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <section>
+                <h3>四、标签的设计</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">标签的位置主要分成三种：左标签、顶标签、和内标签。<br>
+                    <br>
+                    而关于是否要有必填和选填的存在，个人认为，选填是否存在是可以被考究的。<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    <img src="./img/pm-zhaoyue/25.jpg"><br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">左标签是目前比价主流的排布方式，主要适用于web端。<br>
+                    建议将标签靠左对齐，因为不仅在界面上会显得比较争气划一，在用户对信息的提取和响应也会效率大大提高。<br>
+                    但是它存在着一个比较尴尬的问题，也就是空间的占用上，用于web倒也没有什么问题。<br>
+                    但是当如果用于移动端，则会出现需要左右滑动，信息填写被覆盖等问题。<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    <img src="./img/pm-zhaoyue/26.jpg"><br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">顶部标签很好的解决了左标签的尴尬处境，但是自身也存在着问题。<br>
+                    也就是当需要填写较多信息的时候，出现滚动的场景几率也就相对较大。<br>
+                    这里要注意的是在使用顶部标签的时候，我们要注意输入框与输入框之间的距离。<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    <img src="./img/pm-zhaoyue/27.jpg"><br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">将标签放进输入框中是一个很好的解决方式。<br>
+                    但是随之而来的还有，当我填写信息的时候，输入框任何指示信息也没有，会让用户产生困惑的心理。<br>
+                    那我们要如何解决呢？我们可以将图标放入输入框中或者放在左侧。<br>
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <section>
+                <h3>五、帮助性信息 </h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left"> <img src="./img/pm-zhaoyue/28.jpg"><br>
+            </section>
+            <section style="text-align: left;">
+                帮助性文字的展示一般采用气泡框进行提示（也有会先将一些提示性文字放在页面的顶端，但是这个要取决于文案的内容多少，以及重要程度）<br>
+                <br>
+                气泡框提示的内容要求简洁易懂，鼠标放上去则迅速展开提示内容，鼠标移开则消失。<br>
+                <br>
+                注意：展开的时候不宜挡住当前输入区域，这么做的原因是让用户知道我处于什么地方，我在针对什么。<br>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>六、输入框的设计</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left"> <img src="./img/pm-zhaoyue/29.jpg"><br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    在进行信息录入的过程中，我们要保持输入框的独特性（录入前、录入中、录入后）<br>
+                    <br>
+                    录入前和输入中 我们要使输入框高亮，让用户只专注于当前的录入，<br>
+                    <br>
+                    录入后要给出反馈，是录入失败还是录入成功
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>七、报错提示</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">                    <img src="./img/pm-zhaoyue/30.jpg"><br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    如上图，报错提示有很多种，要根据不同场景选择不同的报错提示。<br>
+                    <br>
+                    假如只是针对单个输入框的判断，则仅需在当前状态进行报错，文字提示和输入框颜色、样式、变化都可以。<br>
+                    <br>
+                    但是如果是重大操作结果报错，我们还是优先选择用模态框的方式进行报错。<br>
+                    <br>
+                    这样的好处是能更好的提醒用户错误的结果，也能中断用户的操作，让用户专心思考和检查之前的信息。<br>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>八、自动配置</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    <img src="./img/pm-zhaoyue/31.jpg"><br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    我们在设计的过程中，要尽量减少用户的输入次数。<br>
+                    <br>
+                    有些信息，我们可以通过自动补全，或者提供默认值等方式减少用户的输入时间，毕竟用户输入信息只是一个过程。<br>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>九、尺寸和录入量、格式</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    <img src="./img/pm-zhaoyue/32.jpg"><br>
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">很多数据已经证明根据内容作出适当的尺寸，能够大幅减少用户的不确定性，以及一些特定的信息（手机、银行卡等）采用特定的录入格式都会让用户的体检更加良好。
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <section>
+                <h3>十、录入信息的分组</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">将同类信息进行分组，这样即使是很多的信息叠加在一起，用户在输入上的心理压力也会大大减小。
+                </p>
+            </section>
+
+        </section>
+        <section>
+            <section>
+                <h3>十一、提高反馈报错和帮助信息的可见度</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">用户在输入信息的过程中，当遇到磕绊或者提示时，证明用户正处在迷茫的状态。<br>
+                    这时候表达要发挥它的易操作、易理解、以及可见性，来进行指导用户走出迷茫。<br>
+                </p>
+            </section>
+
+        </section>
+        <section>
+            <section>
+                <h3>十二、总结</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">好的表单设计，在使用上是高效的，友好的，体验统一的。<br>
+                    <br>
+                    在设计的初期，要对录入信息进行充分的了解，有个大概的逼数。<br>
+                </p>
+            </section>
+
+        </section>
+        <section>
+            <section>
+                <h3>十三、参考文献</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    表单设计的九个基本法则—————人人都是产品经理<br>
+                    <br>
+                    表单设计全攻略—————人人都是产品经理<br>
+                    <br>
+                    表单设计，你只需要这一篇就够了—————人人都是产品经理<br>
+                    <br>
+                    5个纬度，阐述表单设计的方法论—————人人都是产品经理<br>
+                </p>
+            </section>
+
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

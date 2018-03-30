@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>如何撰写后台PRD？</h2>
+            <p>分享人：赵跃</p>
+        </section>
+        <section>
+            目录<br>
+            <br>
+            一、前言<br>
+            二、小课堂目标<br>
+            三、为什么要进行后台设计<br>
+            四、下笔的前提<br>
+            五、下笔的顺序<br>
+            六、什么样的需求文档开发爱看<br>
+            七、描述方法<br>
+            八、一些小TIPS<br>
+            九、参考文献<br>
+            十、致谢<br>
+        </section>
+
+        <section>
+            <section>
+                <h3>一、前言</h3>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    大家可能也浏览过许多关于后台设计的文章，大部分文章都是在阐述如何设计后台，给了我们很多设计理念上的建议与帮助。<br>
+                    <br>
+                    只是，无论什么样的设计都最终都需要以文档的形式产出，因此，本文将在后台需求文档的撰写上分享心得和建议。<br>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>二、小课堂目标</h3>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    给大家提供撰写后台PRD的思路<br>
+                    <br>
+                    降低大家撰写后台PRD的难度<br>
+            </section>
+        </section>
+
+
+        <section>
+            <section>
+                <h3>三、为什么要进行后台设计</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    我们设计后台的初心，都是为了支撑业务，并进一步提高运营效率和产品竞争力，这是我们在设计后台时需要时刻提醒自己的。<br>
+                    <br>
+                    由于后台的产品不需要过多的考虑UI和交互设计，所以在明确好业务逻辑和系统架构之后，将效率的提升作为后台产品的重要指标（KPI），注意避免用户在使用你的产品时，做太多重复、机械的操作。
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>四、下笔的前提</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">关于后台的设计还是需要老话重提。产品经理一定要对你所设计的后台业务了如指掌，亲自深入到业务的实际工作中去，将工作流拆分成多个环节，形成功能的初步构想。<br>
+                    <br>
+                    期间，你需要记录下业务的整体流程和涉及到的元素，如字段、字段限制、业务要求等。<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">我个人的习惯是先将这部分内容写于纸上，清楚的梳理好业务之后，再将内容转化成电子档。<br>
+                    <br>
+                    在纸上，你可以迅速的对内容进行编辑、修改，甚至可以将原型直接画出，让功能先简单的呈现出来，再进行调整改动，这样可以减少很多电脑操作的时间。<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">同时还需明确目标用户，也就是这个功能是给谁用的。<br>
+                    <br>
+                    一般后台的目标用户都是公司内部人员，如运营、市场等等，用户就在身边，那么产品经理千万不能浪费机会，一定要与用户进行沟通，提炼出他们的需求。<br>
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">以下是可以提的一些问题举例：<br>
+                    过去是怎么处理这项业务的？<br>
+                    哪一个环节给你带来困扰或者说需要花费你大量的时间去完成？<br>
+                    你最希望实现的功能是什么？<br>
+                    谁可以操作这项业务？操作的范围又是哪些？<br>
+                    是否需要对用户的操作行为进行记录？<br>
+                    ……
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">大家可以根据实际情况进行问题的列举和提问，只有充分地融入到用户中，才能设计出走心的后台哦。<br>
+                    <br>
+                    总结一下，下笔之前需要明确几个要素：角色、角色的权限（包括功能权限和数据权限）、业务流程、所需字段、操作日志等。<br>
+                </p>
+            </section>
+
+
+        </section>
+
+        <section>
+            <section>
+                <h3>五、下笔的顺序</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">无论是功能还在初拟阶段还是已经开始撰写需求文档，下笔的顺序一定是从核心功能（业务）->分支功能（业务），因为核心功能是奠定整个后台的基础，其他功能都是围绕着核心功能延伸开来。<br>
+                    <br>
+                    无论是字段规则还是业务规则，其他功能都必须与核心功能保持一致，才能够保证后台的顺利运行。<br>
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">当你完成核心功能的设计和文档撰写时，可以先与研发讨论设计是否合理和可行，接着再进行分支功能的设计，这么做避免后期需要推倒重做的窘境。<br>
+                    <br>
+                    后台系统的目标用户可能是运营人员、市场人员……，而需求文档的目标用户一定是你的研发同事们，需求文档是你输出的一个产品，因此我们一定要让需求文档变得更清晰更易懂。<br>
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>六、什么样的需求文档开发爱看 </h3>
+            </section>
+
+            <section style="text-align: left;">简洁、高效<br>
+                设计时要遵循“简洁、高效”的原则。能用一个词说明清楚的事，千万不要用一句话。<br>
+                <br>
+                前后描述一致<br>
+                设计后台时，模块之间必然会有关联性，不同的模块可能会涉及到相同的字段，因此对于每项字段、字段类型、字段说明等内容必须保持一致，不要有前后矛盾的情况。<br>
+                <br>
+                善用表格、图文并茂<br>
+                后台中的功能结构、角色权限的分配等结构性内容采用表格的形式；<br>
+                数据流向、业务流程用流程图、泳道图等描述清楚；<br>
+            </section>
+
+            <section style="text-align: left;">
+                功能用原型图呈现，原型图中的信息进行归类，不能因是后台，无需考虑太好的用户体验而忽视了页面的清晰整洁度。<br>
+                <p style="text-align: left"> <img src="./img/pm-zhaoyue/33.jpg"><br>
+                原型图的各类按键规格保持一致，让研发或UI更好的设计，降低沟通成本。<br>
+            </section>
+
+        </section>
+
+        <section>
+            <section>
+                <h3>七、描述方法</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    一般后台功能可分为列表数据、功能操作（增删改查等）两大块。可以从以下方式进行描述：<br>
+                    （1）列表数据<br>
+                    字段：字段名称、字段类型、字段描述、数据来源、字段规则等；<br>
+                    列表：呈现字段、排序规则、分页规则、状态等。<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    （2）功能操作<br>
+                    方法一：事件流程法<br>
+                    比较复杂的后台功能在同一个功能点中可能包含多个事件，所以复杂后台功能可按照：基本事件流程、子事件流程与特别需求来描述。<br>
+                    <img src="./img/pm-zhaoyue/34.jpg"><br>
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    方法二：条件描述法<br>
+                    这个方法适用于查询功能，直接对需要查询的条件、规则进行描述。<br>
+                    <img src="./img/pm-zhaoyue/35.jpg"><br>
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    方法三：输入输出法<br>
+                    输入处理输出大部分是由开发来考虑的，但产品经理如果能站在开发的角度，明确输入、处理、输出的内容，那会省去很多开发的理解成本。<br>
+                    <img src="./img/pm-zhaoyue/36.jpg"><br>
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    <img src="./img/pm-zhaoyue/37.jpg"><br>
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    方法四：简要测试用例<br>
+                    测试用例可直接用来表述简单、常见的功能，直击功能的目的。前提是这类功能一定是比较常见的，不需要过多的深入描述，开发也能懂。<br>
+                    <img src="./img/pm-zhaoyue/38.jpg"><br>
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <section>
+                <h3>八、一些小TIPS</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">1.需不需要描述很细节的东西？这个问题要取决于整个开发团队的默契度，以及在开发之前是否已经形成了标准的规范。<br>
+                    如果是，那么产品经理可以适当减少一些细节描述，简要概括，将重点放在业务的流程和逻辑上。<br>
+                    <br>
+                    2.大部分情况下，前台需求决定后台需求，后台产品经理设计前一定要与前台产品经理进行深入沟通，不管是对目前有的功能还是未来的前台需求规划，后台产品经理都要了解，提前做好规划，眼光放长远，思考功能的可持续性。<br>
+
+                </p>
+            </section>
+
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    3.有些团队的后台文档可能会由若干个产品经理共同完成，建议对每个模块的作者做好标注，方便开发找到负责人沟通。<br>
+                    同时，做好各大模块的标题和大纲，供开发查找。<br>
+                    <br>
+                    4.一份需求文档一定会修改好几个版本，一般采用R（Requirement）0、R2.0……来表示版本号。<br>
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <section>
+                <h3>九、参考文献</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    如何完成后台PRD的撰写？—————人人都是产品经理
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <section>
+                <h3>十、致谢</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    感谢大家的观看<br>
+                    随着第六次小课堂的完成<br>
+                    我的小课堂之旅也将告一段落啦<br>
+                    撒花~<br>
+                    <img src="./img/pm-zhaoyue/39.jpg"><br>
+                </p>
+            </section>
+
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

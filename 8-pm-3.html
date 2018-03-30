@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>画原型时需要注意什么？</h2>
+            <p>分享人：赵跃</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <p>1.前言</p>
+            <p>2.画原型图的原则</p>
+            <p>3.画原型图时我们需要注意些什么</p>
+            <p>4.画原型时常见的细节错误</p>
+            <p>5.对错实例</p>
+            <p>6.画原型图的几个技巧</p>
+            <p>7.参考文献</p>
+            <p>8.感谢，提问</p>
+        </section>
+
+        <section>
+            <section>
+                <h3>1.前言</h3>
+            </section>
+            <section>
+                <p>毛神和旭哥的原型、注释对比容易引战，砍掉了
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>2.画原型图的原则</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    1、手稿原型图优先于电子稿原型图<br>
+                    原型图是需求的外在体现，逻辑是需求的内在体现，两者并不对立，反而是相辅相成关系。<br>
+                    大致理顺逻辑才能开始画原型图，而画原型图的过程又可以检查逻辑。因此，画原型图的过程，也是再次梳理逻辑的过程。<br>
+                    对于手稿来说，想到了就秒秒钟画，错了就秒秒钟擦，验证合适不合适速度飞快；<br>
+                    对于电子稿来说，想到啥要画，还得各种拖动控件，搞排版，简直累人累己分分钟速度小渣渣；<br>
+                    因此，在快速验证或者梳理需求的过程中，推荐用手稿的方式<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    2.电子稿原型图要规范<br>
+                    可以简单归纳为<br>
+                    页面框架要清楚；<br>
+                    页面不影响设计；<br>
+                    页面元素要统一；<br>
+                    页面排版要整齐；<br>
+                    至少过手的东西可以齐整的地方要齐整，最好可以好看的地方要好看<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+            <p style="text-align: left">
+                3、电子稿不宜占用过多时间<br>
+                虽然第二点提到了要好看，但是不能因为好看而主次颠倒，花费了大量时间在电子原型图上，那就得不偿失了。原型图可以说是需求分析的最后一层了，重点始终是前面的思考。<br>
+                而为啥很多人画原型图慢呢？因为画图前不考虑清楚就上软件！<br>
+                因为画图习惯不好就上软件！因为动不动就上软件，然后反反复复反反复复！<br>
+            </p>
+
+            </section>
+        </section>
+        <section>
+            <section style="text-align: left;">
+                <p style="text-align: left"><h3>3.画原型图时我们需要注意些什么</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">第一点，要做的是要清楚页面需要突出的内容是什么。<br>
+                    我们有时候真的会眼高手低，看着感觉so easy，但是真正做起来真正被问及时却发现自己真的不行真的不会。所以，这个必须明确的第一点最好要弄清楚再往下走。<br>
+                    第二点，就是要弄清楚功能方面需要突出的是什么？说白了也就是你要设计的这个页面要突出什么功能。<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    第三点，就是要明确内容板块如何划分，页面的内容主要分成几个模块，每个模块内存放的都应该是一些相近的内容。这个说实话涉及到了涉及原型图页面的深层部分了，也就是涉及到了你所设计的原型页面的大体布局，所以这个部分要拿捏好，这一部分的布局设计可能会直接影响到你的页面效果，很考验人的设计能力，当然还有美感审视能力，所以请大家在这部分的设计上多用点心，多有些自己的想法。
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    第四点要说的就是模块与模块之间以及页面与页面之间承接和关联的关系了。每个模块与其相近的模块之间应该有一些逻辑上的关联性，而不能随意的进行拼接，应具有上下承接关系。页面与页面之间的转化承接也要尤其连接性，切勿给人一种生搬硬套的感觉，要有一定的连贯性和联系性。
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">
+                    最后在原型图设计完之后，需要对其进行修改和检查。最好试着把你设计的原型按照你的思路走一遍，看看是否有哪些不顺畅、别扭的地方。而且要注意的是，这个时候你要学会换位思考，把自己当成一个用户而不是一个设计者，看看在整个流程的过程中是否有用户体验度不好的地方，试着提出一些疑问，并小心求证一下，积极改正。
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>4.画原型时常见的细节错误</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">一.排版粗糙<br>
+                    1、线头未闭合，画到边界前就终止了，手绘还可理解，但软件绘制就说不过去了。<br>
+                    2、元素溢出边界，比如时间属性，超出原型界面边线。<br>
+                    3、文字紧贴边线，未给足内边距。<br>
+                    4、该对齐的元素未对齐。5、该居中的元素未居中。<br>
+                    6、多个列表项的高度不一致，有25像素的，有23像素的……<br>
+                    7、上层与下层元素本该重合的线条未重合，反倒形成了一个更粗的边框。<br>
+                    8、主次文案的字号及字色未作区别。<br>
+                    9、表单等文案不齐整，尽可能更换名词促成整齐，比如：用户名、密码、手机号、身份证号码、E-mail，可以统一为：用户名称、登录密码、手机号码、身份证号、电子邮箱。<br>
+
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">二.原型不仿真<br>
+                    1、原型字号太小，在原型图中首屏可容纳200字，而根据实际情况只能容纳100字，造成信息显示预期未达成。<br>
+                    2、列表内容都是重复或不真实的，比如标题项都写为“标题”，未按真实文章标题长度来展示，无法直观表达截字或折行效果。如果是实名制平台产品，用户名就不要列一堆不切实际的名称如“蓝精灵”、“堂吉诃德”……<br>
+                    3、列表项时间参数都是一样的，无法直观感受到列表是否需要按时间倒序排列。<br>
+                    4、用想当然的图示表达需求，比如画一条横线就完成了播放器进度条的示意，进度如何体现？是否需要拖拽操作？<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">三.缺乏一致性<br>
+                1、每个原型界面整体尺寸需一致。<br>
+                2、同一功能在不同页面叫法不同，如“搜索”、“查询”、“检索”、“找一找”……<br>
+                3、数据单位写法不统一，如文件大小有的用1M，有的用100kb，可统一为1MB与100KB，要么1M与100K。<br>
+                4、时间格式不统一，有的用2017年9月10日 8点6分 有的用2017-09-10 08:06:32<br>
+                5、界面用语风格不一致，如“请您稍后重试”、“亲，请一会儿再试哦”……<br>
+                6、弹窗及提示样式不一致。<br>
+                7、选用图标的风格需一致，尽量用一套图库。<br>
+            </p>
+        </section>
+        </section>
+        <section>
+            <section>
+                <h3>5.部分对错实例</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">1、页面框架要清楚<br>
+                    很多初手画原型图，一般是画多少页面就重建多少page，并且每个page都是平行关系。在这种情况下，想通过看原型图的目录来了解产品的页面关系，完全是懵掉的，和你对接的设计和开发也可能分分钟狗带。<br>
+                    比较合适的方式是，画原型图之前先搞清楚页面与页面之间的关系，在页面目录中根据页面关系建立好空的页面后，再进行具体页面的设计。<br>
+                    举例如右图：<img src="./img/pm-zhaoyue/1.jpg"><br>
+                    左边：为平行关系的页面 右边：为有主次的页面<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">2、页面不影响设计师的视觉<br>
+                    产品经理需求分析完成后，需要拿着原型图和设计师进行直观沟通，沟通清楚之后，设计师就会开始设计。<br>
+                    举例如右图：<img src="./img/pm-zhaoyue/2.jpg"><br>
+                    左边：用固有的占位图或者按钮来表示一些需要的内容；<br>
+                    右边：用不知道从哪里找来的风格不同的icon拼凑；<br>
+
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">3、页面元素要统一<br>
+                可能会有以下情况：同一个页面内同一种控件代表好多种行为；同一个页面内同一种控件表示同一个行为，不同页面之间同一种控件表示好多种行为；<br>
+                举例如右图：<img src="./img/pm-zhaoyue/3.jpg"><br>
+                左边右边：两个控件乱用，不能点击的地方用了按钮，能点击的地方又用了占位符；<br>
+            </p>
+        </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">4、页面排版要整齐<br>
+                    排版整齐主要指：<br>
+                    该左右对齐的地方对齐；该上下居中的地方上下居中；间隔该一致就一致；<br>
+                    举例如右图：<img src="./img/pm-zhaoyue/4.jpg"><br>
+                    左边：上下、左右都对齐；<br>
+                    右边：额，红色标记的都没有对齐；<br>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>6.画原型图的几个技巧</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">1、善用辅助线<br>
+                    辅助线能够帮助你分分钟对齐，并且无时不刻阔以用到它：画整体页面、画局部部件等等都阔以。<br>
+                    2、善用母版<br>
+                    会多处用到的一整块的东西尽量用母版<br>
+                    如果你采用到处复制粘贴的方法的话，那么如果有修改，你就得一次一次的修改好多地方，浪费时间；<br>
+                    如果你采用每次都自己重新画的话，那比上面还惨<br>
+                    同时，母版顺便解决了排不齐的问题，毕竟，大部件拖起来容易排整齐的多。<br>
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">3、善用组合<br>
+                    很多童鞋一开始的时候都不喜欢用组合，反正画完都一样嘛<br>
+                    万一你下个版本要把整坨东西换到另一个位置上去呢？<br>
+                    在不是全局出现的情况下，可以把相关控件组合起来，不管是单页面上的复制粘贴还是挪动，都会非常方便，同时又无形之中解决整齐问题。<br>
+                    4、不要过度用case里的花哨功能<br>
+                    只用页面跳转，最多用面板之间的设置功能。<br>
+                    举例如右图：<img src="./img/pm-zhaoyue/5.jpg"><br>
+
+                </p>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">5、不要过度用条件判断<br>
+                    下图登录注册流程，应该平均一个控件上至少都有5、6个判断条件吧。<br>
+                    可以用文字补充清清楚楚说明白的事情，不要折腾原型图<br>
+                    6、过度用花哨功能和条件判断，会引起控件的命名问题<br>
+                    做大量条件判断或者复杂的case是会需要指向某个控件的，那么对于控件的命名就需要套规则，而这点，一开始的时候你是没有意识到的。你需要不断加前缀来区分不同的控件，随着页面层次越来越多，命名会越来越复杂。<br>
+                </p>
+            </section>
+        </section>
+
+
+
+        <section>
+            <section>
+                <h3>7.参考文献</h3>
+            </section>
+            <section style="text-align: left;">
+                <p style="text-align: left">画原型图时我们需要注意些什么-CSDN<br>
+                    做产品原型设计有哪些需要注意的问题-知乎用户短腿柯基大屁屁<br>
+                    画原型图的几大坑，你被埋了吗？！-人人都是产品经理<br>
+                </p>
+            </section>
+        </section>
+        <section>
+                <section>
+                    <h3>8.感谢，提问？</h3>
+                </section>
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

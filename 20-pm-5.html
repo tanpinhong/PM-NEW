@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h3>不同类型产品如何设计登录注册模块</h3>
+            <h4>小课堂【深圳修真院】</h4>
+            <p>分享人：梁樱桃</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <div style="text-align: left;padding-left:125px;">
+            <p>一、为什么要设计登录注册模块？最重要的作用是？</p>
+            <p>二、常见登录注册的身份识别方式</p>
+            <p>三、如何设计出合适的登录注册模块？</p>
+            <p>四、一个小细节：异常登录判定和安全信息验证</p>
+            <p>五、参考文献</p>
+            <p>六、更多讨论</p> 
+            </div>
+                   
+        </section>
+        <section>
+            <section>
+                <h3>一、为什么要设计登录注册模块</h3>
+                <h3>最重要的作用是？</h3>
+            </section>
+            <section>
+                <p>
+                   很多，不同层面的原因，参考胡师兄的《登录注册找回密码》<a href="https://www.jianshu.com/p/8dd450d86f7c">https://www.jianshu.com/p/8dd450d86f7c</a>
+                </p>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>对产品本身来说，登录注册功能可以建立用户体系，从而:</h4>
+                <p>1.利于收集用户数据-----建立用户画像----跟踪用户使用行为----及时调整和完善产品</p>
+                <p>（访客、精准用户、核心用户？新增用户、日活、月活？）</p>
+                <p>2.权限</p>
+                <h4>对于用户来说，登录注册功能也是用于个性化的身份识别</h4>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>总结:</h4>
+                <p>
+                   登录注册功能最主要的作用---建立身份识别
+                </p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>二、常见登录注册的身份识别方式</h3>
+                <p>1.密码识别：字符串（字母/数字/大小写英文字符）/图形，成本低，应用最广，最常见</p>
+                <img src="./img/pm-cherry/淘宝密码登录.jpg" style="width:400px;margin:15px 60px;margin-bottom: 106px">
+                <img src="./img/pm-cherry/和包手势密码.jpg" style="width:300px">
+            </section>
+            <section>
+                <p>2.通讯工具识别：手机验证码/邮箱验证码/邮箱链接，减低用户记忆成本，可免去复杂的注册流程，利于快速获取用户，需运营商支持；</p>
+                <img src="./img/pm-cherry/淘宝邮箱链接.jpg" style="width:500px;margin-bottom:80px;">
+                <img src="./img/pm-cherry/人人车-无需注册输入手机号即可登录.jpg" style="width:400px">
+            </section>
+            <section>
+                <p>3.证件认证：身份证/护照/学生证等，安全系数较高，常见于政务民生系统/金融银行支付系统，不方便</p>
+                <img src="./img/pm-cherry/12306注册.jpg" style="width:300px;margin:15px 60px;">
+                <img src="./img/pm-cherry/和包支付.jpg" style="width:300px">
+            </section>
+            <section>
+                <p>4.生物特征：安全系数要求高，方便，研发技术要求高</p>
+                <div style="text-align: left;padding-left:125px;">
+                <p>人脸识别---支付宝登录/金融借贷/银行登录</p>
+                <p>指纹锁---中高端智能机/支付方式</p>
+                <p>声音锁---微信登录</p>
+                </div>
+                <img src="./img/pm-cherry/微信声音锁.jpg" style="width:200px;margin: 15px 60px;">
+                <img src="./img/pm-cherry/支付宝人脸识别.jpg" style="width:200px">
+            </section>
+            <section>
+                <p>这么多种登录注册方式中，哪一种才是最适合自己的呢？</p>
+                 <img src="./img/pm-cherry/aaaa.png">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>三、如何设计出合适的登录注册模块？</h3>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>1.行业和类型---偏流量导向or风控导向？</h4>
+                <p>流量导向：尽可能缩短流程和后置，减少不必要操作，增加客户留存</p>
+                <p>风控导向：风控组件尽可能多，流程尽可能前置，以及尽可能延长流程，使留下更多数据供其进行判断</p>
+                </div>
+                <img src="./img/pm-cherry/腾讯视频.jpg" style="width:250px;margin: 15px 60px;margin-bottom:115px">
+                <img src="./img/pm-cherry/和包支付-注册.jpg" style="width:220px">
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>类型---To B还是To C？</h4>
+                <p>To B：To Business的缩写，针对企业用户，应用系统设计专业严谨度高，逻辑性强</p>
+                <p>To C：To Customers的缩写，针对个人用户，应用系统设计更注重个性化，强调用户体验</p>
+                </div>
+                <img src="./img/pm-cherry/国美-to c.jpg" style="width:350px;margin: 15px 60px;">
+                <img src="./img/pm-cherry/国美-to B.jpg" style="width:400px">
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>2.公司发展阶段</h4>
+                <p>初期：流量压力</p>
+                <p>后期：挖掘尽可能多的用户价值/营销定位/业务拓展</p>
+                <p></p>
+                <h4>3.渠道业务定位</h4>
+                <p> PC端已培养起了大批忠实用户，对于主动下载APP端用户可以把注册流程稍微延长。但如果是通过别的渠道导流过来的新用户，则需要更偏向流量需求了。</p>
+                </div>
+                <img src="./img/pm-cherry/aaaaa.jpg">
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <h4>总结：</h4>
+                <p> 不同的行业由于业务场景的不同需要选择不同的注册登录流程，但不管哪个行业，几乎都有对流量的要求，特别是公司发展初期，流量压力大，注册登录环节如果设计得太过于繁琐复杂，就很容易流失用户。 </p>
+                <p>但对于产品本身而言，我们都希望可以尽可能多的保留用户信息，为公司发展后期的提供数据支持，而对于金融/银行/B端应用等行业来说，本身对于风控安全的要求就比较高，更加严谨，需要用户留下更多的数据以供判断。</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>四、一个小细节：异常登录判定和安全信息验证</h3>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>异常登录的判定也是一个相对比较复杂的过程，基本上对于大的公司，比如阿里，是一个大的团队在做。简单来说，收集用户登录的各种行为进行校验。包括但不限于：</p>
+                <p>1.登录地点：如果一直在北京使用产品的用户，两个小时后出现在广东，则系统可能会判定为异常。</p>
+                <p>2.登录设备：对于移动登录，如果更换了移动设备，则系统可能判定为异常。</p>
+                <p>3.登录网络环境：IP变更，4G和wifi的变化，系统都需要判定是否为异常。</p>
+                <p>•  既可以是简单粗暴的策略，也可以是用大量的数据样本进行机器学习，进行判定。</p>
+                </div>
+            </section>
+            <section>
+                <div style="text-align: left;padding-left:125px;">
+                <p>安全信息验证部分，如果用户绑定了手机号（手机号相关内容可以查看上篇），则可以直接要求用户进行手机验证。如果用户没有绑定手机或者用户暂时不方便使用手机，则可以使用图形验证码或者用户行为验证码验证。或者也可以使用产品的信息进行验证，包括但不限于：</p>
+                <p>1.历史购买物品</p>
+                <p>2.历史状态定位地点</p>
+                <p>3.通讯录内容验证</p>
+                <p>4.发送给通讯录好友进行验证</p>
+                <p>•  如果用户都不能通过自动流程，也可以进行人验证，提供一些无法格式化提供的信息进行验证。</p>
+                </div>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>五、参考文献</h3>
+                <p>《登录注册找回密码》<a href="https://www.jianshu.com/p/8dd450d86f7c">https://www.jianshu.com/p/8dd450d86f7c</a></p>
+                <p>《对于登录注册逻辑的总结讨论》<a href="http://www.woshipm.com/pd/681903.html">http://www.woshipm.com/pd/681903.html</a></p>
+                <p>《最完整注册登录详解：流程设计、业务及产品思考》<a href="http://www.woshipm.com/it/414830.html">http://www.woshipm.com/it/414830.html</a></p>
+            </section>
+        </section>
+        <section>
+            <section>
+            <h3>六、更多讨论</h3>
+        </section>
+        <section>
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            <p><small>BY : 梁樱桃</small></p>
+        </section>
+    </div>
+</div>
+<script>
+    angular.module("myApp", [])
+        .controller('demoCtrl',function ($scope) {
+            $scope.aa='as111111'
+        })
+        .directive('demoOne',function () {
+
+            return{
+                restrict:"AECM",
+                template:'<input type="text" ng-model="aa">',
+                replace: true,
+                scope:{},
+                controller:['$scope',function ($scope) {
+                    $scope.aa='ss1212'
+                }]
+
+
+            }
+        })
+
+</script>
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He
