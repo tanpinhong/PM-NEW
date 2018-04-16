@@ -1,0 +1,250 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="https://ptteng.github.io/PPT/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+	<section>
+        <section>
+            <h3>关于验证码的一些思考</h3>
+            <p>分享人:郭凯</p>
+        </section>
+
+	</section>
+    <section>
+        <section>
+        <div style="text-align: left;padding-left:90px;">
+            <p>一.验证码的定义及作用</p>
+            </div>
+            <div style="text-align: left;padding-left:90px;">
+            <p>二.验证码的常见形式及主要特点</p>
+            </div>
+            <div style="text-align: left;padding-left:90px;">
+            <p>三.验证码通常应该如何设置</p>
+            </div>
+            <div style="text-align: left;padding-left:90px;">
+            <p>四.参考文献</p>
+            </div>
+            <div style="text-align: left;padding-left:90px;">
+            <p>五.更多讨论</p>
+            </div>
+        </section>
+
+    </section>
+	<section>	
+        <section>
+            <p>一.验证码的定义及作用</p>
+        </section>
+        <section>
+            <div style="text-align: left;padding-left:60px;">		  		    
+            <p>1.定义</p>
+            </div>
+            <div style="text-align: left;padding-left:60px;">
+            <p>验证码是一种区分用户是计算机还是人的公共全自动程序，由美国卡内基梅隆大学的四位教授在2002年提出。该程序是指向请求的发起方提出问题，能正确回答的即是人类，反之则为机器。</p>
+			</div>
+            <div style="text-align: left;padding-left:60px;">
+            <p>这个程序基于这样一个重要假设：提出的问题要容易被人类解答，并且让机器无法解答。简单而言，验证码就是为了验证某个操作是人为还是机器行为。用户只有正确键入验证码，才可以继续用户行为。</p>
+            </div>
+		</section> 
+		
+        <section>
+            <div style="text-align: left;padding-left:60px;">		  		    
+            <p>2.作用</p>
+            </div>  
+            <div style="text-align: left;padding-left:60px;">
+			<p>验证码能够有效的防止破解密码、刷票、灌水等恶意行为，具有较好的实现成本、安全性和可用性优点。一般多应用于注册、登录、忘记密码、留言、回复、绑定、支付等使用场景，多是在用户多次（一般是三次以上）注册、登录失败时激活使用。</p>
+            </div>
+		</section> 
+	
+    </section>
+    <section>
+	    <section>
+            <p>二.验证码的常见形式及主要特点</p>
+        </section>
+		
+        <section>
+        <div style="text-align: left;padding-left:60px;">
+            <p>1.图片验证码</p>
+            </div>
+            <div style="text-align: left;padding-left:60px;">
+            <p>通常由4-6位数字和字母混合组成，也会出现由纯粹数字或字母组成的情况，多以图片验证码形式显示。用户点击即可刷新当前验证码，刷新无时间间隔。为了提高辨别难度，一般都会在背景里加入干扰线。</p>
+            </div>
+            <div style="text-align: left;padding-left:60px;">
+            <p>这种形式的验证码是最常见的，也是实现最为容易的。不过尽量不要使用难以辨别的字符，如““1、L、I、0、O、Q、g、9、2、Z”等。</p>
+            </div>
+
+            <div style="text-align: left;padding-left:60px;">
+            <p>优点：实现成本低。</p>
+            </div>
+            <div style="text-align: left;padding-left:60px;">
+            <p>缺点：操作较繁琐（需要在鼠标键盘和输入法之间切换使用），无趣味性。</p>
+            </div>
+        </section>
+
+        <section>
+        <div style="text-align: left;padding-left:60px;">
+            <p>2.文字验证码</p>
+            </div> 
+            <div style="text-align: left;padding-left:60px;">
+            <p>文字验证码纯粹由文字组成，多是将6个文字打乱顺序，随机放置在图片背景上，用户按顺序点击找出隐藏在其中的成语即可验证成功</p>
+            </div> 
+            <div style="text-align: left;padding-left:60px;">
+            <p>这种形式的验证码方式较新颖，但是会出现生僻成语阻碍使用，暂时仅在手机QQ和手机百度上发现使用。</p>
+            </div> 
+            <div style="text-align: left;padding-left:60px;">
+            <p>优点：实现成本低、操作简单、趣味性不错。</p>
+            </div> 
+            <div style="text-align: left;padding-left:60px;">
+            <p>缺点：有一定使用门槛。</p>
+            </div> 
+        </section>
+        
+        <section>
+        <div style="text-align: left;padding-left:60px;">
+            <p>3.滑块验证码</p>
+            </div> 
+            <div style="text-align: left;padding-left:60px;">
+            <p>通常需要用户按住滑块并拖动到特定的位置补充完成某张拼图，会随着类似进度条的指示器指导用户操作。同时也有直接让用户按住滑块拖动至进度条底部末端的验证方式，相应的只是减去了拼图形式。</p>
+            </div> 
+            <div style="text-align: left;padding-left:60px;">
+            <p>这类形式的验证码不仅很新颖，还具有不错的趣味性，有利于提升用户体验。</p>
+            </div> 
+            <div style="text-align: left;padding-left:60px;">
+            <p>优点：操作简单、趣味性强。</p>
+            </div> 
+            <div style="text-align: left;padding-left:60px;">
+            <p>缺点：实现成本较高。</p>
+            </div> 
+        </section>
+
+        <section>
+        <div style="text-align: left;padding-left:60px;">
+            <p>4.短信验证码和语音验证码</p>
+            </div> 
+            <div style="text-align: left;padding-left:10px;">
+            <p>由于手机的普及和实名制的推行，许多APP和网站现在都采用手机号码注册账号，一方面既有利于验证手机号码的真实性，防止恶意注册登录；一方面也有利于建立平台自己的用户体系。这种形式的验证码以6位数字组成为主，但由于实现成本较高，重新刷新获取的时间间隔多为60S。</p>
+            </div> 
+            <div style="text-align: left;padding-left:10px;">
+            <p>部分平台会在提供短信验证码之余，同时设置语音验证码，由于不具备短信验证码的优势，通常是作为用户可能由于各种原因无法正常接收短信验证码的补救措施，较典型的知乎和部分互联网金融APP。</p>
+            </div> 
+            <div style="text-align: left;padding-left:10px;">
+            <p>优点：操作简单、真实性强、安全性高。</p>
+            </div> 
+            <div style="text-align: left;padding-left:10px;">
+            <p>缺点：实现成本较高，重新刷新获取的时间间隔较长。</p>
+            </div> 
+        </section>
+
+    </section>
+    <section>
+        <section>
+            <p>三、验证码通常应该如何设置</p>
+        </section>
+        
+        <section>
+            <div style="text-align: left;padding-left:60px;">
+            <p>1.使用原则：非必要的时候尽量不使用验证码。例如：同一用户名或同一IP地址３次输入错误的时候，才允许激活使用验证码。</p>
+            </div>
+            <div style="text-align: left;padding-left:60px;">
+            <p>2.在允许的条件下，验证码不要过长。通常我们见到的都是4-6位的验证码，这样有利于用户形成短暂的快速记忆，方便用户操作使用。</p>
+            </div>
+        </section>
+
+        <section>
+            <div style="text-align: left;padding-left:60px;">
+            <p>3.用户验证码输入错误时，尽量将用户损失降到最低，更多的保存用户已经填过的信息，不要让用户反复填写表单，简化操作。同时尽可能地降低验证码刷新获取机制，方便用户重新获取。</p>
+            </div>            
+            <div style="text-align: left;padding-left:60px;">
+            <p>4.在保证验证码15min的有效期的前提下，可以重复发送同一条验证码，同时这也不容易让用户产生骚扰的感觉；验证码过期无效时，应该刷新发送新的验证码，以此保证验证码的安全性。</p>
+            </div>
+        </section>
+
+    </section>
+    <section>
+		<section>
+            <p>四、参考文献</p>
+        </section>
+
+		<section>
+        <div style="text-align: left;padding-left:1px;">
+		<p>1.《验证码的前世今生（前世篇）》——人人都是产品经理</p>
+        </div> 
+        <div style="text-align: left;padding-left:1px;">		
+        <p>2.《总结：验证码常见形式及个人思考》——人人都是产品经理</p>
+        </div> 
+        </section>
+	
+    </section>
+    <section>
+        <section>
+            <h4>五、更多讨论</h4>
+        </section>
+
+    </section>
+    <section>
+        <section>
+            <h4>谢谢观看</h4>
+            <p><small>By:郭凯</small></p>
+        </section>
+
+<script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+<script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
