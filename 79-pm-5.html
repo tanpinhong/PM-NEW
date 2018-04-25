@@ -1,0 +1,1416 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="../css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    a    <link rel="stylesheet" href="../css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="../lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="../img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        
+		<section>
+            <h3>反馈机制的设计</h3>
+            <h4>小课堂【成都第11期】</h4>
+            <p>分享人：马勖韬</p>
+        </section>
+        
+		<section>
+            <p>目录</p>
+            <p>1.背景介绍</p>
+            <p>2.知识剖析</p>
+            <p>3.参考文献</p>
+            <p>4.更多讨论</p>
+        </section>
+        
+		<section>
+            <h3>1.背景介绍</h3>
+		</section>
+		
+		<section>
+            <p>
+			反馈是产品设计中非常重要的一个环节，它的存在与否会极大的影响你产品的用户体验。
+			</p>
+			<p>
+			反馈从涵盖范围上来说可以分为两种：操作反馈与用户反馈。这里说的主要是操作反馈，或者叫互动反馈，为了表述方便，以下都简称反馈。
+			</p>
+		</section>
+		
+		<section>
+            <h3>
+			2.知识剖析
+			</h3>
+        </section>
+		
+		
+		<section>
+            <p>
+            <h4>
+			一、为什么要反馈
+			</h4>
+            </p>
+			
+			
+			<p>
+            因为用户的每一步操作都得不到反馈，你对当前系统的状态一无所知，就会产生一种焦虑感。焦虑感发展到最后是很恐怖的，用户直接可能就放弃你的产品了。
+			</p>
+			
+			<div align="left">
+			<p>
+			
+			</p>
+			</div>
+			
+			<p>
+			反馈机制建立的必要性：帮助用户随时感知系统的状态，满足用户的控制感，消减不确定性给用户带来的负面情绪。
+			</p>
+			
+			<p>
+			
+			</p>
+			
+			<p>
+			
+			</p>
+			
+			<p>
+            </p>
+        </section>
+
+
+        
+		<section>
+            <p>
+            <h4>
+			二、反馈概述
+			</h4>
+            </p>
+			
+			<p>
+            
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+			<p>
+            互联网产品存在两种界面反馈机制：
+			</p>
+			
+			<p>
+			第一种是通过快速的界面改变来进行反馈，例如点击视频播放按钮，视频立即开始播放；微信点击聊天文本框，立即弹出键盘等。正常情况下，这类反馈无需设置任何反馈信息提示。
+            </p>
+			<p>
+			第二种是，当界面变动很慢或者界面没有响应时，如果不给予提示，用户不确定自己的操作是否成功，会让用户感到困惑，这类提示是今天要阐述的反馈。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+        </section>
+        
+		<section>
+         <p>
+		 那么多长时间给出反馈提示才是合适的呢？
+		 </p>
+		 <p>
+		 0.1秒：这是用户感受系统是在即时反应的阈值，系统除了直接显示操作结果外，不需要其它特殊的反馈提示。例如，用户点击播放按钮，视频立即播放，而不会提示“视频将要播放”。
+		 </p>
+		 
+		 <p>
+		 1秒：通常来说，操作反馈的延迟时间在0.2秒到1.0秒之间仍然不需要特殊的反馈提示，但此时用户已经感觉到自己对数据失去了直接的操控。以点赞为例，如果不能在1秒内响应，用户就会感到UI控件响应很慢，失去了操作的流畅感，极有可能点击以后再次点击才发现已取消点赞，连续多次点击导致操作失败。
+		 </p>
+		 
+		 
+		 
+        </section>
+
+        <section>
+        <p>
+		 1秒到10秒：对于超过1秒的延迟，有必要通过加载动画、反馈提示语等手段进行提示，告知用户服务没有宕机，程序正在处理相关的任务，请继续安心使用。	
+		 </p>
+		 
+		 <p>
+		 超过10：10秒是用户将注意力保持在当前任务的时间阈值。任何需要超过10秒才能完成的任务，需要有明确的进度指示器（条状进度条、饼状进度条、倒计时等）提醒用户，以缓解他们的焦虑。同时为用户指明中断当前操作的方法，让用户可以切换任务，合理安排自己的时间去处理其它事务。例如，爱奇艺片头广告的倒计时提示，同时可以下滑页面查看其它内容。	
+		 </p>
+		</section>
+		
+		
+		<section>
+            <p>
+            <image src="./img/pm-maxutao/001/001.png">
+			</p>
+			<p>
+            
+			</p>
+			<p>
+             
+			 </p>
+			 <p>
+             
+			 </p>
+			 
+        </section>
+		
+		<section>
+          <h4>
+		  三、反馈方式
+		  </h4>
+		  <p>
+		  常见的反馈方式有以下6种：弹框、页面、标签、(功能性)动画、小红点和声音。
+		  </p>
+        </section>
+		
+		<section>
+          <h4>
+		  
+		  </h4>
+		  <p>
+		   1.弹框
+		  </p>
+		  <p>
+           弹框是最主要的反馈方式。
+		  </p>
+		  
+		  <p>
+           弹框可以分为模态弹框和非模态弹框，它们最大的区别就在于是否强制用户交互。
+		  </p>
+		  
+		  <p>
+           模态弹框会打断用户当前的操作流程，用户不在弹框上操作的话，其余功能都使用不了。
+		  </p>
+		  
+		  <p>
+           所以设计师在构建反馈体系的时候，模态弹框都是用于展示优先级最高的信息。一般都会出现在用户在进行有风险性，不可逆的操作。
+		  </p>
+        </section>
+		
+		
+        
+		<section>
+            <p>
+			
+            </p>
+			<p>
+            </p>
+			<p>
+             <image src="./img/pm-maxutao/001/002.png">
+			 </p>
+			 <p>
+             
+			 </p>
+			 
+        </section>
+		
+
+        
+		<section>
+            <p>
+			非模态弹框相比来说就显得“温和”多了，出现2-3秒之后就会自动消失，不会对用户造成干扰。属于轻量型的反馈。
+			</p>
+			<p>
+             </p>
+			 <p>
+			 
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+			<image src="./img/pm-maxutao/001/003.png">
+			</p>
+			<p>
+             			
+			 </p>
+			 <p>
+			 
+			 </p>
+        </section>
+        
+		<section>
+		    <p>
+            弹框体系总结
+			</p>
+            <p>
+			弹框我们可以分为两种：模态弹框和非模态弹框。
+			</p>
+			<p>
+             
+			 </p>
+			 <p>
+			 
+			 </p>
+        </section>
+        
+        <section>
+		    <h4>
+		    
+		    </h4>
+            <p>
+			我们日常所说的弹框是一个很笼统的概念，所有的对话框，浮层，提示条我们都习惯性的称之为弹框
+			</p>
+			<p>
+             弹框我们可以分为两种：模态弹框和非模态弹框
+			</p>
+        </section>
+        
+		<section>
+		   <p>
+            模态弹框
+           </p>
+		   <p>
+            模态弹框和非模态弹框最大的区别就是是否强制用户交互。
+           </p>
+           <p>
+            优点是可以很好的获取的用户的视觉焦点
+           </p>
+		   <p>
+            缺点是打断了用户的当前操作流程
+           </p>
+		   <p>
+            常见的模态弹框种类有对话框(Dialog/Alter)，动作栏(Actionbar/Actionsheet/ActionView)和浮层(Popover/Popup)
+           </p>
+		   
+        </section>
+		
+
+		
+		<section>
+         <p>
+		 对话框
+		 </p>
+		 
+		 <p>
+		 对话框一般用于用户进行一项很重要或者有风险的操作，这时会弹出一个对话框来给用户提示信息，用户根据提示来进行判断。一般会出现在屏幕的中间位置，会对界面的主要内容造成遮挡。
+		 </p>
+			
+        </section>
+		
+		<section>
+		    <p>
+			<image src="./img/pm-maxutao/001/004.png">
+			</p>
+           <p>
+             
+			</p>
+			<p>
+            
+			</p>
+			<p>
+            
+			</p>
+			<p>
+            
+			</p>
+		
+        </section>
+		
+		<section>
+            <p>
+             目前来说对话框的设计样式繁多，用户可以进行信息录入，也可以用于营销宣传。
+			</p>
+		    <p>
+			
+		     </p>
+			 <p>
+			 
+		     </p>
+			 <p>
+			 
+		     </p>
+        </section>
+		
+		
+		<section>
+		    <p>
+		     <image src="./img/pm-maxutao/001/005.png">
+			 </p>
+			 <p>
+			 
+		     </p>
+        </section>
+		
+		
+		
+		<section>
+           <p>
+		    动作栏
+			</p>
+			<p>
+		    动作栏在我看来可以看成是对话框的一个加强版，因为无论是alert还是dialog一般都只有两个按钮。而动作栏可以提供多个功能按钮，而且展示的样式比较多变。
+			</p>
+			<p>
+			 
+		     </p>
+        </section>
+		
+           <section>
+		   <p>
+            <image src="./img/pm-maxutao/001/006.png">
+			</p>
+            <p>
+		    
+			</p>
+			<p>
+		     
+			</p>
+        </section>
+		
+		<section>
+		    <p>
+		    但是也有例外，有的动作栏只有两个选项。
+			</p>
+			<p>
+           
+			</p>
+			<p>
+            
+			</p>
+			<p>
+            
+			</p>
+
+        </section>
+		
+		<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/007.png">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    浮层
+			 </p>
+			 浮层是用户点击控件或者界面某一区域浮出的半透明的临时视图。浮层的样式跟动作栏很相似，都可以向用户展示多个功能选项。但是浮层可以出现屏幕中的任何位置，能够给用户更具有指向型的提示。
+			 <p>
+			 
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/008.png">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    小结：
+			 </p>
+			 
+			 <p>
+			 在不考虑信息录入情况下，对话框适用于用户进行判断操作，而动作栏和浮层适用于用户进行选择操作，而浮层相对于动作栏更具有指向型。
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    非模态弹框
+			 </p>
+			 
+			 <p>
+			 与模态弹框相比，非模态弹框最大的区别是不强制用户交互，也不会弹出半透明背景层，非模态弹框停留一段时间后会自己消失。所以相对于模态弹框来说，非模态弹框属于轻量型反馈，不会对用户造成太大的干扰。常见的非模态弹框有toast(hud)和snackbar。
+		     </p>
+			 
+			 <p>
+		     </p>
+			 
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    Toast
+			 </p>
+			 
+			 <p>
+			 <image src="./img/pm-maxutao/001/009.png">
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    Toast主要用于用户完成操作以后，告诉用户操作结果或者状态的变更。Toast其实是属于Android的组件，iOS里有一个相类似的是hud，最常见的就是音量调节提示。但是现在iOS和Android的界限不断被打破，toast现在也被广泛应用于iOS界面设计中。
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    如果我们去看Android给的设计规范，会发现toast有以下几个特点：
+			 </p>
+			 
+			 <p>
+			 1 只出现在屏幕底部
+		     </p>
+			 
+			 <p>
+			 2 只能放文字
+		     </p>
+			 
+			 <p>
+		     3 非模态弹框
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    但是我们会发现现在的一些toast是可以出现在屏幕中任何位置的，而且也可以加icon，所以说不能教条主义。
+			 </p>
+			 <p>
+			 有前端给PM说的：“只要你们能设计出来，理论上我们都可以做出来，但是我们可能会砍人。”
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/010.png">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    所以真实的toast是可以出现在屏幕的任何位置的，而且可以加icon，甚至连背景层颜色都能变。
+			 </p>
+			 <p>
+			 设计的时候不仅要去看那些设计规范，还要花点时间跟开发沟通一下。
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    Toast的优点是不会打断用户当前的操作流程，属于轻量型的反馈方式。
+			 </p>
+			 
+			 <p>
+			 缺点是容易被用户忽视，而且不适合展示过多的信息，可能在用户读完之前就消失了。
+		     </p>
+			 
+			 <p>
+			 为了提升信息的可读性和增加样式美感，现在toast都会采用文字加icon的组合样式。
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/011.png">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    Snackbar
+			 </p>
+			 <p>
+			 Snackbar一般是由文字和功能按钮组成的，用户可以点击按钮交互，即使用户不点击snackbar也会自动消失，一般位于屏幕下方。通俗意义上，我们可以把snackbar看成是带有icon的toast。
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/001.gif">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    虽然snackbar属于非模态弹框，但是它也有模态弹框的一些特点。例如snackbar也有按钮来供用户交互；此外snackbar一般会出现在界面下方，这点又和动作栏中的Action sheet很像。
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    小结：
+			 </p>
+			 <p>
+			 非模态弹框偏重信息提示，模态弹框既可以信息提示也可以供用户交互；toast是轻量型的弹框类型，snackbar集众家之所长，也可以说是四不像。
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    2.页面
+			 </p>
+			 <p>
+			 与弹框相比，页面反馈的更倾向于是一个流程的终点站。
+		     </p>
+			 <p>
+			 例如我们购买理财前要做的风险评测，购买商品最后的结果都会通过一个新的页面来展示。
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/012.png">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    页面反馈的主体是操作流程，而弹框反馈的主体是操作行为。
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    3.标签
+			 </p>
+			 <p>
+			 标签在反馈体系中同样占据一席位置，不过它的使用场景比较单一：主要用于表单，用户录入信息的过程可以提供逐行报错提示。
+		     </p>
+			 <p>
+			  <image src="./img/pm-maxutao/001/013.png">
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    表单信息录入报错也可以通过弹框也完成，但是有两个缺点：
+			 </p>
+			 <p>
+			 1.弹框会遮挡界面信息，用户看不到表单内容；
+		     </p>
+			 <p>
+			 2.在录入项目过多的情况下，标签可以给予更具有指向性的提示，用户不用费力去寻找。
+		     </p>
+			 <p>
+		     所以说在表单信息录入我们选择更加轻量化的标签。
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    4.动画
+			 </p>
+			 <p>
+			 动画也可以用来完成反馈，这里的动画特指的是功能性动画。
+		     </p>
+			 <p>
+			 动画的合理使用可以吸引用户的注意力，因为人类都是视觉动物，在app和网页中，小动画对我们来说像是眼睛的甜点一样，我们会不自觉的被它们吸引。
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/002.gif">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    前面说的三种反馈样式主要展示的是结果，而动画因为其自身的特性则可以用来展示过程。正在加载中、正在下载中，这些表示“过程”的状态用动画来演示是非常合适的。
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/003.gif">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    5.小红点
+			 </p>
+			 <p>
+			 小红点在反馈中偶尔也会出现，例如在网易云音乐里下载一首歌，你不会收到一个弹框“歌曲下载完成”，你只会在本地音乐里看到一个小红点，这就意味着下载完成。
+		     </p>
+			 <p>
+			 所以小红点虽然用的不多，但是它的存在可以缓解弹框的压力。
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/014.png">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    关于小红点和数字
+			 </p>
+			 <p>
+			 红点适合在大信息量，或者权重不高的提醒中使用，比如微信订阅号入口的红点
+		     </p>
+			 <p>
+			 数字更适合在更新信息量小，或者跟用户有互动内容的提醒中使用，比如消息的条数
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    6.声音/震动
+			 </p>
+			 <p>
+			 通过声音/震动，能够充分引起用户的注意，让场景具象化，合适的音乐还能增加用户的愉悦感，一般在有重要通知或具有娱乐性的操作时，如短信邮件通知，收款时有钱入袋的声音等。
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/015.png">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    7.按下状态
+			 </p>
+			 <p>
+			 在按下和不按下时呈现不同的界面，不仅能引导用户操作，而且能让用户得到一些超乎预期的体验。
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+			<section>
+            <p>
+		    <image src="./img/pm-maxutao/001/016.png">
+			 </p>
+			 <p>
+		     </p>
+			 <p>
+		     </p>
+			 <p>
+		     
+			 </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			四、反馈原则
+			</h4>
+            </p>
+			
+			<p>
+            
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            自动完成
+			</p>
+			
+			<p>
+			一方面减少用户操作，另一方面减少用户输入错误，通过选择更快更好的确定目标。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+             <image src="./img/pm-maxutao/001/017.png">
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            根据舒适度安排控件位置
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			总有些手残党不小心点到按钮，导致不小心给人发信息呀，不小心删除了某文件呀，不小心点错进视频之类的，所以为了解决这类问题，最好把一些不重要或使用频次低的按钮，放在人手不方便操作的地方，PC网页一般放在边角，手机则放在如下的红色区域（据研究显示，49%的人单手操作手机，而单手操作手机时，有三个大的操作区域：方便操作到的，不是很方便操作到的，难操作到的，而红色区域就为难操作到的区域）。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            <image src="./img/pm-maxutao/001/018.png">
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            只能选择可选项
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			总有人会在输入数字的界面会输入字母，也有人会在选择旅行时间时选择到已过去的时间，针对这些，在设计时应尽量引导用户选择可选项，过去的日期就勾选不上，在输入数字密码时只显示数字键盘等。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            <image src="./img/pm-maxutao/001/019.png">
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            屏幕展架
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			屏幕展架是优化提示的一种方式，它指在展示页面时，如遇到网络不畅或加载缓慢等问题时，依次展现内容，而不是等到内容全部全部加载完才显示。这种方式能让用户知道系统是在运作的，减少用户焦虑。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            <image src="./img/pm-maxutao/001/020.png">
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            简化提示
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			只提供重要信息是我们的宗旨，至于对不起呀，我们因为系统刚才崩了下导致啥啥啥了，需要你重新刷新一下啥啥啥的一堆废话，用户是不想知道也不需要知道的，我们只提供核心问题，影响及简短的解决方案。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            <image src="./img/pm-maxutao/001/021.png">
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            优化操作步骤
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			减少不必要的操作从而减少提示也是一种优化提示的方式，如支付宝之前在支付时需要再点击确认付款，现在只要输入密码或指纹之后就直接支付了，减少了操作步骤的同时也减少了与用户的交互提示。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+				<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            <image src="./img/pm-maxutao/001/022.png">
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            避免频繁，只在必要情况下出现
+			</p>
+			<p>
+			现在很多APP会频繁的推送通知或在用户进入界面后不断提示，很大程度上造成用户厌烦，所以尽量避免频繁给不必要的提示，对于部分有必要提示，还可告知用户在哪里可以关闭提示或当前窗口就可选择不再提示。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            <image src="./img/pm-maxutao/001/023.png">
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            提示明确
+			</p>
+			<p>
+			明确的提示可让用户清晰的知道当前操作的结果，让用户按照自己需求选择合理选项，减少错误操作后造成的不良影响。
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+				<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            <image src="./img/pm-maxutao/001/024.png">
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		<section>
+            <p>
+            <h4>
+			
+			</h4>
+            </p>
+			
+			<p>
+            如果能做出差异化就更好了
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+			
+			</p>
+			<p>
+            </p>
+        </section>
+		
+		
+		
+		
+		
+		<section>
+            <h3>3.参考文献</h3>
+        </section>
+        
+		<section>
+		    <p>参考一：<a href="http://www.woshipm.com/pd/986548.html">反馈机制这样设计，才能不让用户厌烦</a></p>
+			<p>参考二：<a href="http://www.woshipm.com/pd/738525.html">反馈提示形式总结与设计要点浅析</a></p>
+			<p>参考三：<a href="http://www.woshipm.com/pd/860240.html">案例分析：产品的信息反馈设计</a></p>
+			<p>参考四：<a href="https://mp.weixin.qq.com/s?__biz=MzU3OTA5ODQ2MQ==&mid=2247484042&idx=1&sn=bfed15976a728fb92ba67b8ff782ff9e&chksm=fd6a00b8ca1d89ae60e7f8770fbb6ecb90b75d08fbcd3a058c1c66111d1ee9ee850e06810055#rd">弹框体系总结</a></p>
+        </section>
+        
+		<section>
+            <h3>
+			4.更多讨论
+			</h3>
+			
+        </section>
+        
+        <section>
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            <p><small>BY :马勖韬</small></p>
+        </section>
+    </div>
+</div>
+
+<script src="../lib/reveal/js/head.min.js"></script>
+<script src="../lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: '../plugin/markdown/marked.js' },
+            { src: '../plugin/markdown/markdown.js' },
+            { src: '../plugin/notes/notes.js', async: true },
+            { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He
