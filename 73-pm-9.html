@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>APP 反馈的三种形式：Toast、Snackbar、Dialog</h2>
+                   <p>谭品鸿</p>
+        </section>
+        <section>
+            <p>一.什么反馈机制</p>
+            <p>二.Toast</p>
+            <p>三.Snackbar</p>
+            <p>四.Dialog</p>
+            <p>五.小结</p>
+		<p>六.更多讨论</p>
+        </section>
+        <section>
+            <h3>一.什么反馈机制</h3>
+        </section>
+
+		<section>
+		   	<h6 style="text-align:left;font-size:24px">互联网产品存在两套反馈机制：</h6>
+			<h6 style="text-align:left;font-size:24px">一套是有明显界面变动的反馈，例如你点击淘宝列表页，立马就进入了商品详情页，页面的及时跳转是明显的视觉反馈；再比如你输入完账号密码，点击登录，登录成功，并进入了APP首页，这也是很明显的视觉反馈。</h6>
+			<h6 style="text-align:left;font-size:24px">如果某种反馈不明显该怎么办？例如，你登录的时候你输错了账号密码，点击登录，是进入不了APP的，这个时候大部分产品都会给予toast提示用户：密码或账号输入错误，请重试。你看到这个提示之后，就会知道自己改怎么做了。这就是反馈的第二套机制：通过设计不同的形式来提示用户。</h6>
+
+			<h6 style="text-align:left;font-size:24px">常见的反馈有三种形式：Toast、Snackbar、Dialog</h6>
+<h6 style="text-align:left;font-size:24px"></h6>
+		</section>
+		
+        <section>
+            <h3>二.Toast</h3>
+        </section>
+		<section>		   
+			<h6 style="text-align:left;font-size:24px">Android中的Toast是一种简易的消息提示框，toast属于一种轻量级的反馈，常常以小弹框的形式出现，一般出现1到2秒会自动消失，可以出现在屏幕上中下任意位置，但同个产品会模块尽量使用同一位置，让用户产生统一认知。</h6>
+			<h6 style="text-align:left;font-size:24px">作用：告知用户任务状态，操作结果，例如：发送成功，加载中，删除成功。</h6>
+			<h6 style="text-align:left;font-size:24px">注意事项：考虑到显示的时间，容易被用户忽略，不适合承载过多的文字和重要信息。 在样式上，尽量和产品整体风格保持一致，这样会更和谐，不至于突兀。</h6>
+			  
+		</section>
+		
+		<section>
+            <h3>三.Snackbar</h3>			
+        </section>
+		<section>		   
+			<h6 style="text-align:left;font-size:24px">Snackbar 是一种针对操作的轻量级反馈机制，通常出现在手机屏幕或者桌面端左下方，以浮动弹出框的形式存在。</h6>
+			<h6 style="text-align:left;font-size:24px">与Toast相同：Snackbar也会出现屏幕所有层的最上方，包括浮动操作按钮；短暂出现后，会主动消失。但Snackbar带有一定的交互性，用户触摸屏幕其他地方后自动消失，也可以在屏幕上滑动关闭。Snackbar继承了toast的所有特性，即：为小弹窗的形式，会自动消失。</h6>
+			<h6 style="text-align:left;font-size:24px">与Toast差异：①可以出现0到1个操作，不包含取消按钮；②点击Snackbar以外的区域，Snackbar会消失；③一般只出现在屏幕底部。</h6>
+			<h6 style="text-align:left;font-size:24px">小结：Snackbar只出现在Android平台，提示程度比toast稍重，介于Toast和Dialog之间。</h6>
+	        
+		</section>
+		<section>
+		<h3>四.Dialog</h3>
+			<h6 style="text-align:left;font-size:24px">如果Toast和Snackbar两种形式都不足以达到你需要的反馈强度，则推荐你使用Dialog的形式，即对话框提示。Dialog是一种针对操作的重量级反馈机制，通常直接出现在手机屏幕中间，常常以弹框的形式出现。Dialog不会自行消失，必须用户操作后（点击确定或关闭）才能消失</h6>
+			<h6 style="text-align:left;font-size:24px">Dialog有两种使用场景，第一是很强的消息提示；第二是重要的运营消息。</h6>
+			<h6 style="text-align:left;font-size:24px">注意事项：由于Dialog不会自行消失，必须用户操作后（点击确定或关闭）才能消失，所以会打断用户当前任务，这会增加用户的焦虑和不安感，影响用户体验，请谨慎使用。如果一定要使用Dialog形式来提示用户，可以尝试在视觉上做得更有趣，减少用户的焦虑和不安。</h6>
+		
+        </section>
+
+        
+        <section>
+            <h3>五.小结</h3>
+			<h6 style="text-align:left;font-size:24px">所有的设计形式都是服务于产品功能，而产品功能则来源于用户需求、公司战略、老板意志等方面。在知道每种设计形式的来龙去脉的基础上，让设计形式服务好用户和公司。</h6>		
+        </section>
+		
+        <section>
+            <h3>六.更多讨论</h3>
+        </section>
+		
+
+		
+        <section>
+            <h4>谢谢观看</h4>
+            <p></p>
+            <p><small>By:谭品鸿</small></p>
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
