@@ -5,7 +5,7 @@ PM小课堂
 https://it-xzy.github.io/PM-NEW/0-index-PM.html
 
 # 严格控制文件命名格式！
-## 序号-pm-任务序号.html
+## 日期-组名-pm-任务序号.html
 ## 所有路径使用相对地址！！！
 
 - 每个PPT为一个html页面，位置放于根目录下

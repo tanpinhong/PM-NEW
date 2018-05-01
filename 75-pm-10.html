@@ -1,0 +1,180 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+	
+        <section>
+            <h3>异常状态：踩坑体验报告</h3>
+			<p>Devils behind millions of details</p>
+            <p>分享人:周亮</p>
+        </section>
+		
+        <section>
+            <p>1.遭遇场景</p>
+            <p>2.你应该知道的各种异常and状态</p>
+			<P>3.讨论</P>
+        </section>
+		
+        <section>
+            <p>1.遭遇场景</p>
+        </section>
+		
+        <section>		  		    
+            <section>
+			<p>你也许遇到过，或即将遇到：</p>
+			</section>
+			
+			<section>		  		    
+            <p>产品设计中的异常流程、状态总是考虑不全，需求评审的时候总被开发怼。尤其是在从0到1设计一个新产品，或者新模块的时候，尤其需要考虑清楚这些经常不被重视但是又很重要的细节，在很多文档里，异常流程的描述往往比正常流程还要多。</p>
+		</section> 
+		
+		<section>
+			<p>这些在向开发同学讲解输出的时候需要准备好的东西如果没有一个完善的准备和无懈可击的逻辑，很有可能在评审现场被问到手足无措，当场尬聊。</p>
+			</section>
+			
+			<section>
+			<p>这还不是最重要的，关键是拖慢了项目进度、被开发一通打击、你还要不断的被动去改原型，理逻辑，从此陷入一个恶性循环。</p>
+			</section>
+		</section>       
+	
+		<section>
+            <h3>2.你应该知道的各种异常and状态</h3>
+        </section>
+		
+        <section>		
+            <section><p>A.用户状态</p></section>
+			<section><p>登录状态/游客状态下的操作和限制，引导和反馈</p></section>
+			<section><p>会员/非会员状态下的操作和限制，引导和反馈</p></section>
+			<section><p>地理位置、个人喜好等</p></section>
+        </section>
+		
+		<section>		
+            <section><p>B.网络状况</p></section>
+			<section><p>无网</p></section>
+			<section><p>弱网</p></section>
+			<section><p>加载中</p></section>
+			<section><p>加载失败</p></section>
+			<section><p>wifi-3G/4G切换</p></section>	
+        </section>
+		
+		<section>		
+            <section><p>C.元素规则</p></section>
+			<section><p>输入框</p></section>
+			<section><p>按钮</p></section>
+        </section>
+		
+		<section>		
+            <section><p>D.页面逻辑</p></section>
+			<section><p>前进（什么状态下去哪里）</p></section>
+			<section><p>后退（一个业务结束，回到哪里）</p></section>
+        </section>
+		
+		<section>		
+            <section><p>E.中断操作</p></section>
+			<section><p>中止/终止</p></section>
+        </section>
+		
+		<section>		
+            <section><p>F.刷新</p></section>
+			<section><p>触发动作（操作中、操作完成反馈/提示）</p></section>
+			<section><p>失败反馈</p></section>
+        </section>
+		
+		<section>		
+            <section><p>G.空状态/404/引导</p></section>
+			<section><p>页面无内容（引导）</p></section>
+			<section><p>页面错误/删除（反馈）</p></section>
+			<section><p>用户操作引导</p></section>
+        </section>
+		
+		<section>		
+            <section><p>H.缺省状态</p></section>
+			<section><p>阈值上限反馈</p></section>
+			<section><p>正常范围</p></section>
+			<section><p>无内容反馈/无操作引导</p></section>
+        </section>
+		
+		<section>		
+            <section><p>I.权限获取</p></section>
+			<section><p>获取失败异常反馈</p></section>
+        </section>
+		  
+		
+		
+        <section>
+            <h3>更多讨论</h3>
+        </section>
+		
+        <section>
+            <h4>感谢参与和观看</h4>
+            <p></p>
+            <p><small>By:周亮</small></p>
+        </section>
+
+
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
