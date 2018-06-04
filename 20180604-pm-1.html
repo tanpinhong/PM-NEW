@@ -1,0 +1,159 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>任务一深度思考之测试</h2>
+                   <p>谭品鸿</p>
+        </section>
+        <section>
+            <p>一.边界测试</p>
+            <p>二.功能测试</p>
+	    <p>三.冒烟测试</p>
+	    <p>四.自动化测试</p>
+	    <p>五.回归测试</p>
+	    <p>六.性能测试</p>
+	    <p>七.更多讨论</p>
+        </section>
+        <section>
+            <h3>一.边界测试</h3>
+		<h6 style="text-align:left;font-size:24px">边界测试是用来探测和验证代码在处理极端的或偏门的情况时会发生什么。</h6>
+		<h5 style="text-align:left;font-size:24px">选择测试用例的原则</h5>
+		<h6 style="text-align:left;font-size:24px">一、如果输入条件规定了值的范围，则应该取刚达到这个范围的边界值，以及刚刚超过这个范围边界的值作为测试输入数据；</h6>
+		<h6 style="text-align:left;font-size:24px">二、如果输入条件规定了值的个数，则用最大个数、最小个数、比最大个数多1格、比最小个数少1个的数做为测试数据；</h6>
+		<h6 style="text-align:left;font-size:24px">三、如果程序的规格说明给出的输入域或输出域是有序集合（如有序表、顺序文件等），则应选取集合的第一个和最后一个元素作为测试用例；</h6>
+		<h6 style="text-align:left;font-size:24px">四、如果程序用了一个内部结构，应该选取这个内部数据结构的边界值作为测试用例；</h6>
+		<h6 style="text-align:left;font-size:24px">五、分析规格说明，找出其他可能的边界条件。</h6>
+        </section>
+	<section>
+	    <h3>二.功能测试</h3>	
+		<h6 style="text-align:left;font-size:24px">功能测试就是对产品的各功能进行验证，根据功能测试用例，逐项测试，检查产品是否达到用户要求的功能。</h6>
+		<h6 style="text-align:left;font-size:24px">功能测试在测试工作中占的比例最大，功能测试也叫黑盒测试。是把测试对象看作一个黑盒子。利用黑盒测试法进行动态测试时，需要测试软件产品的功能，不需测试软件产品的内部结构和处理过程。</h6>
+		<h6 style="text-align:left;font-size:24px">黑盒测试试图发现以下类型的错误：</h6>
+		<h6 style="text-align:left;font-size:24px">（1）功能错误或遗漏</br>（2）界面错误</br>（3）数据结构或外部数据库访问错误</br>（4）性能错误</br>（5）初始化和终止错误</h6>
+	</section>
+	<section>
+	    <h3>三.冒烟测试</h3>
+		   	<h6 style="text-align:left;font-size:24px">这一术语源自硬件行业。对一个硬件或硬件组件进行更改或修复后，直接给设备加电。如果没有冒烟，则该组件就通过了测试。
+				</br>在软件中，“冒烟测试”这一术语描述的是在将代码更改嵌入到产品的源树中之前对这些更改进行验证的过程。</h6>
+			<h6 style="text-align:left;font-size:24px">冒烟测试的对象是每一个新编译的需要正式测试的软件版本，目的是确认软件基本功能正常，可以进行后续的正式测试工作。</h6>
+			<h6 style="text-align:left;font-size:24px">冒烟测试(smoketest)在测试中发现问题，找到了一个Bug，然后开发人员会来修复这个Bug。这时想知道这次修复是否真的解决了程序的Bug，或者是否会对其它模块造成影响，就需要针对此问题进行专门测试，这个过程就被称为SmokeTest。</h6>
+
+			
+<h6 style="text-align:left;font-size:24px"></h6>
+	</section>
+		
+        <section>
+            <h3>四.自动化测试</h3>
+				   
+			<h6 style="text-align:left;font-size:24px">自动化测试与软件开发过程从本质上来讲是一样的，
+				</br>无非是利用自动化测试工具（相当于软件开发工具）；
+				</br>经过对测试需求的分析（软件过程中的需求分析）；
+				</br>设计出自动化测试用例（软件过程中的需求规格）；
+				</br>从而搭建自动化测试的框架（软件过程中的概要设计）；
+				</br>设计与编写自动化脚本（详细设计与编码）；
+				</br>测试脚本的正确性，从而完成该套测试脚本（即主要功能为测试的应用软件）。</h6>
+			<h6 style="text-align:left;font-size:24px">实施自动化测试之前需要对软件开发过程进行分析，以观察其是否适合使用自动化测试。通常需要同时满足以下条件：</h6>
+			<h6 style="text-align:left;font-size:24px">1) 需求变动不频繁</br>2) 项目周期足够长</br>3) 自动化测试脚本可重复使用</h6>
+		</section>
+		
+		
+	<section>
+	    <h3>五.回归测试</h3>
+		<h6 style="text-align:left;font-size:24px">回归测试是指修改了旧代码后，重新进行测试以确认修改没有引入新的错误或导致其他代码产生错误。</h6>
+		<h6 style="text-align:left;font-size:24px">背景：在软件生命周期中的任何一个阶段, 只要软件发生了改变，就可能给该软件带来问题。软件的改变可能是源于发现了错误并做了修改，也有可能是因为在集成或维护阶段加入了新的模块。</h6>
+		<h6 style="text-align:left;font-size:24px">原因：</h6>
+		<h6 style="text-align:left;font-size:24px">1.当软件中所含错误被发现时, 如果错误跟踪与管理系统不够完善，就可能会遗漏对这些错误的修改;
+			</br>2.而开发者对错误理解的不够透彻, 也可能导致所做的修改只修正了错误的外在表现，而没有修复错误本身从而造成修改失败;
+			</br>3.修改还有可能产生副作用从而导致软件未被修改的部分产生新的问题，使本来工作正常的功能产生错误。
+			</br>4.同样, 在有新代码加入软件的时候, 除了新加入的代码中有可能含有错误外新代码还有可能对原有的代码带来影响。
+			</br>因此，每当软件发生变化时，我们就必须重新测试现有的功能，以便确定修改是否达到了预期的目的，检查修改是否损害了原有的正常功能。同时, 还需要补充新的测试用例来测试新的或被修改了的功能。为了验证修改的正确性及其影响就需要进行回归测试。</h6>
+        </section>
+	    
+	<section>
+	    <h3>六.性能测试</h3>
+		<h6 style="text-align:left;font-size:24px">性能测试是通过自动化的测试工具模拟多种正常、峰值以及异常负载条件来对系统的各项性能指标进行测试。</h6>
+		<h6 style="text-align:left;font-size:24px">负载测试和压力测试都属于性能测试，两者可以结合进行。</h6>
+		<h6 style="text-align:left;font-size:24px">通过负载测试，确定在各种工作负载下系统的性能，目标是测试当负载逐渐增加时，系统各项性能指标的变化情况。</h6>
+		<h6 style="text-align:left;font-size:24px">压力测试是通过确定一个系统的瓶颈或者不能接收的性能点，来获得系统能提供的最大服务级别的测试。</h6>
+					
+        </section>
+
+		
+        <section>
+            <h3>更多讨论</h3>
+        </section>
+		
+
+		
+        <section>
+            <h4>谢谢观看</h4>
+            <p></p>
+            <p><small>By:谭品鸿</small></p>
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
