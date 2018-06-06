@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="../css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="../css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="../lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? '../css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<!--<img src="../../img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">-->
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>第三方推送解析</h2>
+            <p>分享人：桂楠</p>
+        </section>
+        <section>
+            <p>目录</p>
+            <p>1. 主流的第三方推送平台分类</p>
+            <p>2.推送类别</p>
+            <p>3.如何选择第三方平台推送服务？</p>
+            <p>4.推送消息类别的选择</p>
+
+        </section>
+        <section>
+            <section>
+                <h3>1.主流的第三方推送平台分类</h3>
+            </section>
+            <section>
+                <p>手机厂商类：小米推送、华为推送。
+                </p>
+                <p>第三方平台类：友盟推送、极光推送、云巴（基于MQTT）
+                </p>
+				<p>BAT大厂的平台推送：阿里云移动推送、腾讯信鸽推送、百度云推送
+
+                </p>
+            </section>
+			<section>
+                <p>其他推送方式还有：C2DM、轮询、SMS、MQTT协议、XMPP协议等等，相对于这些推送方式，第三方推送方式的特点分别是：
+             </p>
+                <p>优点：成本低
+                </p>
+                <p>缺点：安全性低
+                </p>
+                
+            </section>
+        </section>
+        
+        <section>
+            <section>
+                <h3>2.推送类别</h3>
+            </section>
+            <section>
+                <p><h3>1、手机厂商推送</h3>
+                </p>
+                
+            </section>
+            <section>
+                <p><h3>2、第三方平台类</h3>
+                </p>
+                
+            </section>
+			<section>
+                <p><h3>3、BAT大厂的推送</h3>
+                </p>
+                
+            </section>
+        </section>
+<section>
+    <section>
+        <h3>3.如何选择第三方平台推送服务？</h3>
+    </section>
+            <section>
+                <p>主要从用户类别+实现成本+渠道来选择不同的使用场景 
+                </p>
+                <p>1. 如果用户群体精准（使用小米手机或华为手机居多），可以考虑只集成对应手机厂商的推送；
+                </p>
+                <p> 2、如果用户群体广泛、希望实现成本低，可以考虑只使用单一第三方平台类的推送（极光、友盟等，选一个规模效应最大的）
+
+                </p>
+				
+            </section>
+			<section>
+			<p>3、如果用户群体广泛、不在意实现成本，个人建议： 
+                </p>
+			<P>对于小米手机，使用小米推送；
+
+
+             </P>	
+			 <p>对于华为手机，使用华为推送；
+			  </p>
+			  <p>对于其他手机，只使用单一第三方平台类的推送（极光、友盟等等，选一个规模效应最大的）
+			  </p>
+			</section>
+       
+       
+    
+    
+    </section>
+        
+        <section>
+            <section>
+                <h3>4.推送消息类别的选择</h3>
+            </section>
+            <section>
+                <h3>（1） 推送消息的类别</h3>
+                <p>通常第三方推送平台都支持两种推送消息类型：通知栏消息和透传消息。
+                </p>
+				<p>通知栏消息：该类消息在被送达用户的设备后，直接以系统通知栏的形式展示给用户
+                </p>
+				<p>透传消息：该类消息在被送达用户的设备后，还会继续传递到App
+                </p>
+            </section>
+            <section>
+                <h3>（2）消息类别的区别与特点</h3>
+                <p>二者的区别在于：透传消息在整个消息传递过程中比通知栏消息多了一步-传递到App
+            </p>
+			  <p>通知栏消息的优点：送达率高 
+            </p>
+			  <p>因为透传消息在整个消息传递过程中比通知栏消息多了一步-传递到App，因此透传消息就增加一些被系统限制的概率，给系统杀死的概率就高一些，所以说，通知栏消息比透传消息应该能提供更好的送达率。
+            </p>
+            </section>
+			<section>
+                
+                <p>透传消息的优点：对消息操作程度高 & 自定义程度高 -
+            </p>
+			  <p> 提供了对消息数据的更灵活的操纵能力。
+            </p>
+			  <p>可自定义通知提醒的样式（包括提示样式、提示形式如声音等等）
+            </p>
+            </section>
+        </section>
+        </section>
+       
+        </section>
+        <section>
+            <h3>鸣谢</h3>
+            <p>感谢大家观看</p>
+            <p><small>BY : 桂楠</small></p>
+        </section>
+
+    </div>
+</div>
+
+<script src="../lib/reveal/js/head.min.js"></script>
+<script src="../lib/reveal/reveal.js"></script>
+
+<script>
+
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: '../plugin/markdown/marked.js' },
+            { src: '../plugin/markdown/markdown.js' },
+            { src: '../plugin/notes/notes.js', async: true },
+            { src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

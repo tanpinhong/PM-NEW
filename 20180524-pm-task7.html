@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://it-xzy.github.io/PM-NEW/85-pm-1.html#/ -->
+<html class=" js no-mobile desktop no-ie chrome chrome57 pm-new-section w-1366 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 lt-1440 lt-1680 lt-1920 no-portrait landscape gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch no-retina fontface domloaded" id="85-pm-1-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://it-xzy.github.io/PM-NEW/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://it-xzy.github.io/PM-NEW/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://it-xzy.github.io/PM-NEW/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script><link rel="stylesheet" type="text/css" href="https://it-xzy.github.io/css/reveal/print/paper.css"><script type="text/javascript" src="https://it-xzy.github.io/PM-NEW/plugin/markdown/marked.js"></script><script type="text/javascript" src="https://it-xzy.github.io/PM-NEW/plugin/markdown/markdown.js"></script><script type="text/javascript" src="https://it-xzy.github.io/PM-NEW/plugin/notes/notes.js"></script><script type="text/javascript" src="https://it-xzy.github.io/PM-NEW/plugin/highlight/highlight.js"></script>
+</head>
+<body>
+<img src="https://it-xzy.github.io/PM-NEW/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com/" alt="" target="_blank">
+</map>
+<div class="reveal slide center" role="application" data-transition-speed="default" data-background-transition="fade">
+    <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.822857);">
+	
+        <section class="present" style="top: 234px; display: block;">
+            <h3>浅谈数据分析中的埋点</h3>
+			<p> </p>
+            <p>分享人:高健雄</p>
+        </section>
+		
+        <section hidden="" aria-hidden="true" class="future" style="top: 135px; display: block;">
+            <p>1.为什么做数据分析？</p>
+            <p>2.通过什么来做数据分析——“埋点”</p>
+			<p>3.“埋点”分类</p>
+			
+        </section>
+		
+        <section hidden="" aria-hidden="true" class="future" style="top: 267px; display: block;">
+            <p>1.为什么做数据分析？</p>
+        </section>
+
+
+		 <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p>在流量红利基本消失殆尽的大背景之下，流量逐步呈现愈发明显的马太效应，智勇双全的前辈们遂提出了精细化产品探索之道，等各种方法论，通过数据分析团结一切可以团结的力量，利用可以利用的一切工具通过数据驱动产品迭代，通过数据驱动产品优化从而在激烈的同行竞争中杀出一条血路来，谋生存，求发展；最终通过数据始终在战略上比竞品（同行竞争对手）快一步，</p>
+			 <p>基于以上背景首先培养的就是以数据思维驱动产品迭代，精细化产品探索，及时发现产品问题，持续优化，提升用户体验让用户用的爽、满足用户的深层次情感需求，来达到“大吉大利，今晚吃鸡”的目的。</p>
+        </section>
+
+	  
+		<section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p>2、通过什么来做数据分析——“埋点”</p>
+        </section>
+
+		
+		  <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p>数据埋点是数据产品经理、数据运营以及数据分析师，基于业务需求（例如：CPC点击付费广告中统计每一个广告位的点击次数），产品需求（例如：推荐系统中推荐商品的曝光次数以及点击的人数）对用户行为的每一个事件对应的位置进行开发埋点，并通过SDK上报埋点的数据结果，记录数据汇总后进行分析，推动产品优化或指导运营。</p>
+          </section>
+
+		  <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p>埋点分析，是网站分析的一种常用的数据采集方法。数据埋点分为初级、中级、高级三种方式。数据埋点主流部署的方式有两种；</p>
+			<p>私有化部署（即部署在自己公司的服务器上，如果期望提高数据安全性，或者定制化的埋点方案较多，则适合私有部署，并开发一套针对自己公司定制化的数据后台查询系统保证数据的安全性和精确性，缺点是成本较高）；</p>
+			<p>接入第三方服务，（优点是成本较低，部分基础服务免费，缺点是：数据会存在不安全的风险，另外一个就是只能进行通用的简单分析，无法定制化埋点方案）</p>
+          </section>
+
+		
+		 
+          
+
+
+		  
+		  <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p>3.“埋点”分类</p>
+          </section>
+
+		    
+		
+		
+		  <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p>1、点击事件：
+                点击事件，用户点击按钮即算点击事件，不管点击后有无结果；如下图红框标注所示，点击一次记一次。</p>
+			<img src="untitled.png" alt="untitled">
+          </section>
+
+		     
+		
+
+		     <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+			 <p>2、曝光事件：
+                成功打开一次页面记一次，刷新页面一次记一次，加载下一页新页，加载一次记一次。home键切换到后台再进入页面，曝光事件不记；如下图页面所示，打开一次记一次。</p>
+                <img src="untitledd.png" alt="untitledd">
+          </section>
+
+		  
+		   <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <p>3、页面停留时间事件：
+                表示一个用户在X页面的停留时长记为停留时长。例如：小明9:00访问了X网站首页，此时分析工具则开始为小明这个访问者记录1个Session（会话）。接着9:01小明又浏览了另外一个页面列表页，然后离开了网站（离开网站可以是通过关闭浏览器，或在地址栏键入一个不同的网址，或是点击了你网站上链接到其他网站的链接……）为了简单，我们把这个过程当做一个Session。
+                则最终小明在首页的页面停留时间：
+                （Time on Page，简称Tp）Tp(首页) = 9:01 – 9:00 = 1 分钟</p>
+          </section>
+
+		   
+		   
+
+
+
+
+		
+        <section hidden="" aria-hidden="true" class="future" style="top: 330px; display: none;">
+            <h4>感谢参与和观看</h4>
+            <p></p>
+            <p><small>By:高健雄</small></p>
+        </section>
+
+
+    </div>
+<div class="backgrounds"><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" style="display: block;"><button class="navigate-left" aria-label="previous slide"></button><button class="navigate-right enabled" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide"></button><button class="navigate-down" aria-label="below slide"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe=""></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px);">
+    浅谈用户画像在电商领域的应用
+			 
+            分享人:高健雄
+        </div></div>
+
+<script src="https://it-xzy.github.io/PM-NEW/lib/reveal/js/head.min.js"></script>
+<script src="https://it-xzy.github.io/PM-NEW/lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+
+</body></html>
