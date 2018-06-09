@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+	
+        <section>
+            <h3>反馈对于交互体验的重要性</h3>
+			<p> </p>
+            <p>分享人:雷侨</p>
+        </section>
+		
+        <section>
+            <p>1.什么是反馈？</p>
+            <p>2.为什么反馈设计是用户体验重要的一环？</p>
+			<P>3.反馈的设计应该满足的四个原则：</P>
+			<P>4.反馈设计的目的</P>
+			<P>5.反馈的五种类型</P>
+			<P>6.如何判断你的反馈设计是有效的，非过度的反馈。</P>
+			<P>7.如何判断你的涉及反馈是否过度？</P>
+        </section>
+		
+
+        <section>
+            <p>1.什么是反馈？</p>
+        </section>
+
+		 <section>
+			 <p>反馈就是用户做了某项操作之后，应用系统给用户的一个响应。这个响应根据场景的不同会有不同的响应形式和不同作用。</p>
+        </section>
+
+
+		
+		  <section>
+            <p>2.为什么反馈设计是用户体验重要的一环？</p>
+          </section>
+
+		  <section>
+            <p>在人机交互的过程中，用户希望看到每一步都清晰，及时的显示。</p>
+			<p>2.1一方面，PC端和移动端产品需要保证产品有积极，及时的反馈响应以确保用户知道自己所处的状态，否则会让用户觉得反应迟钝；</p>
+			<p>2.2另一方面，我们也要避免过度的信息反馈，而尤其注意不要反馈错误信息，错误的信息对用户造成的影响是巨大的。</p>
+			<p>2.3反馈直观的表现为界面的变化（少数为声音和震动），通过这种变化使的用户能够更加友好高效地与产品进行交互，更加专心地投入到任务流程当中去。</p>
+          </section>
+
+		  <section>
+            <p>比如：当用户执行完一步操作后，系统没有及时甚至没有给出相应的反馈提示，就会给用户带来疑惑（实现模型与心理模型冲突），让用户不能确定自己的操作是否被执行、执行是否成功、执行整体进度、或者是执行后会产生怎么样的影响、能在哪里查询到结果以及执行后是否可以被撤销等等。而这其中的任何一个环节都有可能影响到用户对当前任务的理解以是否执行下一步操作，从而影响到产品的用户体验。</p>
+          </section>
+
+		  
+		  <section>
+            <p>3.反馈的设计应该满足以下四个原则</p>
+          </section>
+
+		    <section>
+            <p>3.1反馈通过直观的体现，可以帮助用户理解微交互的规则，最大可能地降低用户的学习成本。</p>
+			 <p>3.2别让反馈给用户造成压力，通过最少的反馈传达同样的信息。</p>
+			  <p>3.3反馈应该由需求驱动，然后在恰当的场景下和时间下让用户知道他需要知道的事情。</p>
+			   <p>3.4反馈的速度尽可能的快，反馈过慢会给用户感觉产品的性能差。</p>
+          </section>
+
+		  
+		   <section>
+            <p>4.对于用户而言，反馈设计的目的主要告诉用户以下几点</p>
+          </section>
+
+          
+		   <section>
+            <p>告诉用户发什么了什么？</p>
+			<p>用户刚刚做了什么事？</p>
+			<p>哪些过程已经开始了？</p>
+			<p>哪些过程已经结束了？</p>
+			<p>哪些过程正在进行中？</p>
+			<p>用户不能做什么？</p>
+			<p>用户刚刚操作的结果是什么？</p>
+          </section>
+
+		
+
+		    <section>
+            <p>5.反馈的5种类型</p>
+          </section>
+
+		    <section>
+            <p>5.1结果反馈</p>
+			 <p>告知用户的操作结果。例如操作成功或者操作失败、对操作后的一种确认。</p>
+			 	 <p>以toast形式给用户反馈。例如:微信转发他人信息，出现toast,提示用户已经发送成功。QQ的删除好友，出现toast，提示删除好友成功。</p>
+          </section>
+
+		     <section>
+            <p>5.2状态反馈</p>
+			 <p>操作前后展示效果不一样。</p>
+			 <p>当用户操作后，界面操作前的状态和操作后的状态不一致。通过这个不一致，给用户反馈我的操作得到了提交。例如京东的签到前状态和签到后按钮的状态是不同的。</p>
+          </section>
+
+		   <section>
+            <p>5.3过渡反馈</p>
+			 <p>有些时候程序确实不够快，缓慢的加载速度和延迟问题，这时候通过常见的过渡组件给用户反馈,过渡反馈的目的在于通过向用户反馈当前的响应进度和合理的时间消耗来让用户在等待过程中放松下来。</p>
+			 <p>以进度指示器给用户反馈当前状态。例如浏览器在点击搜索后，页面加载的进程反馈</p>
+			 <p>以系统/自定义的循环动画，例如：QQ空间标题栏的加载；优酷，第一次进入应用然后出现的过渡动画</p>
+          </section>
+		   
+		   <section>
+            <p>5.4操作反馈</p>
+			 <p>对下一步操作的指引，用户点击一个操作就出现新的操作组件以此给用户的反馈。</p>
+			 <p>当用户进行一个操作后，出现反馈，这个反馈通常是通过浮层弹框、调起键盘、进入下一个界面等等形式表现</p>
+			 <p>例如：ios原生邮件，点击回复/转发出现底部浮层；删除微信好友，弹出的底部确认浮层</p>
+          </section>
+
+		  <section>
+            <p>5.5声音和震动反馈</p>
+			 <p>声音和震动也是反馈的一种的表现形式，通过用户的操作加以声音和震动的引导，给用户很强的心理暗示。</p>
+			 <p>例如QQ邮箱，发送过程和成功后都有声音提示。特别是小游戏跳一跳通过声音展示按压的时长，也是一个很典型的通过声音反馈的例子。</p>
+          </section>
+
+		  <section>
+            <p>6.如何判断你的反馈设计是有效的，非过度的反馈。</p>
+          </section>
+
+		    <section>
+			 <p>上面介绍的反馈的各种类型。但是很多情况设计师们过度使用反馈。常见的情况是过度使用toast。</p>
+			 <p>例如猫眼：点击已想看 爱心变灰，同时出现toast提示。这样就存在过度的反馈。</p>
+			 <p>为什么我说猫眼的反馈过度呢？因为用户点击操作时，爱心状态已经变了，那么这个元素的变化已经暗示用户，该App进行了反馈，没必要在出现toast提示。</p>
+          </section>
+
+           <section>
+            <p>7.如何判断你的涉及反馈是否过度？</p>
+          </section>
+
+		   <section>
+            <p>在设计反馈时，如果已经有一组元素的变化足以暗示用户当前状态得到了反馈，那么没必要再增加多余的元素进行反馈提示（除非有特别的目的）。这样会使得用户的心理负担变重，一个反馈可能不足以影响用户体验，如果整个APP都出现这种情况呢，将严重影响用户体验。</p>
+          </section>
+
+		
+        <section>
+            <h4>感谢参与和观看</h4>
+            <p></p>
+            <p><small>By:雷侨</small></p>
+        </section>
+
+
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

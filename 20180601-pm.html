@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    a    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : './css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        
+		<section>
+            <h3>解读流程图</h3>
+            <h4></h4>
+            <p>分享人：钱琴</p>
+        </section>
+        
+		<section>
+            <p>目录</p>
+            <p>1.定义</p>
+            <p>2.目的</p>
+            <p>3.分类</p>
+            <p>4.小结</p>
+            <p>5.流程图的画法</p>
+        </section>
+        
+		<section>
+            <h3>1.流程图的定义</h3>
+		</section>
+		
+		<section>
+            <p>
+                    流程——顾名思义：水流的路程；事物进行中的次序或顺序的布置和安排。流程是自然而然就存在的，它可以不规范，可以不固定，可以充满问题。
+                    由两个及以上的步骤，完成一个完整的行为的过程，可称之为流程；注意是两个及以上的步骤。                    
+			</p>
+			<p>
+                    流程图的核心就在于如何排布事物进行的次序，不同的顺序可能造成截然不同的结果。
+			</p>
+		</section>
+
+        <section>
+            <h3>2.目的</h3>
+        </section>
+        
+		<section>
+            <p>
+            <h4>产品经理画流程图的目的不外乎几点：
+                </h4>
+            </p>
+			<p>
+                    流程图为产品设计基石，可以保证产品的使用逻辑合理顺畅
+                    传达需求，用流程图来更好地表达产品逻辑
+                    查漏补缺，检验是否有遗漏的分支流程
+                    
+			</p>
+        </section>
+        <section>
+                <h3>3.分类</h3>
+            </section>
+        <section>
+                <p>业务流程图</p>
+                <p>页面流程图</p>
+                <p>功能流图程</p>
+                <p>数据流程图</p>
+            </section>
+		
+		<section>
+                <h4>业务流程图
+                    </h4>
+			<p>
+                    先以宋丹丹小品中的一个脑筋急转弯为例：把大象装冰箱，总共分几步？
+                    三步：
+                    第一步，把冰箱门打开；
+                    第二步，把大象装进去；
+                    第三步，把冰箱门关上。
+                    这看似是一个笑话，但其实蕴含着很强的逻辑思维。首先这里忽略了很多现实中的限制条件。比如，以大多数冰箱的容积都不可能将大象塞进去；比如是否能把大象切成块放进去？如果把大象塞进去，它会不会又跑出来？但抛开这些限制条件，那把大象塞冰箱的极简流程就是三步。打开冰箱门，把大象装进去，最后把门关上。
+                    我们做业务流程图，其实很多时候都需要具有把“大象塞进冰箱”的思维方式，抛开很多现有的认知局限，将具象的行为一个个抽象出来。
+
+			</p>
+       
+        </section>
+        
+		<section>
+         <p>
+                结合上面的例子，再来细细品味“业务流程图”的定义：
+                抽象地描述事物进行的次序和顺序，不涉及具体操作与执行细节。在互联网软件行业通常指脱离产品设计的用户行为流程。业务流程图是一种系统分析人员都懂的共同语言, 用来描述系统组织结构、业务流程。
+                不管是否理解上述定义，下面带着抽象思维去思考购物行为的业务流程图应该是什么样的？
+         </p>
+         <p>
+                <img src="./img/pm-06/1.png" />
+              </p>
+
+
+        </section>
+
+        <section>
+                <p>
+                        以上的三步组成了一个最简的一个流程，其完全涵盖了任何购物行为的核心。无论是网购还是在实体超市，都是以这三个行为为主体，然后进行扩展的。相对于大家平时看到的复杂的网购流程图，以上的三步流程简直简单的令人发指，而这恰恰是印证了大道至简的原理。我始终坚信无论再复杂的事情都能简化为极其简单的事情，如果你无法将其简化，说明只是你没有理解其核心。
+                        依据上面的最小流程单元，我们下面尝试能不能将其扩展，尝试套用在更细节的流程图上面。
+                        
+                 </p>
+            
+        </section>
+        
+		<section>
+                <h4>页面流程图</h4>
+            <p>
+                    定义：指电子产品具体所呈现的页面跳转流程图。其承载了业务流程图所包含的业务流转信息。
+                    下图以淘宝为例，展示出了网购的页面流程。
+                    
+            </p>
+
+            
+			
+        </section>
+		
+		<section>
+                <p>
+                        <img src="./img/pm-06/2.png" />
+                      </p>
+        </section>
+        
+		<section>
+                <p>
+                        由上图红框中的三个节点我们可以看出，页面流程图依然是包含在业务流程图的。这恰恰符合定义中的要求，同时也印证了页面流程图的正确性。相较于一开始的极简流程图，现在的流程图已经渐渐变得复杂了一些。我们将抽象的业务，映射在了具象的页面上，用软件的页面承载起了业务需求。而以上就是由业务流程图到页面流程图的转化过程。
+
+                    </p>
+        </section>
+        
+		<section>
+                <h4>功能流程图</h4>
+            <p>
+                    定义：指单页面内或多页面之间的功能操作流程，其包含在页面流程中。
+                    任何功能都是被包含在页面内的，但一个页面内往往不止一个功能，所以单单页面流程图可能无法完整表达所有流程，而这时就需要用功能流程图来更加具体表达每个页面内所包含的功能。
+                    
+		    </p>
+        </section>
+        
+		<section>
+                <p><img src="./img/pm-06/3.png" />
+                      </p>
+            <p>
+                    由上图红框中的四个节点我们可以看出，功能流程图同样也是由页面流程图拓展而来的。功能流程图是在页面流程图的基础上继续深化，变得更加复杂。同时也渐渐变得像大家日常看到的流程图一样
+            </p>
+        </section>
+        
+        <section>
+                <h4>数据流程图</h4>
+             <p>
+                    定义：特指软件产品中，描述数据在不同节点被处理的过程所画的图表。主要表达计算机程序对于业务的实现原理。用户在功能流程图中的每一个操作，对应都会反映在数据流程图中。同时，数据流程图也可以叫程序流程图（Program Flow Diagram）。
+                    它是一种能全面地描述信息系统逻辑模型的主要工具。它可以利用少数几种符号综合的反映出信息在系统中的流动、处理和存储的情况。数据流程图具有抽象性和概括性。
+                    
+			</p>
+
+        </section>
+        
+		<section>
+           <p>
+                <p>
+                        可能业务流程图、页面流程图和功能流程图大家都耳熟能详，但数据流程图恐怕了解的就比较少了。其实，每个流程图中都有一个核心伴随着不同操作在整个系统中不断流转。比如业务流程图大多以人为核心，每个节点都是在传递人的不同行为。而页面流程图和功能流程图也类似，都是以人的操作行为为核心，在不同页面和功能间进行流转。但数据流程图不同，它是以数据为核心，展示整个系统中，数据是如何被处理的。
+                </p>
+            </p>
+        </section>
+		
+		<section>
+                <p>
+                其更偏技术思维，更多的是展现后台程序的实现原理。所以，常常是开发人员绘制此图，而产品经理涉及较少。但随着产品经理地不断成长，向上提高到战略层，而向下则会深入到实现层。理解程序的开发原理和背后的数据流转，无疑会让产品经理对产品设计有更加深刻的理解。
+                下面仍以购物流程为主题来展示数据流程图。
+            </p>
+		
+        </section>
+		
+		<section>
+                <p><img src="./img/pm-06/4.png" />
+                </p>
+			
+        </section>
+		
+		<section>
+                <p>
+                相较于之前的图表，数据流程图增加了新的维度——程序。客户端在展现用户操作行为的同时，也表达了程序在用户行为背后的动作。而往往大家说一个产品复杂的时候，可能只注意到了它的前端交互复杂，而忽视了后端逻辑的复杂。对于一个优秀的产品经理来说，不止要关注前端的用户体验，更要能看清事物背后的逻辑。毕竟人人都可以对用户体验指手画脚，而说到程序实现，那可就体现出产品经理的专业性来了。
+                </p>
+		
+        </section>
+        		
+		<section>
+                <h3>4.小结</h3>
+        </section>
+		
+		<section>
+                <p>
+                        以上几幅图片分别展示了一个产品的业务流程、页面流程、功能流程和数据流程。从中可以发现，由业务到页面，再到功能，再到数据处理，是顺序拓展的。一个产品的页面或功能，不是凭空出现的，而是依据业务层的各个节点和流程进行设计的。这就是为什么在做产品设计时一定要先理解业务的原因。
+                        在初步学习画流程图时，尽量将业务、页面、功能和数据区分清楚，并且逐层递进，不要把多种类型的流程图混杂一起。这样反而会将思想搞得混乱。                        
+                        </p>
+        </section>
+		
+		
+		<section>
+                <h3>
+                        5.流程图的画法
+                        </h3>
+
+        </section>
+		
+		
+		
+		<section>
+                <h4>
+                        流程图的基本元素
+                        </h4>
+                <p>
+                        下图为流程图中最常用的几种元素。不常用的元素就不在此展示了，大家可以在Microsoft Visio中查看。
+                </p>
+                <p><img src="./img/pm-06/5.png" />
+                </p>
+
+       
+        </section>
+		
+		<section>
+                <h4>
+                        泳道图
+                        </h4>
+                        <p>
+                              泳道图是流程图中的一种画法，是将流程图中的一些流程节点按操作角色的不同而划分。比如刚才的数据流程图其实就采用泳道图的画法展示，其中顶部为两个不同角色——用户和服务器。同时在竖向的基础上也可以添加横向泳道，以不同页面来给操作分类。对于涉及到多角色比较复杂的流程图来说，画泳道流程图会看起来更加清晰明了。
+
+                        </p>
+
+        </section>
+		
+		<section>
+                <p><img src="./img/pm-06/6.png" />
+                </p>
+
+        </section>
+		
+		<section>
+                <h4>
+                        流程图的组成部分
+                        </h4>
+			<p>
+                    流程图主要由三部分组成：
+                    主干流程
+                    分支流程（异常流程属于分支流程）
+                    子流程
+                    下图是将之前功能流程图的例子作为主干流程，然后添加了分支流程。我们在画流程图时应该遵循先主干后分支的顺序来描绘流程图，因为对于大多数用户来说，主干流程是最常用的路径。
+                    
+            </p>
+        </section>
+		
+		<section>
+                <p><img src="./img/pm-06/7.png" />
+                </p>
+
+        </section>
+		
+		<section>
+                <p>
+                        主干流程和分支流程大家都好理解，那到底什么是子流程呢？在画流程图的过程中，有一些流程是会经常遇到的，比如登录流程、注册流程、修改密码流程。对于电商来说，可能有退货流程、购物券使用流程等等。如果每次画与之有关的流程图的时候，都将其再画一遍，那实在繁琐。所以，子流程就是将某几个具有逻辑关系的节点集合而成的，可以复用在各个地方。
+                        下图就是将登录流程变成子流程后的流程图。                
+                     </p>
+        </section>
+		
+		<section>
+                <p><img src="./img/pm-06/8.png" />
+                </p>
+        </section>
+		
+		<section>
+           <h4>
+		   流程图的结构 
+		   </h4>
+		   <p>
+                流程图中大致包含四种结构：顺序结构、条件结构（又称选择结构）、循环结构。基本上大多数流程图都是由这三种结构组成的。
+
+		   </p>
+        </section>
+		
+		<section>
+                <p><img src="./img/pm-06/9.png" />
+                </p>
+        </section>
+		
+		
+		<section>
+            <h3>参考文献</h3>
+        </section>
+        
+		<section>
+		    <p>全面解读流程图</p>
+            
+			
+        </section>
+        
+		<section>
+            <h3>更多讨论</h3>
+        </section>
+        
+        <section>
+            <p>感谢大家观看</p>
+            <p><small>By :钱琴</small></p>
+        </section>
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status He
