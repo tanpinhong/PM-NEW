@@ -1,0 +1,198 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="https://ptteng.github.io/PPT/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+	
+        <section>
+            <h3>浅谈设计搜索时容易被忽视的部分</h3>
+            <p>分享人:董瑞锋</p>
+        </section>
+		
+		<section>		  		    
+            <p>我加一个搜索框和一个搜索结果页，找一个搜索的算法团队提供搜索算法，其他的交互抄抄竞品，ok啦！</p>
+	</section> 
+		
+		<section>
+            <p>一个综合电商的健康程度，可以从首页“搜索框”的点击率来略窥一二。
+想一想，一个想买“追风筝的人”的用户的购买转化率和一个随手打开APP的用户的购买转化率，必然前者要高很多很多啊。也就是说搜索入口点击量越高，说明健康程度越高。一般电商的搜索栏的点击比例可以达到1/2以上。由此可见搜索功能的重要性。</p>
+        </section>
+		
+		<section>		  		    
+            <p>总之，搜索产品线满足着“有明确购买意愿”场景，承载着电商APP中最重的一部分流量。</p>
+		</section> 
+
+		<section>		  		    
+            <p>“搜索”功能的几个步骤</p>
+		</section>    
+		
+		<section>		  		    
+            <p>从上图用户的使用流程可以看到：用户的搜索需求链可以粗分为5步。因为最后两步“进入单品页查看详情”“加入购物车”和商品信息、单品页展示相关，搜索结果一般也很受重视，但是前两步经常就会被忽视，所以我们主要研究前2步。</p>
+		</section>    
+		
+		<section>		  		    
+            <p>“搜索入口”设计要点</p>
+		</section> 
+		
+		<section>		  		    
+            <p>搜索入口的关键指标是这个功能的使用率，目前搜索入口栏的视觉样式已经趋同，设计时候采用搜索框／单独的搜索按钮已经比较主流了。</p>
+		</section> 
+		
+		<section>		  		    
+            <p>在这种情况下，提高搜索入口的使用率，有两个要点：</p>
+		</section> 	
+		
+		<section>		  		    
+            <p>要点1：寻找频道增加搜索入口</p>		
+		</section> 
+		
+		<section>		  		    
+            <p>错误方式：
+我在所有的卖场页面都加上，有比没有好吧，让用户想搜就搜，还符合尼尔森一致性的原则呢。</p>
+			<p>搜索入口有两种模式：
+
+模式一：普通型，搜索模块是对所有商品进行搜索；
+模式二：指定型，搜索模块只针对指定分类、或卖场内的商品进行搜索。</P>
+	        </section> 		
+        <section>		
+            <p>如果你的卖场商品数量较多，并且品类综合，采用普通型搜索模块。
+一般这种综合型的卖场流量大，用户意向分散，使用普通型搜索模块即可。比如：首页、比如大促落地页等。
+	        </section> 
+
+        <section>
+如果你的卖场商品数量较多，并且品类单一，采用指定型搜索模块。
+指定类目的卖场，比如：生鲜卖场、图书馆等，需要在搜索模块上增加类型。也就是说用户在图书馆里面的任何搜索，都应该是书籍相关的。又或者是满100减10的卖场中，搜索到的商品也应该是满足这个促销条件的。
+	        </section> 
+
+        <section>
+如果你的卖场商品数量较少，不要使用搜索模块。
+比如：榜单、少商品的卖场等，如果用户搜索后召回的商品数量极少，简直是搜索体验的噩梦。有这个模块还不如没有哇，真是的。
+	        </section> 
+
+        <section>
+如果你的卖场品类用户无法感知，不要使用搜索模块。
+推荐清单就是一个例子，用户无法感知到这个集合是什么样子的。可能这个用户A比较喜欢图书、女装，换了一个用户后，品类却完全不同。</p>
+        </section>
+
+		<section>		
+            <p>要点2：增加单页面内搜索入口的曝光次数
+
+这个要点需要在交互层面注意，不要让你的搜索模块仅仅出现在首屏。在用户下滑浏览过程中也需要看到搜索入口，可以采用一个吸顶的搜索栏，或者在用户下滑过程中将搜索栏缩小到某一个位置。总之，要保证实时可见。</p>
+        </section>
+		
+		<section>		  		    
+            <p>“搜索输入页”设计要点</p>
+		</section> 
+		
+        <section>		
+            <p>搜索输入页有两个状态，一个是刚进入时候的默认状态，另外一个是用户已经开始输入时候的输入状态。</p>
+        </section>		
+		
+		<section>
+            <p>要点1：“搜索输入页”的默认状态
+默认状态承载了两个任务：</p>
+		</section>
+		
+		<section>
+			<p>（1）对于用户：帮助用户快速输入
+用户进入搜索输入页，应该立即键盘弹出并且输入框是待输入状态，保证用户无需其他点击，直接输入即可。另外需要增加快捷搜索词入口，展示5～10个历史搜索词，方便用户快速键入。</p>
+		</section>
+		
+		<section>		
+            <p>（2）对于业务：增加产品引导性
+可以在搜索页增加一些模块，提高相关性购买。比如：热门搜索模块、比如推荐搜索词模块等。</p>
+        </section>
+		
+		<section>		
+            <p>要点2：“搜索输入页”的输入状态</p>
+        </section>
+		
+        <section>
+            <p>在输入状态下，需要节省用户的输入时间，快速进入搜索结果页。
+所以需要有如下功能：</p>
+        </section>
+		
+		<section>
+            <p>（1）搜索词匹配：
+比如：输入英文“hah”可以转换成中文“哈哈”，并且识别出我的关键词是哈哈哈。搜索建议功能是满足用户只记得部分关键词等的模糊搜索场景，这一个部分主要是技术来实现。
+PM更加注意在交互和视觉上进行命中态和非命中态的区分，比如：上文中的“hah”就应该展示成非命中态。另外如果搜索词完全命中和部份命中，也应该在样式上进行区分。</p>
+        </section>
+		
+		<section>
+            <p>（2）帮助用户快速定位搜索词
+提供搜索词相关的信息：比如显示搜索结果数量、商品数量等。 
+搜索结果信息前置从而缩小结果范围： 比如搜索词属性、标签等。 </p>
+        </section>
+		
+        <section>
+            <h4>谢谢观看</h4>
+            <p></p>
+            <p><small>By:董瑞锋</small></p>
+        </section>
+
+
+    </div>
+</div>
+
+<script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+<script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
