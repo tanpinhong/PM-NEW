@@ -1,0 +1,178 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="https://ptteng.github.io/PPT/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+	
+        <section>
+            <h3>产品的三种流程图</h3>
+			<p>分享人:张建兴</p>
+        </section>
+		
+        <section>
+            <p>1.业务流程图</p>
+            <p>2.任务流程图</p>
+			<p>3.页面流程图</p>
+			<P>4.讨论</P>
+        </section>
+		
+        <section>
+            <section>
+			<p>写在前面</p>
+			</section>
+			
+			<section>
+			<p>刚开始的时候，画原型图的时候会火急火燎的画，根本不会想到前面要做什么准备，因为画原型图的时候成就感最大，这毕竟是真正意义上的输出物，终于画完美美的原型图了，给师兄看的时候，才发现存在很多逻辑漏洞，不是缺少分支流程，就是没考虑异常状态，就这样来来回回修改原型图，自己都开始怀疑自己了。
+
+随着画的越来越多，终于知道原型图存在着两道墙，一个是信息架构，另一个则是流程设计。只有按照相应的设计原则跨过这两道墙才能在画原型图时做到心中有数，考虑周全，而不是跟着感觉走。</p>
+			</section>
+			
+        </section>
+		
+        <section>		  		    
+            <section>
+			<p>什么是流程图？</p>
+			</section>
+			
+			<section>		  		    
+            <p>流程图：用图示的方式反映出特定主体为了满足特定需求而进行的有特定逻辑关系的一系列操作过程。精简一下，就是流程图是用图示来表示某一系列的操作过程。这个操作过程有特定的主体，是为了满足特定的需求且有特定逻辑关系的。例如：京东的购物流程，特定主体是用户、特定需求是购物、特定逻辑关系是用户购物过程中的逻辑。</p>
+		</section> 
+		
+		<section>
+			<p>1.业务流程图：一般涉及多个主体，一般会用泳道图的形式去表示业务在多方协作下是如何运行的</p>
+			<p>2.任务流程图：业务流程图是让人们能够直观的了解任务线，而任务流程图则反映出用户完成某个具体任务时的操作流程</p>
+            <p>3.页面流程图：页面流程图包含页面、行动点、连接线，是产品从抽象到具体的关键点</p>
+			</section>
+			
+		</section>       
+	
+	    <section>		  		    
+            <section>
+			<p>1、业务流程图</p>
+			</section>
+			
+			<section>		  		    
+            <p>一般涉及多个主体，表示业务在多方协作下是如何运行的。在画泳道图是要注意三个问题：</p>
+		</section> 
+		
+		<section>
+			<p>①涉及到哪些主体？</p>
+			<p>②每个主体都有哪些任务？</p>
+            <p>③各个主体之间怎么联系的？</p>
+			</section>
+			
+		</section>   
+		
+        <section>		  		    
+            <section>
+			<p>2、任务流程图</p>
+			</section>
+			
+			<section>		  		    
+            <p>泳道图从表示业务在多方协作下是如何运行的。而任务流程图就是分解到各个任务层具体是如何操作的，例如买家选购商品这个任务就涉及到搜索商品、浏览搜索结果、查看商品详情、若满意则进入订单任务，若不满意则返回到搜索结果或者重新搜索，这就是具体的某个任务的流程。</p>
+		</section> 
+		
+		<section>
+			<p>画具体任务流程的时候要注意从整体流程到局部流程，从主干流程到分支，从正常流程到异常流程。对于交互设计师来说，任务流程的主体一般是产品的用户，任务流程图反映的则是用户的行为。</p>
+			</section>
+			
+		</section> 
+		
+		<section>		  		    
+            <section>
+			<p>3、页面流程图</p>
+			</section>
+			
+			<section>		  		    
+            <p>画页面流程图的好处</p>
+		</section> 
+		
+		<section>
+			<p>1、页面流程图一张页面助你讲完完整的用户与系统的交互故事，借助它，你更容易知道流程中的潜在地雷是什么，哪里的效率比较低，有助于系统化、全局化、周全性的思考</p>
+			<p>2、细化工作量的基础，通过页面流程图可准确评估需要多少张页面。</p>
+			<p>3、聚焦：页面流程图中的每个页面都不必追求精细——你的目标是规划行为路径，而不是单页面交互设计，所以完全无需考虑页面内容、布局。所以你会更加聚焦于用户目标和任务的完成。不必过早陷入细节。</p>
+			<p>4、关键是很快。线框图有可能有几十张，你画起来没那么快，而且一旦进入细节，则还需要慢慢深究。但是页面流程图也许就是几个小时的事情。你就可以对整个项目心中有数了。</p>
+			</section>
+			
+		</section> 
+		
+		<section>
+            <h3>参考文献：【人人都是产品经理】</h3>
+        </section>
+		
+        <section>
+            <h3>更多讨论</h3>
+        </section>
+		
+        <section>
+            <h4>感谢参与和观看</h4>
+            <p></p>
+            <p><small>By:张建兴</small></p>
+        </section>
+
+
+    </div>
+</div>
+
+<script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+<script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
