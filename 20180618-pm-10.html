@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? './css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+	
+        <section>
+            <h3>完整的交互说明包含什么？</h3>
+			<p> </p>
+            <p>分享人:雷侨</p>
+        </section>
+		
+        <section>
+            <p>一、什么是交互说明？</p>
+            <p>二、交互说明怎么写？</p>
+			<P>三、注意事项</P>
+        </section>
+		
+
+        <section>
+            <p>一、什么是交互说明？</p>
+        </section>
+
+		 <section>
+			 <p>（1）简单来说就是原型图上的注释说明，注释主要是给Ui设计师和开发人员做参考。</p>
+			 <p>（2）Ui设计师会关注一些界面设计相关的信息，比如元素的限制条件和状态。</p>
+			 <p>（3）开发人员则是比较关注这个元素的类型，按钮还是文本框，限制条件、不同状态、操作反馈、以及元素的来龙去脉：从哪儿来到哪儿去。</p>
+        </section>
+
+
+		
+		  <section>
+            <p>二、交互说明应该怎么写？</p>
+          </section>
+
+		  <section>
+            <p>一份完整的交互说应该包含的内容</p>
+			<p>（1）限制条件：对页面元素的属性的描述</p>
+			<p>（2）操作、反馈：用户执行某项操作后给到用户的及时反馈</p>
+			<p>（3）状态：不同场景下用户会遇到的状态（默认状态、正常状态、特殊状态）</p>
+			<p>（4）其他重要点：用户身份、新老版本的兼容性、数据埋点、首屏位置、推送等。</p>
+          </section>
+
+		  <section>
+		   <p>（1）限制条件</p>
+            <p>a.范围值：数据的取值范围</p>
+			<p>b.极限值：数据的显示限制</p>
+          </section>
+
+		  <section>
+		   <p>（2）状态</p>
+            <p>默认状态：</p>
+			<p>默认显示的文案、选项</p>
+			<p>文本框的默认唤起的键盘</p>
+			<p>列表的默认排序方式，发布时间的倒序正序、跟新时间倒序正序</p>
+          </section>
+
+		   <section>
+		   <p>正常状态</p>
+            <p>用户正常使用的时候会遇到的状态</p>
+			<p>登录、未登录、认证审核状态（未实名、已实名）、订单状态（未付款、未发货、已发货）。即使业务流程中正常存在的状态。</p>
+          </section>
+
+		  <section>
+		   <p>特殊状态</p>
+            <p>一些特殊场景才会出现的状态</p>
+			<p>包括无数据的状态、网络加载状态、网络连接状态、系统报错的状态</p>
+          </section>
+
+		  <section>
+		   <p>（3）操作和反馈</p>
+            <p>当用户执行某些操作后，需要给用户及时的反馈。不管是正常的操作、错误的操作、还是极端情况下的特殊操作、都要做到有响应，防止让用户不知所措。</p>
+          </section>
+
+		  <section>
+		   <p>错误操作</p>
+            <p>用户进行了一些错误的操作时，需要给出一些纠正反馈，错误提示内容需要包括当前错误和纠正的信息。即告诉用户当前发生了什么，接下来需要该怎么办。</p>
+          </section>
+
+
+		  <section>
+		   <p>正常操作</p>
+            <p>正常状态下，用户的操作流程。在用户的操作过程中，需要及时给予用户反馈，告知用户发生了什么。</p>
+          </section>
+
+		  <section>
+		   <p>特殊操作</p>
+            <p>当用户进行了极端操作时，也需要给出的反馈。</p>
+          </section>
+
+
+		  
+		  <section>
+            <p>（4）交互说明中最容易遗漏的点</p>
+			<p>用户身份</p>
+			<p>站内信、推送</p>
+			<p>数据埋点</p>
+			<p>新旧版本兼容</p>
+			<p>首屏位置</p>
+          </section>
+
+		    <section>
+            <p>用户身份</p>
+			 <p>（1）当某些功能并非发放给全局用户时，需要明确告知开发人员，哪些用户有该功能的权限。</p>
+			  <p>（2）如果在需求文档中没有进行说明，开发人员会默认认为该功能开放给所有的用户，所以当涉及用户权限问题时，需要明确的在交互文档中标注清楚，那部分用户有权限使用。</p>
+			   <p>（3）会员身份、非会员身份、登录状态、未登录状态、不同等级对应的权限等</p>
+          </section>
+
+
+		  <section>
+            <p>站内信和推送</p>
+			 <p>（1）当用户完成某步操作后，是否需要触发消息（站内信、推送）通知用户，以及通知用户的文案应该写什么。</p>
+			  <p>（2）注意：在写站内信和推送时需要 注意不要遗漏信息（给谁发，什么时间发、发什么）。</p>
+			   <p>（3）模板：站内信模板：发送对象+内容（XX字以内）+发送时间+（跳转链接）推送模板：推送对象+标题（XX字以内）+内容（XX字以内）+推送时间+跳转链接</p>
+          </section>
+
+		  <section>
+            <p>数据埋点</p>
+			 <p>（1）在功能开发时进行数据埋点，为功能上线后提供一个数据分析的基础。</p>
+			  <p>（2）常见需要埋点得到的数据包括：用户的行为轨迹、查看关键路径的转化率，某个活动对日活注册量的影响等。</p>
+			   <p>（3）常见的数据埋点方式包括：公司自己做后台统计或是借助第三方数据统计平台（友盟统计、百度统计等）</p>
+          </section>
+
+		  
+
+
+
+		   <section>
+            <p>新旧版本的兼容问题</p>
+			<p>（1）在新版本中增加了一种内容类型（如视频），那么该内容在老版本中该如何展示？（不显示？显示图片？…）</p>
+			<p>（2）当某个功能需要明确计划在下个版本中开发，那么在设计本版本时便要考虑，老版本如何展示去提醒用户升级。</p>
+          </section>
+
+          
+		   <section>
+            <p>首屏位置</p>
+			<p>针对较长的页面，需要再原型图中标注出首屏参考线，以便告知设计师，在设计时需要把参考线上方的内容放在首屏。这样可以省去一些沟通成本，也能让设计师更能理解原型意图，确保最终输出物与预期相符。</p>
+          </section>
+
+		
+
+		    <section>
+            <p>三、注意事项</p>
+          </section>
+
+		    <section>
+            <p>（1）尽量使用真实数据</p>
+			 <p>真实数据更有代入感，更能还原真实的场景，也不容易遗漏一些特殊状态的处理。</p>
+          </section>
+
+		   <section>
+            <p>（2）避免过长的文字说明</p>
+			 <p>可以用户图片表格讲清楚的内容，尽量不要使用很长的文字，因为大家都很少有耐心去看完。</p>
+          </section>
+		   
+		   <section>
+            <p>（3）注意交互说明的排版</p>
+			 <p>整体排版清晰更有助于开发人员的阅读，提升文档受众群体的阅读体验，一定程度上也体现了文档撰写者的水平。</p>
+          </section>
+
+		  <section>
+            <p>（4）不要遗漏特殊状态的描述</p>
+			 <p>很多需求的改动和增加都是因为一开始将特殊状态给遗漏了，导致最终增加开发的工作量。</p>
+          </section>
+
+
+		     <section>
+            <h3>保持一个好的心态</h3>
+			<p> 出现遗漏及时完善，解决问题是第一位的，记录问题并分析原因，下次注意就好了。</p>
+   
+        </section>
+
+		 
+
+
+    </div>
+</div>
+
+<script src="./lib/reveal/js/head.min.js"></script>
+<script src="./lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: './plugin/markdown/marked.js' },
+            { src: './plugin/markdown/markdown.js' },
+            { src: './plugin/notes/notes.js', async: true },
+            { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>

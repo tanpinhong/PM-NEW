@@ -1,0 +1,223 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="https://ptteng.github.io/PPT/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+	
+        <section>
+            <h3>如何有效的埋点</h3>
+            <p>分享人:董瑞锋</p>
+        </section>
+		
+		<section>		  		    
+            <p>第一个问题：为什么埋点？</br>
+第二个问题：怎么埋点？</p>
+	</section> 
+		
+		<section>
+            <p>一、为什么埋码？</p>
+        </section>
+		
+		<section>		  		    
+            <p>作为产品经理我们认定的事情，要去说服研发，当然这个责任和后果由产品来背。说通他而不是考虑他的难处公司的难处，从而将就一些事情。</p>
+		</section> 
+
+		<section>		  		    
+            <p>1、产品方向和目标负责需要数据的支撑，正确的数据分析可以有效的判断APP核心指标是否达成，以及判断方向是否正确。</p>
+		</section>    
+		
+		<section>		  		    
+            <p>2、接触用户。产品上线后需要通过数据去看你的产品用户是否喜欢？做的是否有问题，比如一个页面我加了4个输入框，通过数据反馈80%用户填了第二个但没完成就走了，这便是很好地接触用户反馈的方式，调研可能调研不到用户的各种心理，但是数据可以说话。</p>
+		</section>    
+		
+		<section>		  		    
+            <p>3、优化迭代的利器。</p>
+		</section> 
+		
+		<section>		  		    
+            <p>二、怎么埋码？</p>
+		</section> 
+		
+		<section>		  		    
+            <p>1、埋哪些点，收集哪些指标？</p>
+		</section> 	
+		
+		<section>		  		    
+            <p>（1）最最重要流量指标
+常用的pv，uv，dau，mau，次日留存，7日留存这些。
+这些点埋了其实对产品优化本身对大部分产品没什么太大作用，除了广告产品和游戏产品本身就是做流量生意的。埋点的原因是要给老板看，所以把这些点埋好方便以后汇报工作。</p>		
+		</section> 
+		
+		<section>		  		    
+            <p>（2）产品指标
+埋在常见的关键节点比如登陆转化，注册转化，功能打开率，功能具体内部组件使用频率。
+b端产品埋的更多更细，因为要看用户对哪些功能不够满意，哪些功能里面具体组件做的不够好，方便梳理流程和产品逻辑。</p>
+	        </section> 		
+        <section>		
+            <p>（3）用户指标
+追踪用户行为的一些指标，比如用户跳出页面，退出页面，用户点击分布，不同功能用户使用时间，用户群体分布。
+通过追踪用户的行为，来更加了解用户群，进而抽象出用户模型。</p>
+	        </section> 
+
+        <section>
+<p>（4）具体产品还有一些具体指标
+比如内容社区，要看每日产生问题数量，每日回答问题数量，高质量用户活跃度，社区在整个互联网内的关注度。
+比如电商产品，要看收藏，购物车，订单产生量，订单完成购买率。
+比如游戏产品，登陆，注册，转化，第一次使用时长，次日留存。
+这一块就因不同产品而异了。
+如果是小团队先把123埋齐再分析4。</p>
+	        </section> 
+
+        <section>
+<p>2、埋点表</p>
+	        </section> 
+
+        <section>
+<p>漏斗模型
+对于产品的关键路径一定要进行漏斗模型分析，比如注册路径，从用户输入注册手机号到注册成功，中间可能会有几个步骤，如果100个人注册，最后只有一个人注册成功，那么求运营同学心里的阴影面积。还有电商的购买下单路径，从浏览商品到最后下单购买成功，每一个步骤的转化率是多少，对于漏的比较多的那个步骤我们肯定要着重关注，分析原因。这个可以技术研发进行埋点，获取更精确的数据，比如下图的埋点表。</p>
+        </section>
+
+		<section>		
+            <p>3、埋点方式</p>
+        </section>
+		
+		<section>		  		    
+            <p>代码埋点：
+
+所谓的代码埋点就是在你需要统计数据的地方植入N行代码，统计用户的关键行为。
+代码埋点的优点：
+使用者控制精准，可以非常精确地选择什么时候发送数据
+使用者可以比较方便地设置自定义属性、自定义事件，传递比较丰富的数据到服务端。
+代码埋点的缺点：
+埋点代价比较大，每一个控件的埋点都需要添加相应的代码，不仅工作量大，而且限定了必须是技术人员才能完成；
+更新代价比较大，每一次更新，都需要更新埋点方案，然后通过各个应用市场进行分发，而且有的用户还不一定更新，这样你就获取不到这批用户数据。
+</p>
+		</section> 
+		
+        <section>		
+            <p>可视化埋点：
+
+既然代码埋点代价比较大，每一个埋点都需要写代码，那就使用可视化交互手段代替写代码；既然每次代码埋点都需要更新，那就参照现在的很多手游做法，把核心代码和配置、资源分开，每次用户启动app的时候通过网络更新配置和资源。
+可视化埋点优势：
+可视化买点解决了代码埋点埋点代价大和更新代价大两个问题。
+可视化埋点劣势：
+可视化埋点能够覆盖的功能有限，目前并不是所有的控件操作都可以通过这种方案进行定制；
+</p>
+        </section>		
+		
+		<section>
+            <p>无埋点：
+
+可视化埋点先通过界面配置哪些控件的操作数据需要收集；“无埋点”则是先尽可能收集所有控件的操作数据，然后再通过界面配置哪些数据需要在系统里面进行分析，“无埋点”也就是“全埋点”的意思。
+无埋点的优点：
+可视化埋点只能收集到你埋点以后的数据，如果你想对某个按钮进行点击分析，则只能分析增加可视化埋点以后的数据，之前的数据你收集不到，而无埋点在你部署SDK的时候数据就一直在收集。
+因为无埋点对页面所有元素进行埋点，那么这个页面每个元素被点击的概率你也就知道，对点击概率比较大的元素可以进行深入分析。
+无埋点的缺点：
+由于无埋点方案所有的元素数据都收集，会给数据传输和服务器带来较大的压力。</p>
+		</section>
+		
+		<section>
+			<p>4、埋点工具</p>
+		</section>
+		
+		<section>		
+            <p>（第三方工具及自建数据后台
+
+1、公司研发在自己的产品当中注入统计代码，搭建相应的后台查询，这种代价比较大。
+2、集成第三方统计的SDK，比如友盟、百度移动统计、Sensors Data、GrowingIO、Talking Data等。</p>
+        </section>
+		
+		<section>		
+            <p>我推荐有能力就自建后台，毕竟第三方不可能按你的意志去增减功能；没有时间精力那么只能使用第三方的了，大多数人推荐友盟，我也把友盟推荐给了我们部门，然后辛苦埋码，每期都埋，最后发现真是一坨....友盟数据可视化、细分、对比、频率、同比环比都太不人性，真是没得用，推荐大家使用谷歌GA，可拓展性非常强，只不过需要翻墙使用，很麻烦。</p>
+        </section>
+		
+        <section>
+            <p>三、需要注意</p>
+        </section>
+		
+		<section>
+            <p>产品上线前，产品经理在埋点这个过程中，需要思考的是以下几件事情，因为 埋的好是高手，埋不好反倒伤了自己。</p>
+        </section>
+		
+		<section>
+            <p>1、弄清产品的目标以及当下的首要问题
+做任何事情，有一个目标总是极好的，数据采集工作也是如此。
+产品可能产生的用户行为数据纷繁复杂，清晰的目标能避免迷失在数据的海洋中，从而耗费大量的时间和机会成本。也就是说，数据埋点的前提是，团队需要首先明确目前产品最亟待解决的问题是什么。举个栗子，比如电商产品，那么可能最首要的问题就是交易额，如何突破交易额，分解下去，可能就涉及到流量、转化率、客单价、回购率等等，提升这些数据指标就是当前产品的首要问题。在整个产品的分析和改进过程中，需要持续的观察这些指标的变化。 </p>
+        </section>
+<section>
+            <p>2、选择少量、重要的用户行为开始记录和分析
+在分析的一开始，并不建议采集太多的用户行为，在这一点上，倒是很像做产品里面的MVP（最小可化产品）思路，敏捷地不断迭代，不要一下子把全部用户行为都采集齐全。因为如果产品经理在一开始就试图设计实施一套庞大、全面的方案，很容易陷入复杂而又细节的泥潭并导致失败，或者极可能会（因为初期的错误规划）导致很多时间浪费。在一开始只记录和分析与“产品目标”最为相关的少量用户行为（如浏览、购买、下单），这样很快就能有成果产出。</p>
+        </section>
+		
+        <section>
+            <h4>谢谢观看</h4>
+            <p></p>
+            <p><small>By:董瑞锋</small></p>
+        </section>
+
+
+    </div>
+</div>
+
+<script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+<script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
