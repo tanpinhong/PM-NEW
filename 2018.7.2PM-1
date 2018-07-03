@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<!--<img src="../../img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">-->
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>需求分析，分析需求</h2>
+            <p>分享人：张德智</p>
+        </section>
+        <section>
+            <p style="text-align: left">目录</p>
+            <p style="text-align: left">1.何为需求？</p>
+            <p style="text-align: left">2.需求的产生</p>
+            <p style="text-align: left">3.需求的类别与辨别标准</p>
+			<p style="text-align: left">4.需求分析的重要性</p>
+			<p style="text-align: left">5.产品生命周期</p>
+			<p style="text-align: left">6.讨论时间</p>
+			<p style="text-align: left">7.谢谢观看</p>
+
+          
+          
+        </section>
+        <section>
+            <section>
+                <h3>1.何为需求？</h3>
+            </section>
+            <section>
+                 <p style="text-align: left">
+<p>我们吧需求两个汉字拆分开来看</p>
+<p>需=需要 求=要求</p>
+<p>即需要的要求，表示想要某种东西的坚定想法</p>
+		         
+  </section>
+            </section>
+<section>
+    <section>
+                <h3>2.需求的产生</h3>
+             </section>
+            </section>
+<section>
+    <section>
+        <h3>3.需求的类别与辨别标准</h3>
+    </section>
+            <section>
+               <p style="text-align: left">1.强需求/弱需求 </p>
+<p style="text-align: left">强需求：人，在某种场景下，一定要去做的事情</p>
+<p style="text-align: left">弱需求：人，在某种场景下，做了挺好，不做可以接受的事情</p>
+</section>
+            <section>
+               <p style="text-align: left">高频需求/低频需求 </p>
+<p style="text-align: left">高频需求：在人的正常生活中，频繁发生的场景中的核心环节</p>
+<p style="text-align: left">低频需求：在人的正常生活中，非频繁发生的场景中的核心环节，或频繁发生场景中的非核心环节</p>
+<p style="text-align: left">分辨这两种需求的重点就是，过程中是否频繁的出现核心环节</p>
+    </section>
+              
+        </section>
+        <section>
+            <section>
+			 <h3>4.需求分析的重要性</h3>
+   </section>
+            <section> 
+<p style="text-align: left">需求分析是贯穿了产品生命周期的一个重要过程，一方面，需求分析以系统规格说明和项目规划作为分析活动的基本出发点，并从软件角度对它们进行检查与调整；另一方面，需求规格说明又是软件设计、实现、测试直至维护的主要基础。良好的分析活动有助于避免或尽早剔除早期错误，从而提高软件生产率，降低开发成本，改进软件质量。 </p>
+ 
+
+
+    </section>
+            
+        </section>
+        <section>
+            <section>
+                <h3>5.产品生命周期</h3>
+            </section>
+			
+			<section>
+                <p style="text-align: left">产品生命周期观念，简称PLC，是把一个产品的销售历史比作人的生命周期，要经历出生、成长、成熟、老化、死亡等阶段。就产品而言，也就是要经历一个开发、引进、成长、成熟、衰退的阶段。在这一整个产品的销售历史中，全部都是需要对需求进行分析的。每个阶段都有每个阶段相对应的需求，而产品经理要做的就是在各个阶段中，将该阶段所收集到的产品需求进行总合，进行合理分析，改进、完善各个系统，在需求分析的同时，做到让产品的出生、成长阶段缩短，成熟阶段延长，尽可能做到让每个产品都发挥出它最大的价值</p>
+     
+           
+    </section>
+            
+        </section>
+        <section>
+            <section>
+                <h3>6.讨论</h3>
+           
+    </section>
+            
+        </section>
+        <section>
+            <section>
+                <h3>7.谢谢观看</h3>
+            </section>
+	
+                
+
+            
+    </div>
+</div>
+
+<script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+<script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
