@@ -1,0 +1,258 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<img src="https://ptteng.github.io/PPT/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank"/>
+</map>
+<div class="reveal">
+    <div class="slides">
+	
+        <section>
+            <h3>浅谈支付系统？</h3>
+			<p>分享人:张建兴</p>
+        </section>
+		
+        <section>
+            <p>1.实名认证</p>
+            <p>2.绑定银行卡</p>
+			<p>3.充值</p>
+			<P>4.提现</P>
+			<P>5.第三方支付业务流程</P>
+			<P>6.支付方式</P>
+			<P>7.支付限制</P>
+			<P>8.讨论</P>
+			<P>9.参考文献</P>
+        </section>
+		
+        <section>
+            <section>
+			<p>01.实名认证</p>
+			</section>
+			
+			<section>
+			<p>实名认证方式</p>
+			<p>1.姓名+身份证号码匹配认证</p>
+			<p>2.身份证正反面照片+人脸照片认证</p>
+			<p>3.身份认证正反面照片+人脸识别</p>
+			</section>
+			
+			<section>
+			<p>存在的问题：</p>
+			<p>1.如何验证身份证号码与姓名匹配？</p>
+			<p>答：验证方式是根据官方系统提供的数据进行对比</p>
+			<p>2.验证过程速度如何？</p>
+			<p>答：认证时间----有时需要十几秒才能返回认证结果。</p>
+			<p>3.验证的成本如何？</p>
+			<p>答：成本----每次认证0.1-0.3元。</p>
+			</section>
+			
+			<section>
+			<p>解决方案</p>
+			<p>尽量将错误认证阻挡在认证前面，从而节省成本，节省用户验证时间。在姓名、身份证的格式验证上严格一点。</p>
+			</section>
+			
+        </section>
+		
+        <section>		  		    
+            <section>
+			<p>02.绑定银行卡</p>
+			</section>
+			
+			<section>		  		    
+            <p>绑定银行卡，是银行卡与账户的一种关联行为。狭义上的绑卡即银行卡与账户的简单关联，广义上的绑卡有通过银行卡信息要素的验证，通过后方便进行后续的支付、提现等动作，也有通过绑卡的形式进行实名认证、找回支付密码等操作。</p>
+		    </section> 
+		
+			<section>		  		    
+            <p>绑定银行卡的目的？</p>
+			<p>快捷支付</p>
+			<p>身份要素验证</p>
+		    </section> 
+		
+			<section>		  		    
+            <p>绑定银行卡需要注意的地方？</p>
+			<p>1.银行卡一般都是16-19位，所以输入机制应设置为44443，方便用户输入的同时，也方便用户检测。</p>
+			<p>2.用户输入银行卡号后，系统能智能的识别出发卡行及卡种，无须用户手动选择</p>
+            <p>3.卡号、姓名、身份证号码、预留手机号码等要素验证，对于验证不通过的，应尽量明确错误原因，并指导用户采用相应可以解决的办法。</p>
+		    </section> 
+		
+		</section>       
+
+        <section>		  		    
+            <section>
+			<p>03.充值</p>
+			</section>
+			
+			<section>		  		    
+            <p>什么是充值？</p>
+		    </section> 
+		
+		    <section>		  		    
+            <p>用户主动发起的，将本人银行资金账户资金结算到虚拟账户，并伴随资金流由用户银行资金账户向平台客户备付金账户划拨的过程。</p>
+		    <p>用人话讲就是：我在自己的银行卡上申请充值100元到我支付宝，我银行卡上的资金余额减少了100元，过了一会我的支付宝账上多了100元。在这个过程中，实际上是银行卡账户向支付宝公司的银行账户（开户名是支付宝）转了100块钱，支付宝后台在我的余额加了100元。</p>
+		    </section>
+		
+			<section>		  		    
+            <p>充值的细节？</p>
+			<p>1.文本框获得焦点时弹出键盘</p>
+			<p>2.输入框输入规则说明</p>
+		    <p>3.未认证，点击充值</p>
+			<p>4.充值成功的反馈提示</p>
+		    </section> 		
+		</section>   		
+		
+		
+	    <section>		  		    
+            <section>
+			<p>04.什么是提现</p>
+			</section>
+			
+			<section>	
+            <p>用户主动发起的，将虚拟账户资金结算到本人银行资金账户，并伴随资金流由平台客户备付金账户向用户银行资金账户划拨的过程。</p>	
+            <p>用人话讲就是：我在支付宝上申请提现100元到我自己的银行卡上，我支付宝上的资金余额减少了100元，过了一会我的银行卡账上多了100元。在这个过程中，实际上是支付宝公司通过客户备付金银行账户（开户名是支付宝）向我的银行卡账户转了100块钱。</p>	
+		    </section> 
+		
+            <section>
+			<p>提现背后的流程</p>
+			</section>		
+			
+		    <section>
+			<p>风控审核：提现发起后需要经过风控系统进行判断是否有资金风险。部分平台对于出款申请还需要进行人工审核。</p>
+			<p>渠道路由：大型平台公司会在多个银行开设账户，而且每个银行提供的产品/接口也是多样性的，因此需要进行渠道路由，确定出最优的出款渠道，常见的考虑维度有成本、时效性等。</p>
+			<p>渠道出款：渠道确定后，则发起该渠道的出款指令。 需要说明的是，我们一般理解渠道可能是把它理解为某某银行某某支行，出款这块需要再细分，需细分的具体的出款产品。一般银行提供的产品有单笔代发、批量代发、跨行实时转账、自动转账、非自动转账等等。</p>	
+			</section>	
+
+		</section>   
+		
+        <section>	
+		
+            <section>
+			<p>05.第三方支付</p>
+			</section>
+			
+			<section>		  		    
+            <p>使用微信、支付宝等第三方支付平台来完成支付。使用时，一般需要用户预先安装支付平台系统（手机上），注册并登录到第三方支付平台，并且已经在该平台上完成绑卡等操作。 由于微信、支付宝已经被大量使用，用户也产生对这些平台的信任，该类支付往往是电商公司的主要支付方式。</p>
+		    </section> 
+		
+		</section> 
+
+        <section>	
+		
+            <section>
+			<p>06.支付方式</p>
+			</section>
+			
+			<section>		  		    
+            <p>1.快捷、代扣支付</p>
+			<p>2.网银支付</p>
+			<p>3.第三方支付</p>
+			<p>4.账户支付</p>
+			<p>5.信用支付</p>
+			<p>6.其他：货到支付、信用卡支付、paypal支付</p>			
+		    </section> 
+		
+		</section> 		
+	        
+		<section>	
+		
+            <section>
+			<p>07.支付限制</p>
+			</section>
+			
+			<section>		  		    
+            <p>第三方平台支付限制</p>
+		    </section> 
+			
+			<section>		  		    
+            <p>1.风控限额</p>
+			<p>为了规避洗钱或套现行为，钱包方的风控中心会对商户的行业及发起的交易记录进行分析，对疑似洗钱或套现行为的资金周转进行限额。从用户角度，为规避套现行为，会对个人消费行为进行判断，主要针对信用卡的单笔限额。频繁或过大额度的使用扫码支付都有账户被限制交易额度的可能。</p>
+		    <p>2.对个人账户的固定限额</p>
+			<p>按照用户递交材料的完整性和用户个人的信用分析，钱包方会对用户账户有一个分级，比如支付宝，没有经过实名认证的用户额度肯定相对较低。</p>
+  		    </section> 
+			
+			<section>		  		    
+            <p>1.针对持卡人所有网上交易的限额</p>
+			<p>信用卡、储蓄卡的发卡行针对网上交易（各银行钱包，银联支付、快捷支付等），都有默认的限额，通常单笔交易额度限制在几千万左右，需要用户自己致电发卡行客服要求增加网上交易额度。</p>
+		    <p>2.针对微信支付宝交易的限额</p>
+			<p>目前四大行对个人使用支付宝及微信快捷支付的单笔和单日额度均限制在万元以下，其中信用卡的额度更低，单笔额度基本都在2000以下。其他银行略高不等。主要原因是受各银行或央行鉴于交易安全等因素的政策性驱动较多。</p>
+			</section>
+		
+		</section> 	
+		
+		<section>
+            <h3>参考资料</h3>
+			<h3>【知乎】提现结算杂谈  作者：叉一</h3>
+        </section>
+		
+        <section>
+            <h3>更多讨论</h3>
+        </section>
+		
+        <section>
+            <h4>感谢参与和观看</h4>
+            <p></p>
+            <p><small>By:张建兴</small></p>
+        </section>
+
+
+    </div>
+</div>
+
+<script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+<script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+<script>
+    // 以下为常见配置属性的默认值
+    // {
+    //  controls: true, // 是否在右下角展示控制条
+    //  progress: true, // 是否显示演示的进度条
+    //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    //  keyboard: true, // 是否启用键盘快捷键来导航
+    //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    //  center: true, // 是否将幻灯片垂直居中
+    //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+    //  loop: false, // 是否循环演示
+    //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    //  fragments: true, // 全局开启和关闭碎片。
+    //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
