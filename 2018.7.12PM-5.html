@@ -1,1 +1,203 @@
+<!doctype html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="https://ptteng.github.io/PPT/lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <img src="https://ptteng.github.io/PPT/img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+    <map name="pttmap">
+        <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank" />
+    </map>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h3>第三方登录的作用、价值与实现方式</h3>
+                <p>分享人:张德智</p>
+            </section>
+
+            <section>
+                <p style="text-align: left">目录</p>
+                <p style="text-align: left">1.什么叫做第三方登录</p>
+                <p style="text-align: left">2.第三方登录的优势</p>
+                <p style="text-align: left">3.第三方登录的不足</p>
+                <p style="text-align: left">4.第三方登录的实现方式</p>
+                <p style="text-align: left">5.总结</p>
+                <p style="text-align: left">6.讨论</p>
+            </section>
+            <section>
+                <section>
+                    <p>什么叫做第三方登录</p>
+
+                </section>
+                <section>
+                    第三方登录，是相对于应用而言，用户登录操作不是基于自身建设账号体系，而是基于用户在第三方平台上已有的账号和密码来快速完成登录的过程。目前国内比较广泛使用的第三方登录方式为微博、微信、QQ，天翼账号等，国外广泛使用的登录方式为Facebook，Twitter等。
+                </section>
+            </section>
+            <section>
+                <section>
+                    <p>第三方登录的优势</p>
+
+                </section>
+                <section>
+                    1、方便用户快捷登录，降低用户的登录流失率</br>用户在使用第三方登录认证时，只需要保证自己选择的第三方登录应用注册过账号，而且保持在线状态的话，不需要记忆账号密码或者输入账号密码的操作，提升了用户登录的便利性与快捷性，有效降低了用户的流失。
+                </section>
+                <section>
+                    2、方便应用获取用户信息，减少产品设计成本</br>
+                    第三方登录接入后，应用可直接获取用户昵称、头像、用户ID等信息，方便产品获取用户的基本资料。
+                </section>
+                <section>
+                    3、可共享登录应用的用户关系，提升产品的用户转化率</br>第三方登录一般设计有共享登录账号已有的用户关系，用户进入产品后可了解到自己登录应用的好友是否也在使用相同的产品或者分享该产品给登录应用里的好友，如今日头条中的添加好友功能中，用微信登录的用户可以将头条推荐给自己的微信好友。
+                </section>
+                <section>
+                    4、减少短信验证码发送次数，降低产品登录成本</br>目前市面上的短信验证码的价钱约在0.05元左右，当用户选择使用第三方登录时，可有效减少产品的登录成本
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <p>第三方登录的不足</p>
+
+                </section>
+                <section>
+                    1、选择第三方登录会受到非产品可控因素的制约，目前大多数的第三方登录应用流程为：用户选择登录logo-跳转至第三方登录应用-授权登录-登录到产品，在整个登录流程中，需要用户在第三方软件注册过账号才能完成该流程，倘若用户没有第三方登录账号，那么会增加用户新的登录流程，增加流程的成本都是接入第三方登录的产品不可控的。
+                </section>
+                <section>
+                    2、产品获取到的用户信息有限</br>用户选择第三方登录时，其用户信息参数由第三方登录选择性的传给产品，一般多为用户的头像、昵称、用户ID等，产品能获取的用户信息是基于第三方登录应用给予的，其信息量有限。
+                </section>
+                <section>
+                    3、不利于产品自身的账号体系建设</br>产品在设计注册功能时，可以根据自己的业务状况与场景进行规划性设计，可选择让用户用自定义昵称、手机号、邮箱等方式注册，而基于第三方账号体系的第三方登录虽可以带给用户一定程度上的方便，但是流失了部分会选择产品账号体系登录的用户，降低了注册转化率，这对于后续产品的账号体系是不利的。</p>
+                </section>
+                <section>
+                    4.一旦自己的第三方账户出现问题，比如被第三方平台封号，或者账号被盗，则会发生相应的应用内数据丢失或者数据泄露。这个时候即使注册一个新账户，之前在应用内所有的记录也是无法恢复的。</p>
+                </section>
+                <section>
+                    5.对于有自己本地注册需求，并且提供第三方登录的应用而言，需要考虑第三方账号和本地账号的对接问题，产品需要设计对接方案，研发也要正确实现这个对接方案，会带来一定的额外工作量；此外，如果这个问题处理不好，很容易导致同一个用户在应用上存在多个账号的情况，为用户在平台上的操作带来了困扰。一旦第三方登录出现问题，比如出现服务当机，或者停止提供登录服务，将会对应用的后续发展造成一定的风险。</p>
+                </section>
+            </section>
+
+           <section>
+            <section>
+              <p>第三方登录的实现方式</br>目前来说第三方登录的实现方式一般有两种</br>纯登录与绑定登录（伪第三方）</p> 
+            </section>
+            <section>
+              <p>纯登录</p> 
+              （1）实现方式</br> 使用第三方账号直接登录，即可拥有完整的同本地注册用户相同的待遇。
+               </p>
+            </section>
+            <section>
+                （2）优势</br>简单、快捷，用户第一次只需要登录第三方平台并将登录许可授权给应用即可，只要成功，后续就能像应用注册用户一样使用应用内所有服务。</p>
+              </section>
+              <section>
+                （3）劣势</br>账号体系在别人手里，一旦第三方登录出现问题，会面临用户及用户数据丢失的风险，给应用的可持续发展带来一定的隐患，只是，考虑到目前提供第三方登录的平台的实力，这种隐患的发生是一个小概率事件。</p>
+              </section>
+              <section>
+                （4）适用场景</br>如果所开发的应用定位是分享、评论、社交，并不涉及必须进行创建应用账号的复杂功能，是比较轻量级的应用，那么可以选择放弃自主的应用账号体系。比如今日头条、一点资讯等资讯类应用，还有网易云音乐等音乐类应用。</p>
+              </section>
+
+              <section>
+                <p>绑定登录（伪第三方）</p> 
+                使用第三方登录后，要求绑定应用内账户（如果用户有，则直接绑定，否则需要走应用内的账号注册流程）。这种实现方式总体上来讲，对应用和用户都是有一定好处的。</p>对应用来讲：可以将用户信息牢牢抓在自己手里，防止被第三方拒绝提供服务后丢失本应用积累的用户；可以拿到更多用户的联系信息，比如邮箱、手机号码等，可以为后续的持续营销打下基础；可以避免一个用户多个账号同时存在的情况发生。
+
+              </br>对用户来讲：主要是可以防止第三方登录关闭登录服务之后，无法找到自己在应用内的信息的风险。
+
+                 </p>
+              </section>
+              <section>
+                  （1）实现方式</br>使用第三方登录后立即需要绑定应用内账号。</p>
+                </section>
+                <section>
+                  （2）优势</br>使得应用内的账号体系比较规整，避免同一个用户产生不同的账号，也进一步避免了同一个用户不同账号之间的数据合并工作。</p>
+                </section>
+                <section>
+                    （3）劣势</br>这种方式给用户的体验不太好，尤其是用户没有本地账号的时候，不但没有减轻用户的注册成本，反而增加了，给用户的感觉是还不如直接注册，多此一举。</p>
+                  </section>
+                <section>
+                  （4）适用场景</br>对于规模较大的应用，完全可以这么干，比如京东、淘宝这种级别的，因为你对用户的吸引力足够，他为了获得应用的服务，能够忍受这样的额外麻烦。但对于刚起步的应用，拉新是比较重要的任务和业绩指标，这么干则有一定的风险，因为这样的用户体验是非常糟糕的，用户很可能因为这个设计而放弃使用这个软件。
+                  </p>
+                </section>
+                <section>
+                    应用账号登录与第三方登录均有利弊，无论何种选择，力求尊重用户，为用户带来方便这个大方向总是不错的。至于具体选择，则要结合自己产品的形态、定位、风格以及愿景来进行选择，不同场景使用不同的实现方式，具体问题具体分析，任何试图用一个方子处理所有问题的想法都是有风险的。
+                  </section>
+            </section>
+          
+           <section>
+            
+            <p>总结</p>第三方登录作为互联网常见的登录方式，产品经理在接入第三方登录应用时，要全面分析考虑第三方的登录特点，除了对比登录产品的设计流程外，其登录产品的对接技术难度、返回用户信息的参数、用户规模及特点也应该全面考虑，从而选择适合自己产品的第三方登录方式，从而放大化第三方登录的作用于价值。</p>
+            </section>
+           </section>
+          
+           <section>
+                <p>更多讨论</p>
+            </section>
+
+            <section>
+                <h4>谢谢观看</h4>
+                <p></p>
+                <p>
+                    <small>By:张德智</small>
+                </p>
+            </section>
+
+
+        </div>
+    </div>
+
+    <script src="https://ptteng.github.io/PPT/lib/reveal/js/head.min.js"></script>
+    <script src="https://ptteng.github.io/PPT/lib/reveal/reveal.js"></script>
+
+    <script>
+        // 以下为常见配置属性的默认值
+        // {
+        //  controls: true, // 是否在右下角展示控制条
+        //  progress: true, // 是否显示演示的进度条
+        //  slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+        //  history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+        //  keyboard: true, // 是否启用键盘快捷键来导航
+        //  overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+        //  center: true, // 是否将幻灯片垂直居中
+        //  touch: true, // 是否在触屏设备上启用触摸滑动切换
+        //  loop: false, // 是否循环演示
+        //  rtl: false, // 是否将演示的方向变成RTL，即从右往左
+        //  fragments: true, // 全局开启和关闭碎片。
+        //  autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+        //  transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+        //  transitionSpeed: 'default', // 过渡速度，default/fast/slow
+        //  mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+        // }
+        // 初始化幻灯片
+        Reveal.initialize({
+            history: true,
+            dependencies: [
+                { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+                { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+                { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+                { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+            ]
+        });
+    </script>
+</body>
+
+</html>
