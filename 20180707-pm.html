@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./css/reveal/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./css/reveal/theme/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./lib/reveal/css/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? './css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+</head>
+
+<body>
+    <img src="./img/demo/logo.png" alt="" usemap="#pttmap" class="base-logo">
+    <map name="pttmap">
+        <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com" alt="" target="_blank" />
+    </map>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2>简单了解消息推送</h2>
+                <p></p>
+                <h3></h3>
+                <p>分享人：钱琴</p>
+            </section>
+            <section>
+                <p>一.什么是消息推送</p>
+                <p>二.消息推送机制</p>
+                <p>三.消息推送方式有哪些</p>
+                <p>四.消息推送的利与弊</p>
+                <p>五.消息推送内容</p>
+                <p>六.搭建推送平台</p>
+                <p>七.更多讨论</p>
+            </section>
+            <section>
+                <section>
+                    <h3>一.什么是消息推送</h3>
+                </section>
+            </section>
+            <section>
+                <h4>消息推送是服务器端主动向客户端发送消息，客户端进行接收消息。</h4>
+            </section>
+            <section>
+                <section>
+                    <h3>二.消息推送机制（APP服务器到手机间）</h3>
+                </section>
+                <section>
+                    <section>
+                        <h3>IPhone（APPLE）的工作机制</h3>
+                        <h4>第一阶段：Java应用程序把要发送的消息、目的iPhone的标识打包，发给APNS。</h4>
+                        <h4>第二阶段：APNS在自身的已注册Push服务的iPhone列表中，查找有相应标识的iPhone，并把消息发到iPhone。</h4>
+                        <h4>第三阶段：iPhone把发来的消息传递给相应的应用程序， 并且按照设定弹出Push通知。</h4>
+                    </section>
+                </section>
+                <section>
+                    <h3>android的推送机制</h3>
+                    <h4>谷歌也建立了类似ios一样的推送系统——C2DM推送系统。 但是为什么这个系统没有APNS给力呢？主要是C2DM的服务器对于国内来说是外面的东西，由于谷歌在国内受到了一些格外的照顾，这个服务器也就显得不那么给力，这是国内厂商多不选择C2DM的重要原因。
+                    </h4>
+                    <h4>另外Android开源和API的开放提供了其它推送的选择。在 C2DM不给力的情况下，一些软件选回了老的轮询方式的（凡是软件里需要你自己选择多长时间检查一次有没有更新的软件都是轮询方式）来提供消息，这种方式
+                        有相当的不稳定因素，在机器内存紧张的情况下驻留的http服务容易被回收，还更费电费流量。
+                    </h4>
+                </section>
+                <section>
+                    <h4>更多软件厂商则选择了利用Android的自由的XML的 API接口自己搭建XMPP服务器来直接向用户推送消息，缺点同样是驻留的服务容易被回收，尤其对于小内存机器和在内存管理上时常有技术性溢出（回收机制
+                        缺陷）的MIUI来说如果不锁定服务的内存那么就可能出现收不到推送的情况。
+                    </h4>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>三.消息推送方式有哪些</h3>
+                </section>
+            </section>
+            </section>
+            <section>
+                <h4>即时通讯（IM）： QQ、微信</h4>
+                <h4> 非即时通讯（非IM） 1.短信推送 2.通知栏推送 3.应用内推送 4.邮件推送 5.微信服务号推送
+                </h4>
+
+            </section>
+            <section>
+                <section>
+                    <section>
+                        <h3>四.消息推送的利与弊</h3>
+                    </section>
+                </section>
+            </section>
+            <section>
+                <h4>优点： 及时让用户了解需要的讯息，提高体验 为运营提供路径做拉新留存，提升转化率 成本低，特别是采用自动化推送能大大节省客服人力成本。
+                </h4>
+                <h4> 缺点： 骚扰用户，特别是在用户不想被打扰的情况，比如晚上休息时间。 消耗信任感，比如用标题吸引用户，但是点进去却发现被骗了。 过多无用的信息，招致用户厌烦而将通知关闭，甚至卸载。
+                </h4>
+
+            </section>
+            <section>
+                <section>
+                    <h3>五.消息推送内容</h3>
+                </section>
+                <section>
+                    <section>
+                        <h4>
+                            <p>1.消息推送内容类别：新闻 营销 产品 系统（订单、增减变动、评论回复点赞等）</p>
+                            <p>2.推送提示标志： 通知栏 APP右上角角标 应用内红点标识 </p>
+                            <p>3.推送内容形式： 图片、文案加图片、文案</p>
+                            <p>4.定义推送落地页</p>
+                        </h4>
+                    </section>
+                </section>
+
+            </section>
+            <section>
+                <section>
+                    <h3>六.推送平台</h3>
+                </section>
+                <section>
+                    <section>
+                        <h4>第三方平台、后台管理系统</h4>
+                        <p> 后台-后端数据库-app服务器-APP  适用应用内消息</p>
+                        <p>后台-后端数据库-第三方平台-app服务器-手机               适用通知栏、短信</p>
+                    </section>
+                </section>
+                <section>
+                    <p>参考文献：</p>
+                    <p>《一文搞懂互金产品消息推送设计策略 》 </p>
+                    <p>《IOS与Android推送的差别 》 </p>
+                    <p>《移动手机消息推送机制》</p>
+                </section>
+                <section>
+                    <p>七. 更多讨论</p>
+                    <p>感谢观看！</p>
+                    <p>
+                        <small>BY : 钱琴</small>
+                    </p>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="./lib/reveal/js/head.min.js"></script>
+    <script src="./lib/reveal/reveal.js"></script>
+
+    <script>
+
+        // 以下为常见配置属性的默认值
+        // {
+        // 	controls: true, // 是否在右下角展示控制条
+        // 	progress: true, // 是否显示演示的进度条
+        // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+        // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+        // 	keyboard: true, // 是否启用键盘快捷键来导航
+        // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+        // 	center: true, // 是否将幻灯片垂直居中
+        // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+        // 	loop: false, // 是否循环演示
+        // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+        // 	fragments: true, // 全局开启和关闭碎片。
+        // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+        // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+        // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+        // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+        // }
+
+        // 初始化幻灯片
+        Reveal.initialize({
+            history: true,
+            dependencies: [
+                { src: './plugin/markdown/marked.js' },
+                { src: './plugin/markdown/markdown.js' },
+                { src: './plugin/notes/notes.js', async: true },
+                { src: './plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+            ]
+        });
+    </script>
+</body>
+
+</html>
